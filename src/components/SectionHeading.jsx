@@ -2,7 +2,7 @@ function SectionHeading({ eyebrow, title, description, align = 'center' }) {
   const alignment =
     align === 'left'
       ? 'items-start text-left'
-      : 'items-center text-center';
+      : 'mx-auto items-center text-center';
 
   return (
     <div className={`flex max-w-3xl flex-col gap-4 ${alignment}`}>

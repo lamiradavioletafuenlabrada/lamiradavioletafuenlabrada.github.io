@@ -9,7 +9,7 @@ function Hero() {
       aria-label="Portada"
     >
       <div
-        className="absolute inset-0 bg-cover bg-right-center"
+        className="absolute inset-0 bg-cover bg-[position:78%_center] sm:bg-right-center"
         style={{ backgroundImage: `url(${heroContent.image})` }}
       />
       <div className="absolute inset-0 bg-hero-fade" />
