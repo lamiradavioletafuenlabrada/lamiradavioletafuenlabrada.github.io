@@ -35,3 +35,26 @@
     color: #24163a;
   }
 }
+
+@layer utilities {
+  @keyframes blob-drift {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+      transform: translate3d(24px, -18px, 0) scale(1.08);
+    }
+  }
+
+  .animate-blob-drift {
+    animation: blob-drift 14s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-blob-drift {
+      animation: none;
+    }
+  }
+}

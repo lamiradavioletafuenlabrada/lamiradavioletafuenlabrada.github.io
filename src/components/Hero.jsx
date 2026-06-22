@@ -1,9 +1,10 @@
 import { FaArrowRightLong } from 'react-icons/fa6';
+import Reveal from './Reveal';
 import useParallax from '../hooks/useParallax';
 import { heroContent } from '../data/siteContent';
 
 function Hero() {
-  const imageRef = useParallax({ speed: 0.1, maxOffset: 60, scale: 1.08 });
+  const imageRef = useParallax({ speed: 0.28, maxOffset: 140, scale: 1.18 });
 
   return (
     <section
@@ -13,13 +14,15 @@ function Hero() {
     >
       <div
         ref={imageRef}
-        className="absolute -inset-y-8 inset-x-0 bg-cover bg-[position:78%_center] will-change-transform sm:bg-right-center"
+        className="absolute -inset-y-24 inset-x-0 bg-cover bg-[position:78%_center] will-change-transform sm:bg-right-center"
         style={{ backgroundImage: `url(${heroContent.image})` }}
       />
       <div className="absolute inset-0 bg-hero-fade" />
+      <div className="animate-blob-drift pointer-events-none absolute left-10 top-32 h-40 w-40 rounded-full bg-white/20 blur-3xl" />
+      <div className="animate-blob-drift pointer-events-none absolute bottom-12 right-12 h-56 w-56 rounded-full bg-accent/25 blur-3xl [animation-delay:-5s]" />
 
       <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-5 py-16 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
             <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
               Asociación feminista y comunitaria
             </span>
@@ -32,13 +35,13 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={heroContent.cta.href}
-              className="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
+              className="group inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
             >
               {heroContent.cta.label}
-              <FaArrowRightLong className="h-4 w-4" />
+              <FaArrowRightLong className="h-4 w-4 transition group-hover:translate-x-1" />
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

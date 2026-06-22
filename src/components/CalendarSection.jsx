@@ -1,5 +1,6 @@
 import { FaCalendarAlt } from 'react-icons/fa';
 import SectionHeading from './SectionHeading';
+import Reveal from './Reveal';
 import { calendarContent } from '../data/siteContent';
 
 function CalendarSection() {
@@ -13,20 +14,20 @@ function CalendarSection() {
             description={calendarContent.subtitle}
             align="left"
           />
-          <div className="inline-flex items-center gap-3 self-start rounded-full bg-white px-5 py-3 text-sm font-medium text-brand-700 shadow-card">
+          <Reveal delay={120} className="inline-flex items-center gap-3 self-start rounded-full bg-white px-5 py-3 text-sm font-medium text-brand-700 shadow-card">
             <FaCalendarAlt className="h-4 w-4" />
             Zona horaria: Europa/Madrid
-          </div>
+          </Reveal>
         </div>
 
-        <div className="overflow-hidden rounded-[32px] border border-brand-200 bg-white p-3 shadow-soft sm:p-4">
+        <Reveal delay={180} className="overflow-hidden rounded-[32px] border border-brand-200 bg-white p-3 shadow-soft sm:p-4">
           <iframe
             src={calendarContent.embedUrl}
             title="Calendario de actividades"
             className="h-[420px] w-full rounded-[24px] sm:h-[600px]"
             loading="lazy"
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

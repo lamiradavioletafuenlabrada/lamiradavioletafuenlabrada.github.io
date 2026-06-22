@@ -1,3 +1,5 @@
+import Reveal from './Reveal';
+
 function SectionHeading({ eyebrow, title, description, align = 'center' }) {
   const alignment =
     align === 'left'
@@ -5,7 +7,7 @@ function SectionHeading({ eyebrow, title, description, align = 'center' }) {
       : 'mx-auto items-center text-center';
 
   return (
-    <div className={`flex max-w-3xl flex-col gap-4 ${alignment}`}>
+    <Reveal className={`flex max-w-3xl flex-col gap-4 ${alignment}`}>
       {eyebrow ? (
         <span className="inline-flex rounded-full bg-brand-100 px-4 py-1 text-sm font-semibold text-brand-700">
           {eyebrow}
@@ -17,7 +19,7 @@ function SectionHeading({ eyebrow, title, description, align = 'center' }) {
       {description ? (
         <p className="text-base leading-7 text-mist sm:text-lg">{description}</p>
       ) : null}
-    </div>
+    </Reveal>
   );
 }
 

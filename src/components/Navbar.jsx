@@ -1,14 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { navigation } from '../data/siteContent';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrolled = () => setIsScrolled(window.scrollY > 24);
+
+    updateScrolled();
+    window.addEventListener('scroll', updateScrolled, { passive: true });
+
+    return () => window.removeEventListener('scroll', updateScrolled);
+  }, []);
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-200/70 bg-white/85 backdrop-blur-md">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${
+        isScrolled || isOpen
+          ? 'border-brand-200/80 bg-white/95 shadow-card'
+          : 'border-white/10 bg-white/70'
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
         <a
           href="#inicio"
