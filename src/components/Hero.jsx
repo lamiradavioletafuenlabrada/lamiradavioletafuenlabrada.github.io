@@ -1,0 +1,43 @@
+import { FaArrowRightLong } from 'react-icons/fa6';
+import { heroContent } from '../data/siteContent';
+
+function Hero() {
+  return (
+    <section
+      id="inicio"
+      className="relative isolate overflow-hidden pt-28"
+      aria-label="Portada"
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-right-center"
+        style={{ backgroundImage: `url(${heroContent.image})` }}
+      />
+      <div className="absolute inset-0 bg-hero-fade" />
+
+      <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-5 py-16 sm:px-6 lg:px-8">
+        <div className="max-w-2xl">
+            <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
+              Asociación feminista y comunitaria
+            </span>
+          <h1 className="font-display text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
+            {heroContent.title}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-8 text-white/85 sm:text-xl">
+            {heroContent.description}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href={heroContent.cta.href}
+              className="inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
+            >
+              {heroContent.cta.label}
+              <FaArrowRightLong className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

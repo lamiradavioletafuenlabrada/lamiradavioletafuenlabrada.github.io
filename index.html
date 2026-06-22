@@ -1,165 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asociación La Mirada Violeta | Fuenlabrada</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Enlace para Iconos de FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">La Mirada Violeta</a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
-                <li><a href="#actividades" class="nav-link">Actividades</a></li>
-                <li><a href="#calendario" class="nav-link">Calendario</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Sección Inicio (Hero optimizado asimétrico con textos a la izquierda) -->
-    <header id="inicio" class="hero-section" style="background-image: url('banner-izq-vacio.png'); background-size: cover; background-position: right center; justify-content: flex-start; text-align: left; padding: 0 8%;">
-        <div class="hero-content" style="max-width: 600px; margin-left: 0; margin-right: auto;">
-            <h1 style="font-size: 3.5rem; margin-bottom: 20px; color: #ffffff; text-shadow: none;">Asociación La Mirada Violeta</h1>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #ffffff; line-height: 1.5; margin-left: 0;">Dando voz a las mujeres del pasado, del presente y del futuro en Fuenlabrada.</p>
-            <a href="#actividades" class="btn-main">Descubre Actividades</a>
-        </div>
-    </header>
-
-    <!-- Galería Destacada -->
-    <section class="gallery-intro">
-        <div class="container">
-            <h2 class="section-title">Nuestra Comunidad en Acción</h2>
-            <div class="grid-gallery">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=80" alt="Espacio colectivo">
-                    <div class="overlay"><span>Encuentros Íntimos</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Talleres feministas">
-                    <div class="overlay"><span>Talleres y Charlas</span></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Teatro y Expresión">
-                    <div class="overlay"><span>Teatro y Expresión</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quiénes Somos (Con tus modificaciones incorporadas) -->
-    <section id="quienes-somos" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Quiénes Somos</h2>
-                    <p>La Mirada Violeta es una asociación feminista de Fuenlabrada formada por mujeres de diferentes edades, experiencias y trayectorias, unidas por el compromiso con la igualdad, la justicia social y la participación activa en la comunidad.</p>
-                    <p>Trabajamos para crear espacios seguros, inclusivos y accesibles donde las mujeres puedan encontrarse, compartir experiencias, aprender unas de otras y fortalecer redes de apoyo mutuo. Creemos en el valor de la diversidad y en la importancia de incorporar una perspectiva interseccional que tenga en cuenta las distintas realidades y desafíos que enfrentan las mujeres.</p>
-                    <p>Desarrollamos actividades, talleres, encuentros, campañas de sensibilización y proyectos comunitarios orientados a promover la igualdad de oportunidades, el empoderamiento de las mujeres y la participación social. También colaboramos con entidades, instituciones y colectivos que comparten nuestros valores y objetivos.</p>
-                    <p>Nuestra labor nace desde los barrios del sur y está profundamente vinculada al territorio, convencidas de que la transformación social comienza en la comunidad y se construye a través de la participación, el diálogo y la acción colectiva. En La Mirada Violeta trabajamos para que todas las mujeres tengan voz, sean escuchadas y puedan formar parte activa del cambio hacia una sociedad más igualitaria.</p>
-                    <p>Si compartes nuestros valores, te invitamos a conocernos, participar en nuestras actividades y construir juntas una sociedad más justa e igualitaria.</p>
-                    
-                    <div class="pillars">
-                        <div class="pillar">
-                            <i class="fas fa-hands-helping"></i>
-                            <h3>Sororidad</h3>
-                            <p>Creamos espacios de reencuentro íntimo, colectivo y transformador.</p>
-                        </div>
-                        <div class="pillar">
-                            <i class="fas fa-bullhorn"></i>
-                            <h3>Visibilización</h3>
-                            <p>Continuamos abriendo camino y dando voz a las realidades silenciadas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=600&q=80" alt="Lucha feminista en Fuenlabrada">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Actividades Destacadas -->
-    <section id="actividades" class="activities-section">
-        <div class="container">
-            <h2 class="section-title">Últimas Iniciativas</h2>
-            <div class="activities-grid">
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80');"></div>
-                    <div class="card-body">
-                        <h3>Miradas Alternativas</h3>
-                        <p>Talleres colectivos enfocados en resignificar nuestros cuerpos desde el pensamiento feminista positivo.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=500&q=80');"></div>
-                    <div class="card-body">
-                        <h3>Teatro Fórum</h3>
-                        <p>Dinámicas interactivas como "Elige tu propia aventura" para identificar y desarmar violencias machistas cotidianas.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544535830-9df3f56fff6a?auto=format&fit=crop&w=500&q=80');"></div>
-                    <div class="card-body">
-                        <h3>Conferencias y Debate</h3>
-                        <p>Espacios necesarios de reflexión social sobre las violencias sistemáticas ejercidas contra mujeres y niñas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calendario de Eventos (Con la zona horaria corregida a Madrid) -->
-    <section id="calendario" class="calendar-section">
-        <div class="container">
-            <h2 class="section-title">Próximos Eventos</h2>
-            <p class="calendar-subtitle">Mantente al día con nuestras asambleas, talleres y eventos en Fuenlabrada.</p>
-            <div class="calendar-wrapper">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=M2RkYjFkZjFmMGFjOThjZjYyYmQ2NDMwYmYwZWFlOGRiYTI2MGUzN2IwN2I4YThmNzJmN2FhZjMwNDM0OTViOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237cb342&color=%230b8043" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto (Simplificado) -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Conecta con Nosotras</h2>
-            <div class="contact-center-content">
-                <h3>¿Quieres participar o colaborar?</h3>
-                <p>Si vives en Fuenlabrada o alrededores y deseas sumarte a nuestras asambleas presenciales, proponer una actividad o hacernos una consulta, no dudes en escribirnos.</p>
-                <p>Encuentra todos nuestros canales de comunicación oficiales, redes sociales y correo electrónico justo aquí abajo, en el pie de página.</p>
-                <p class="contact-location"><i class="fas fa-map-marker-alt"></i> Fuenlabrada, Madrid</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pie de página (Con todas las redes sociales unificadas) -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Asociación La Mirada Violeta. Diseñado para la Igualdad.</p>
-            <div class="footer-social-links">
-                <!-- Instagram -->
-                <a href="https://instagram.com/lamiradavioletafuenla" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <!-- TikTok -->
-                <a href="https://tiktok.com/@lamiradavioletafuenla" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/company/lamiradavioletafuenla" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Correo Electrónico -->
-                <a href="mailto:lamiradavioletafuenlabrada@gmail.com" title="Correo Electrónico"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <meta
+      name="description"
+      content="Asociación feminista de Fuenlabrada que impulsa actividades, encuentros y acciones comunitarias por la igualdad."
+    />
+    <meta property="og:title" content="Asociación La Mirada Violeta" />
+    <meta
+      property="og:description"
+      content="Conoce nuestras actividades, encuentros y próximos eventos en Fuenlabrada."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/banner-izq-vacio.png" />
+    <meta name="theme-color" content="#6d28d9" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  </html>
