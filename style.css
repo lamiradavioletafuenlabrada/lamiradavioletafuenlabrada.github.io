@@ -273,7 +273,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Nueva Sección: Calendario */
+/* Calendario */
 .calendar-section {
     background-color: #fcf8ff;
     text-align: center;
@@ -295,100 +295,76 @@ body {
     overflow: hidden;
 }
 
-/* Contacto Modificado */
+/* Contacto Ajustado */
 .contact-section {
     background-color: #ffffff;
+    text-align: center;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.contact-center-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-center-content h3 {
+    font-size: 1.6rem;
+    color: var(--color-oscuro);
+    margin-bottom: 15px;
+}
+
+.contact-center-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .contact-location {
     margin-top: 25px;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: bold;
+    color: var(--texto-oscuro);
 }
 
 .contact-location i {
     color: var(--color-primario);
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
-/* Botones de Redes Sociales */
-.social-buttons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border-radius: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.05rem;
-    transition: transform 0.2s, filter 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.social-btn i {
-    margin-right: 10px;
-    font-size: 1.3rem;
-}
-
-.social-btn:hover {
-    transform: translateY(-3px);
-    filter: brightness(0.9);
-}
-
-/* Colores de marca */
-.social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-btn.tiktok {
-    background-color: #000000;
-}
-
-.social-btn.linkedin {
-    background-color: #0077b5;
-}
-
-.social-btn.email {
-    background-color: var(--color-primario);
-}
-
-/* Pie de Página */
+/* Pie de Página Mejorado */
 footer {
     background-color: var(--color-oscuro);
     color: var(--texto-claro);
-    text-align: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 40px 0;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 15px;
 }
 
 .footer-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--texto-claro);
-    font-size: 1.5rem;
-    margin-left: 20px;
-    transition: color 0.3s;
+    font-size: 1.4rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .footer-social-links a:hover {
-    color: var(--color-claro);
+    transform: translateY(-3px);
+    background-color: var(--color-primario);
 }
 
 /* Adaptabilidad Móvil (Responsive) */
@@ -417,18 +393,15 @@ footer {
     .hero-content h1 {
         font-size: 2.2rem;
     }
-    .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    .social-buttons-grid {
+    .about-grid {
         grid-template-columns: 1fr;
     }
     .calendar-wrapper iframe {
-        height: 450px; /* Reducimos el tamaño en móviles para mejor experiencia */
+        height: 450px;
     }
     .footer-content {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        text-align: center;
     }
-}    }
 }
