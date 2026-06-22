@@ -126,7 +126,7 @@ body {
     background-color: var(--color-oscuro);
 }
 
-/* Galería Visual de Introducción */
+/* Títulos de sección */
 .section-title {
     text-align: center;
     font-size: 2.2rem;
@@ -145,6 +145,7 @@ body {
     border-radius: 2px;
 }
 
+/* Galería Visual de Introducción */
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -184,7 +185,6 @@ body {
     transition: opacity 0.3s;
 }
 
-.gallery-item:hover class .overlay,
 .gallery-item:hover .overlay {
     opacity: 1;
 }
@@ -273,7 +273,29 @@ body {
     margin-bottom: 10px;
 }
 
-/* Contacto */
+/* Nueva Sección: Calendario */
+.calendar-section {
+    background-color: #fcf8ff;
+    text-align: center;
+}
+
+.calendar-subtitle {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.calendar-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(106, 27, 154, 0.1);
+    overflow: hidden;
+}
+
+/* Contacto Modificado */
 .contact-section {
     background-color: #ffffff;
 }
@@ -282,32 +304,66 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: center;
 }
 
-.contact-list {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.contact-list li {
-    margin-bottom: 15px;
+.contact-location {
+    margin-top: 25px;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.contact-list i {
+.contact-location i {
     color: var(--color-primario);
     margin-right: 10px;
-    width: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+/* Botones de Redes Sociales */
+.social-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: transform 0.2s, filter 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.social-btn i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.9);
+}
+
+/* Colores de marca */
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.tiktok {
+    background-color: #000000;
+}
+
+.social-btn.linkedin {
+    background-color: #0077b5;
+}
+
+.social-btn.email {
+    background-color: var(--color-primario);
 }
 
 /* Pie de Página */
@@ -324,14 +380,14 @@ footer {
     padding: 30px 0;
 }
 
-.social-links a {
+.footer-social-links a {
     color: var(--texto-claro);
     font-size: 1.5rem;
     margin-left: 20px;
     transition: color 0.3s;
 }
 
-.social-links a:hover {
+.footer-social-links a:hover {
     color: var(--color-claro);
 }
 
@@ -364,8 +420,15 @@ footer {
     .about-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
+    .social-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+    .calendar-wrapper iframe {
+        height: 450px; /* Reducimos el tamaño en móviles para mejor experiencia */
+    }
     .footer-content {
         flex-direction: column;
         gap: 15px;
     }
+}    }
 }
