@@ -2,9 +2,152 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prueba web La Mirada Violeta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación La Mirada Violeta | Fuenlabrada</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos externos para redes sociales -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <h1>Mi web estática funciona.</h1>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">La Mirada Violeta</a>
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#actividades" class="nav-link">Actividades</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio (Hero muy visual) -->
+    <header id="inicio" class="hero-section" style="background-image: linear-gradient(rgba(106, 27, 154, 0.4), rgba(74, 20, 140, 0.8)), url('https://unsplash.com');">
+        <div class="hero-content">
+            <h1>Asociación La Mirada Violeta</h1>
+            <p>Dando voz a las mujeres del pasado, del presente y del futuro en Fuenlabrada.</p>
+            <a href="#actividades" class="btn-main">Descubre Actividades</a>
+        </div>
+    </header>
+
+    <!-- Galería Destacada e Impacto Visual -->
+    <section class="gallery-intro">
+        <div class="container">
+            <h2 class="section-title">Nuestra Comunidad en Acción</h2>
+            <div class="grid-gallery">
+                <div class="gallery-item">
+                    <img src="https://unsplash.com" alt="Espacio colectivo">
+                    <div class="overlay"><span>Encuentros Íntimos</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://unsplash.com" alt="Talleres feministas">
+                    <div class="overlay"><span>Talleres y Charlas</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://unsplash.com" alt="Reivindicación">
+                    <div class="overlay"><span>Teatro y Expresión</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos (Misión y Valores) -->
+    <section id="quienes-somos" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>Somos una agrupación de mujeres fuenlabreñas unidas para continuar con la lucha histórica por la igualdad real de género.</p>
+                    <div class="pillars">
+                        <div class="pillar">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Sororidad</h3>
+                            <p>Creamos espacios de reencuentro íntimo, colectivo y transformador.</p>
+                        </div>
+                        <div class="pillar">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3>Visibilización</h3>
+                            <p>Continuamos abriendo camino y dando voz a las realidades silenciadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://unsplash.com" alt="Lucha feminista">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividades Destacadas -->
+    <section id="actividades" class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Últimas Iniciativas</h2>
+            <div class="activities-grid">
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="card-body">
+                        <h3>Miradas Alternativas</h3>
+                        <p>Talleres colectivos enfocados en resignificar nuestros cuerpos desde el pensamiento feminista positivo.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="card-body">
+                        <h3>Teatro Fórum</h3>
+                        <p>Dinámicas interactivas como "Elige tu propia aventura" para identificar y desarmar violencias machistas cotidianas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="card-body">
+                        <h3>Conferencias y Debate</h3>
+                        <p>Espacios necesarios de reflexión social sobre las violencias sistemáticas ejercidas contra mujeres y niñas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Conecta con Nosotras</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>¿Quieres participar?</h3>
+                    <p>Si vives en Fuenlabrada o alrededores y deseas sumarte a nuestras asambleas o enterarte de los próximos talleres, escríbenos o búscanos en redes.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Fuenlabrada, Madrid</li>
+                        <li><i class="fab fa-instagram"></i> @lamiradavioletafuenla</li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="https://formspree.io" method="POST">
+                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                        <input type="email" name="email" placeholder="Tu Correo" required>
+                        <textarea name="message" rows="5" placeholder="¿Cómo te gustaría colaborar?" required></textarea>
+                        <button type="submit" class="btn-main">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Asociación La Mirada Violeta. Diseñado para la Igualdad.</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
