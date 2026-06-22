@@ -1,7 +1,10 @@
 import { FaArrowRightLong } from 'react-icons/fa6';
+import useParallax from '../hooks/useParallax';
 import { heroContent } from '../data/siteContent';
 
 function Hero() {
+  const imageRef = useParallax({ speed: 0.1, maxOffset: 60, scale: 1.08 });
+
   return (
     <section
       id="inicio"
@@ -9,7 +12,8 @@ function Hero() {
       aria-label="Portada"
     >
       <div
-        className="absolute inset-0 bg-cover bg-[position:78%_center] sm:bg-right-center"
+        ref={imageRef}
+        className="absolute -inset-y-8 inset-x-0 bg-cover bg-[position:78%_center] will-change-transform sm:bg-right-center"
         style={{ backgroundImage: `url(${heroContent.image})` }}
       />
       <div className="absolute inset-0 bg-hero-fade" />

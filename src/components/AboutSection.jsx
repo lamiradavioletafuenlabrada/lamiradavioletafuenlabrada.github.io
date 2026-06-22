@@ -1,10 +1,13 @@
 import { FaBullhorn, FaHandsHelping } from 'react-icons/fa';
 import SectionHeading from './SectionHeading';
+import useParallax from '../hooks/useParallax';
 import { aboutContent, pillars } from '../data/siteContent';
 
 const pillarIcons = [FaHandsHelping, FaBullhorn];
 
 function AboutSection() {
+  const imageRef = useParallax({ speed: 0.08, maxOffset: 36, scale: 1.08 });
+
   return (
     <section id="quienes-somos" className="scroll-mt-28 bg-brand-100 py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
@@ -45,10 +48,11 @@ function AboutSection() {
         <div className="lg:pl-8">
           <div className="overflow-hidden rounded-[32px] shadow-soft">
             <img
+              ref={imageRef}
               src={aboutContent.image}
               alt={aboutContent.imageAlt}
               loading="lazy"
-              className="h-full min-h-[420px] w-full object-cover"
+              className="h-full min-h-[420px] w-full object-cover will-change-transform"
             />
           </div>
         </div>
