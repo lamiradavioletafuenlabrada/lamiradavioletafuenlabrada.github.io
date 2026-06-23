@@ -28,6 +28,7 @@ export default {
       },
       backgroundImage: {
         'hero-fade': 'linear-gradient(90deg, rgba(36, 22, 58, 0.82) 0%, rgba(36, 22, 58, 0.55) 42%, rgba(36, 22, 58, 0.18) 100%)',
+        'hero-fade-desktop': 'linear-gradient(90deg, rgba(36, 22, 58, 0.82) 0%, rgba(36, 22, 58, 0.48) 34%, rgba(36, 22, 58, 0.08) 68%, rgba(36, 22, 58, 0) 100%)',
       },
     },
   },

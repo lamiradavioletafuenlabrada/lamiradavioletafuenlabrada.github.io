@@ -4,7 +4,7 @@ import useParallax from '../hooks/useParallax';
 import { heroContent } from '../data/siteContent';
 
 function Hero() {
-  const imageRef = useParallax({ speed: 0.28, maxOffset: 140, scale: 1.18 });
+  const imageRef = useParallax({ speed: 0.2, maxOffset: 110, scale: 1.08 });
 
   return (
     <section
@@ -14,15 +14,15 @@ function Hero() {
     >
       <div
         ref={imageRef}
-        className="absolute -inset-y-24 inset-x-0 bg-cover bg-[position:63%_50%] will-change-transform sm:bg-[position:68%_54%] lg:bg-contain lg:bg-no-repeat lg:bg-[position:76%_68%] xl:bg-[position:72%_72%]"
+        className="absolute inset-y-0 inset-x-0 bg-cover bg-no-repeat bg-[position:72%_center] will-change-transform sm:bg-[position:76%_center] lg:bg-contain lg:bg-[position:right_center]"
         style={{ backgroundImage: `url(${heroContent.image})` }}
       />
-      <div className="absolute inset-0 bg-hero-fade" />
+      <div className="absolute inset-0 bg-hero-fade sm:bg-hero-fade-desktop" />
       <div className="animate-blob-drift pointer-events-none absolute left-10 top-32 h-40 w-40 rounded-full bg-white/20 blur-3xl" />
       <div className="animate-blob-drift pointer-events-none absolute bottom-12 right-12 h-56 w-56 rounded-full bg-accent/25 blur-3xl [animation-delay:-5s]" />
 
-      <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-5 py-16 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
+      <div className="relative mx-auto flex min-h-[72vh] max-w-7xl items-center px-5 py-16 sm:min-h-[78vh] sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl lg:max-w-2xl">
             <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
               Asociación feminista y comunitaria
             </span>
