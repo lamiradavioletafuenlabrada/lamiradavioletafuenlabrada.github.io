@@ -25,10 +25,15 @@ function ContactSection() {
               Escríbenos por correo
             </a>
 
-            <div className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-card">
+            <a
+              href={contactContent.locationUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-card transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+            >
               <FaMapMarkerAlt className="h-4 w-4 text-brand-700" />
               {contactContent.location}
-            </div>
+            </a>
           </div>
         </Reveal>
       </div>

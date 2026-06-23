@@ -118,6 +118,8 @@ export const contactContent = {
     'Puedes escribirnos por correo electrónico o encontrarnos en nuestras redes sociales oficiales para seguir de cerca actividades, encuentros y novedades de la asociación.',
   ],
   location: 'Fuenlabrada, Madrid',
+  locationUrl:
+    'https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada',
   email: 'lamiradavioletafuenlabrada@gmail.com',
 };
 
