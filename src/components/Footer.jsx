@@ -22,12 +22,19 @@ function Footer() {
           <p className="text-sm leading-7 text-white/75 sm:text-base">
             Asociación feminista de Fuenlabrada comprometida con la igualdad, la participación y la acción colectiva.
           </p>
+          <p className="text-sm font-medium leading-7 text-white/90 sm:text-base">
+            Síguenos en redes para acompañar nuestro día a día, descubrir nuevas actividades y no perderte ninguna iniciativa.
+          </p>
           <p className="text-sm text-white/55">
             © 2026 Asociación La Mirada Violeta. Diseñado para la igualdad.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="space-y-4 lg:max-w-md lg:text-right">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/65">
+            Conecta con nuestra comunidad
+          </p>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
           {socialLinks.map((link) => {
             const Icon = iconByLabel[link.label];
             const external = !link.href.startsWith('mailto:');
@@ -46,6 +53,7 @@ function Footer() {
               </a>
             );
           })}
+          </div>
         </div>
       </div>
     </footer>

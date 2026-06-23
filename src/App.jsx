@@ -5,12 +5,14 @@ import AboutSection from './components/AboutSection';
 import ActivitiesSection from './components/ActivitiesSection';
 import CalendarSection from './components/CalendarSection';
 import ContactSection from './components/ContactSection';
+import FloatingSocialLinks from './components/FloatingSocialLinks';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="bg-brand-50 text-ink">
       <Navbar />
+      <FloatingSocialLinks />
       <main>
         <Hero />
         <GallerySection />
