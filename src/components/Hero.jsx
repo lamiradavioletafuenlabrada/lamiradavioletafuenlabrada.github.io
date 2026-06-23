@@ -14,7 +14,7 @@ function Hero() {
     >
       <div
         ref={imageRef}
-        className="absolute -inset-y-24 inset-x-0 bg-cover bg-[position:78%_center] will-change-transform sm:bg-right-center"
+        className="absolute -inset-y-24 inset-x-0 bg-cover bg-[position:74%_54%] will-change-transform sm:bg-[position:80%_55%] lg:bg-[position:70%_58%] xl:bg-[position:66%_60%]"
         style={{ backgroundImage: `url(${heroContent.image})` }}
       />
       <div className="absolute inset-0 bg-hero-fade" />
