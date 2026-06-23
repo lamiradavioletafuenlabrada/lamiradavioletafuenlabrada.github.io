@@ -67,9 +67,9 @@ function Footer() {
               className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/logo-aytofem.png"
+                src="/logofuenla.png"
                 alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
-                className="h-14 w-auto max-w-full object-contain opacity-90"
+                className="h-12 w-auto max-w-full object-contain opacity-90"
               />
             </a>
             <a
@@ -79,9 +79,9 @@ function Footer() {
               className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/marzologo.png"
+                src="/logofeminismo.png"
                 alt="Logo del Centro 8 de Marzo de Fuenlabrada"
-                className="h-12 w-auto max-w-full object-contain opacity-90"
+                className="h-10 w-auto max-w-full object-contain opacity-90"
               />
             </a>
           </div>
