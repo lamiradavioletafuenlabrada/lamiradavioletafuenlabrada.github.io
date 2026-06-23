@@ -105,7 +105,7 @@ export const activities = [
 export const calendarContent = {
   title: 'Próximos eventos',
   subtitle:
-    'Mantente al día con nuestras asambleas, talleres y eventos en Fuenlabrada.',
+    'Conoce las últimas actividades, talleres y eventos en Fuenlabrada.',
   embedUrl:
     'https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=M2RkYjFkZjFmMGFjOThjZjYyYmQ2NDMwYmYwZWFlOGRiYTI2MGUzN2IwN2I4YThmNzJmN2FhZjMwNDM0OTViOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237cb342&color=%230b8043',
 };

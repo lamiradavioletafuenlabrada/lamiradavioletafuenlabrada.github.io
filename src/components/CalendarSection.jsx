@@ -1,4 +1,3 @@
-import { FaCalendarAlt } from 'react-icons/fa';
 import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
 import { calendarContent } from '../data/siteContent';
@@ -14,10 +13,6 @@ function CalendarSection() {
             description={calendarContent.subtitle}
             align="left"
           />
-          <Reveal delay={120} className="inline-flex items-center gap-3 self-start rounded-full bg-white px-5 py-3 text-sm font-medium text-brand-700 shadow-card">
-            <FaCalendarAlt className="h-4 w-4" />
-            Zona horaria: Europa/Madrid
-          </Reveal>
         </div>
 
         <Reveal delay={180} className="overflow-hidden rounded-[32px] border border-brand-200 bg-white p-3 shadow-soft sm:p-4">
