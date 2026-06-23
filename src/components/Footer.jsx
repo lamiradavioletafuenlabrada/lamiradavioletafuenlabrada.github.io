@@ -35,9 +35,9 @@ function Footer() {
             Síguenos en redes para acompañar nuestro día a día, descubrir nuevas actividades y no perderte ninguna iniciativa.
           </p>
           <div className="flex flex-wrap gap-3 lg:justify-end">
-           {socialLinks.map((link) => {
-             const Icon = iconByLabel[link.label];
-             const external = !link.href.startsWith('mailto:');
+           {socialLinks.filter((link) => link.label !== 'Correo electrónico').map((link) => {
+              const Icon = iconByLabel[link.label];
+              const external = !link.href.startsWith('mailto:');
 
             return (
               <a
@@ -59,14 +59,21 @@ function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 sm:px-6 lg:flex-row lg:px-8">
-          <p className="text-xs uppercase tracking-[0.18em] text-white/50">
-            Con la colaboracion institucional de
+          <p className="text-[10px] uppercase tracking-[0.16em] text-white/45 sm:text-[11px]">
+            Con la colaboración institucional de
           </p>
-          <img
-            src="/logo-aytofem.png"
-            alt="Logo institucional del Ayuntamiento de Fuenlabrada y del area de igualdad"
-            className="h-14 w-auto max-w-full object-contain opacity-90"
-          />
+          <div className="flex flex-wrap items-center justify-center gap-5 lg:justify-end">
+            <img
+              src="/logo-aytofem.png"
+              alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
+              className="h-14 w-auto max-w-full object-contain opacity-90"
+            />
+            <img
+              src="/8marzologo.png"
+              alt="Logo 8 Marzo"
+              className="h-12 w-auto max-w-full object-contain opacity-90"
+            />
+          </div>
         </div>
       </div>
     </footer>
