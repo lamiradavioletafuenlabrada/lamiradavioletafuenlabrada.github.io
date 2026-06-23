@@ -63,16 +63,30 @@ function Footer() {
             Con la colaboración institucional de
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5 lg:justify-end">
-            <img
-              src="/logo-aytofem.png"
-              alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
-              className="h-14 w-auto max-w-full object-contain opacity-90"
-            />
-            <img
-              src="/8marzologo.png"
-              alt="Logo 8 Marzo"
-              className="h-12 w-auto max-w-full object-contain opacity-90"
-            />
+            <a
+              href="https://www.ayto-fuenlabrada.es/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+            >
+              <img
+                src="/logo-aytofem.png"
+                alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
+                className="h-14 w-auto max-w-full object-contain opacity-90"
+              />
+            </a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+            >
+              <img
+                src="/marzologo.png"
+                alt="Logo del Centro 8 de Marzo de Fuenlabrada"
+                className="h-12 w-auto max-w-full object-contain opacity-90"
+              />
+            </a>
           </div>
         </div>
       </div>
