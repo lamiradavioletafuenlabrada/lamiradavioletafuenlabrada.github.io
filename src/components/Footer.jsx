@@ -31,9 +31,6 @@ function Footer() {
           <p className="font-display text-2xl text-white">
             Conecta con nuestra comunidad
           </p>
-          <p className="text-sm leading-7 text-white/80 sm:text-base">
-            Síguenos en redes para acompañar nuestro día a día, descubrir nuevas actividades y no perderte ninguna iniciativa.
-          </p>
           <div className="flex flex-wrap gap-3 lg:justify-end">
            {socialLinks.filter((link) => link.label !== 'Correo electrónico').map((link) => {
               const Icon = iconByLabel[link.label];
