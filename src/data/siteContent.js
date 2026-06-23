@@ -115,7 +115,7 @@ export const contactContent = {
   heading: '¿Quieres participar o colaborar?',
   paragraphs: [
     'Si vives en Fuenlabrada o alrededores y deseas sumarte a nuestras asambleas presenciales, proponer una actividad o hacernos una consulta, no dudes en escribirnos.',
-    'Puedes escribirnos por correo electrónico o encontrarnos en nuestros canales oficiales para seguir de cerca actividades, encuentros y novedades de la asociación.',
+    'Puedes escribirnos por correo electrónico o encontrarnos en nuestras redes sociales oficiales para seguir de cerca actividades, encuentros y novedades de la asociación.',
   ],
   location: 'Fuenlabrada, Madrid',
   email: 'lamiradavioletafuenlabrada@gmail.com',
@@ -132,7 +132,7 @@ export const socialLinks = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/company/lamiradavioletafuenla',
+    href: 'https://www.linkedin.com/company/asociacion-la-mirada-violeta',
   },
   {
     label: 'Correo electrónico',
