@@ -18,20 +18,20 @@ export const galleryItems = [
   {
     title: 'Encuentros íntimos',
     image:
-      'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80',
-    alt: 'Encuentro y conversación en grupo',
+      'https://images.pexels.com/photos/3811108/pexels-photo-3811108.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Grupo de mujeres conversando y compartiendo un momento de apoyo mutuo',
   },
   {
     title: 'Talleres y Charlas',
     image:
-      'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',
-    alt: 'Taller participativo en comunidad',
+      'https://images.pexels.com/photos/11000901/pexels-photo-11000901.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Mujeres participando en un taller creativo compartido',
   },
   {
     title: 'Teatro y expresión',
     image:
-      'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80',
-    alt: 'Actividad artística y expresiva',
+      'https://images.pexels.com/photos/4834133/pexels-photo-4834133.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    alt: 'Grupo de mujeres bailando y expresándose al aire libre',
   },
 ];
 
@@ -63,8 +63,8 @@ export const aboutContent = {
   closing:
     '¿Sintonizas con nuestra mirada? Te invitamos a conocernos, participar y seguir construyendo juntas una sociedad más justa.',
   image:
-    'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=900&q=80',
-  imageAlt: 'Lucha feminista en Fuenlabrada',
+    'https://images.pexels.com/photos/7951920/pexels-photo-7951920.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  imageAlt: 'Grupo diverso de mujeres unidas en comunidad',
 };
 
 export const pillars = [
@@ -84,21 +84,21 @@ export const activities = [
     description:
       'Talleres colectivos enfocados en resignificar nuestros cuerpos desde el pensamiento feminista positivo.',
     image:
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80',
+      'https://images.pexels.com/photos/6925177/pexels-photo-6925177.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     title: 'Teatro Fórum',
     description:
       'Dinámicas interactivas como "Elige tu propia aventura" para identificar y desarmar violencias machistas cotidianas.',
     image:
-      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80',
+      'https://images.pexels.com/photos/8107614/pexels-photo-8107614.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     title: 'Conferencias y Debate',
     description:
       'Espacios necesarios de reflexión social sobre las violencias sistemáticas ejercidas contra mujeres y niñas.',
     image:
-      'https://images.unsplash.com/photo-1544535830-9df3f56fff6a?auto=format&fit=crop&w=900&q=80',
+      'https://images.pexels.com/photos/3810795/pexels-photo-3810795.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 ];
 
