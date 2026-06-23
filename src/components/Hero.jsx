@@ -4,23 +4,19 @@ import useParallax from '../hooks/useParallax';
 import { heroContent } from '../data/siteContent';
 
 function Hero() {
-  const imageRef = useParallax({ speed: 0.22, maxOffset: 100, scale: 1.04 });
+  const imageRef = useParallax({ speed: 0.28, maxOffset: 140, scale: 1.18 });
 
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-brand-700 pt-28"
+      className="relative isolate overflow-hidden pt-28"
       aria-label="Portada"
     >
-      <div className="pointer-events-none absolute -inset-y-24 inset-x-0 lg:inset-y-auto lg:bottom-auto lg:left-auto lg:right-[6%] lg:top-1/2 lg:h-[76%] lg:w-auto lg:-translate-y-1/2 xl:right-[8%] xl:h-[82%]">
-        <img
-          ref={imageRef}
-          src={heroContent.image}
-          alt=""
-          aria-hidden="true"
-          className="h-[calc(100%+12rem)] w-full max-w-none object-cover object-[72%_56%] will-change-transform sm:object-[76%_58%] lg:h-full lg:w-auto lg:object-contain"
-        />
-      </div>
+      <div
+        ref={imageRef}
+        className="absolute -inset-y-24 inset-x-0 bg-cover bg-[position:72%_56%] will-change-transform sm:bg-[position:76%_58%] lg:bg-contain lg:bg-no-repeat lg:bg-[position:76%_68%] xl:bg-[position:72%_72%]"
+        style={{ backgroundImage: `url(${heroContent.image})` }}
+      />
       <div className="absolute inset-0 bg-hero-fade" />
       <div className="animate-blob-drift pointer-events-none absolute left-10 top-32 h-40 w-40 rounded-full bg-white/20 blur-3xl" />
       <div className="animate-blob-drift pointer-events-none absolute bottom-12 right-12 h-56 w-56 rounded-full bg-accent/25 blur-3xl [animation-delay:-5s]" />

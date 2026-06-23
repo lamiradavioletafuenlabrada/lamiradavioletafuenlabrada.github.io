@@ -11,7 +11,7 @@ export const heroContent = {
   description:
     'Dando voz a las mujeres del pasado, del presente y del futuro en Fuenlabrada.',
   cta: { label: 'Descubre nuestras actividades', href: '#actividades' },
-  image: '/banner-izq-vacio.png',
+  image: '/banner-limpio.png',
 };
 
 export const galleryItems = [
