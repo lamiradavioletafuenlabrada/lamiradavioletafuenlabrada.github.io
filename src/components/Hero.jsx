@@ -23,9 +23,6 @@ function Hero() {
 
       <div className="relative mx-auto flex min-h-[72vh] max-w-7xl items-center px-5 py-16 sm:min-h-[78vh] sm:px-6 lg:px-8">
         <Reveal className="max-w-xl lg:max-w-2xl">
-            <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
-              Asociación feminista y comunitaria
-            </span>
           <h1 className="font-display text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
             {heroContent.title}
           </h1>
