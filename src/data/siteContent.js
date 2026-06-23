@@ -39,13 +39,29 @@ export const aboutContent = {
   eyebrow: 'Comunidad feminista en Fuenlabrada',
   title: 'Quiénes somos',
   paragraphs: [
-    'La Mirada Violeta es una asociación feminista de Fuenlabrada formada por mujeres de diferentes edades, experiencias y trayectorias, unidas por el compromiso con la igualdad, la justicia social y la participación activa en la comunidad.',
-    'Trabajamos para crear espacios seguros, inclusivos y accesibles donde las mujeres puedan encontrarse, compartir experiencias, aprender unas de otras y fortalecer redes de apoyo mutuo. Creemos en el valor de la diversidad y en la importancia de incorporar una perspectiva interseccional que tenga en cuenta las distintas realidades y desafíos que enfrentan las mujeres.',
-    'Desarrollamos actividades, talleres, encuentros, campañas de sensibilización y proyectos comunitarios orientados a promover la igualdad de oportunidades, el empoderamiento de las mujeres y la participación social. También colaboramos con entidades, instituciones y colectivos que comparten nuestros valores y objetivos.',
-    'Nuestra labor nace desde los barrios del sur y está profundamente vinculada al territorio, convencidas de que la transformación social comienza en la comunidad y se construye a través de la participación, el diálogo y la acción colectiva.',
+    'La Mirada Violeta somos una asociación feminista de Fuenlabrada profundamente vinculada a nuestros barrios. Nos mueve el compromiso con la igualdad, la justicia social y la transformación desde lo local y lo colectivo.',
+    'Lo que nos hace fuertes es nuestra diversidad: somos mujeres de entre 24 y 70 años, con diferentes trayectorias y experiencias, unidas para aprender las unas de las otras y tejer redes de apoyo mutuo.',
+  ],
+  actionsHeading: '¿Qué hacemos?',
+  actions: [
+    {
+      title: 'Espacios seguros',
+      description:
+        'Creamos encuentros inclusivos donde compartir, debatir y fortalecernos juntas desde una perspectiva interseccional.',
+    },
+    {
+      title: 'Acción comunitaria',
+      description:
+        'Desarrollamos talleres, actividades y campañas de sensibilización para impulsar el empoderamiento y la igualdad de oportunidades.',
+    },
+    {
+      title: 'Tejido local',
+      description:
+        'Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.',
+    },
   ],
   closing:
-    'Si compartes nuestros valores, te invitamos a conocernos, participar en nuestras actividades y construir juntas una sociedad más justa e igualitaria.',
+    '¿Sintonizas con nuestra mirada? Te invitamos a conocernos, participar y seguir construyendo juntas una sociedad más justa.',
   image:
     'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=900&q=80',
   imageAlt: 'Lucha feminista en Fuenlabrada',
@@ -54,11 +70,11 @@ export const aboutContent = {
 export const pillars = [
   {
     title: 'Sororidad',
-    description: 'Creamos espacios de reencuentro íntimo, colectivo y transformador.',
+    description: 'Espacios seguros para sanar, compartir y transformarnos juntas.',
   },
   {
     title: 'Visibilización',
-    description: 'Continuamos abriendo camino y dando voz a las realidades silenciadas.',
+    description: 'Abrimos caminos, rompemos silencios y sumamos nuestras voces.',
   },
 ];
 

@@ -25,6 +25,20 @@ function AboutSection() {
             {aboutContent.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            <div className="space-y-4">
+              <h3 className="font-display text-2xl text-ink">{aboutContent.actionsHeading}</h3>
+              <ul className="space-y-3">
+                {aboutContent.actions.map((action) => (
+                  <li key={action.title} className="flex gap-3">
+                    <span className="mt-3 h-px w-3 flex-none bg-brand-500" aria-hidden="true" />
+                    <p>
+                      <span className="font-semibold text-ink">{action.title}:</span>{' '}
+                      {action.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p className="font-medium text-ink">{aboutContent.closing}</p>
           </Reveal>
 
