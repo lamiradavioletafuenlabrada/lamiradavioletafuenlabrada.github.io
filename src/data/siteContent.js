@@ -80,11 +80,10 @@ export const pillars = [
 
 export const activities = [
   {
-    title: 'Miradas Alternativas',
+    title: 'Feria del libro 2026',
     description:
-      'Talleres colectivos enfocados en resignificar nuestros cuerpos desde el pensamiento feminista positivo.',
-    image:
-      'https://images.pexels.com/photos/6925177/pexels-photo-6925177.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'Compañeras de la asociación en compañía del Alcalde de Fuenlabrada, el Sr. Ayala.',
+    image: '/ayala.png',
   },
   {
     title: 'Teatro Fórum',
