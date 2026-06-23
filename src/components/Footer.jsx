@@ -64,24 +64,24 @@ function Footer() {
               href="https://www.ayto-fuenlabrada.es/"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
                 src="/logofuenla.png"
                 alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
-                className="h-12 w-auto max-w-full object-contain opacity-90"
+                className="h-12 w-auto max-w-full object-contain"
               />
             </a>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
                 src="/logofeminismo.png"
                 alt="Logo del Centro 8 de Marzo de Fuenlabrada"
-                className="h-10 w-auto max-w-full object-contain opacity-90"
+                className="h-10 w-auto max-w-full object-contain"
               />
             </a>
           </div>
