@@ -9,8 +9,8 @@ function ContactSection() {
       <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
         <Reveal className="rounded-[32px] border border-brand-200 bg-brand-100/70 p-8 text-center shadow-card sm:p-12">
           <SectionHeading title={contactContent.title} />
-          <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-8 text-mist sm:text-[1.35rem] sm:leading-9">
-            <h3 className="font-display text-[2rem] leading-tight text-ink sm:text-[2.35rem]">{contactContent.heading}</h3>
+          <div className="mx-auto mt-8 max-w-2xl space-y-5 text-base leading-7 text-mist sm:text-lg sm:leading-8">
+            <h3 className="font-display text-[1.75rem] leading-tight text-ink sm:text-[2rem]">{contactContent.heading}</h3>
             {contactContent.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}

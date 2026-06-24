@@ -9,15 +9,15 @@ function SectionHeading({ eyebrow, title, description, align = 'center' }) {
   return (
     <Reveal className={`flex max-w-3xl flex-col gap-4 ${alignment}`}>
       {eyebrow ? (
-        <span className="inline-flex rounded-full bg-brand-100 px-4 py-1.5 text-base font-bold text-brand-700 sm:text-[1.05rem]">
+        <span className="inline-flex rounded-full bg-brand-100 px-4 py-1 text-sm font-bold text-brand-700 sm:text-base">
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="font-display text-4xl leading-[1.05] text-ink sm:text-5xl">
+      <h2 className="font-display text-3xl leading-[1.08] text-ink sm:text-4xl">
         {title}
       </h2>
       {description ? (
-        <p className="text-lg leading-8 text-mist sm:text-[1.35rem] sm:leading-9">{description}</p>
+        <p className="text-base leading-7 text-mist sm:text-lg sm:leading-8">{description}</p>
       ) : null}
     </Reveal>
   );

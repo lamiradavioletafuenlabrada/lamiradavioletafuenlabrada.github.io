@@ -31,10 +31,10 @@ function ActivitiesSection() {
                 />
               </div>
               <div className="space-y-4 p-7">
-                <h3 className="text-[1.65rem] font-bold leading-tight text-ink transition group-hover:text-brand-700">
+                <h3 className="text-[1.4rem] font-bold leading-tight text-ink transition group-hover:text-brand-700">
                   {activity.title}
                 </h3>
-                <p className="text-base leading-8 text-mist sm:text-[1.05rem]">{activity.description}</p>
+                <p className="text-sm leading-7 text-mist sm:text-base sm:leading-7">{activity.description}</p>
               </div>
             </Reveal>
           ))}

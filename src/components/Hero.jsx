@@ -30,7 +30,7 @@ function Hero() {
               </span>
             ))}
           </h1>
-          <p className="mt-6 max-w-xl text-xl leading-8 text-white/90 sm:text-[1.45rem] sm:leading-9">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-white/90 sm:text-xl sm:leading-8">
             {heroContent.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
