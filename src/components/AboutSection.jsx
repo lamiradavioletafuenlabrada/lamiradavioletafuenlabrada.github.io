@@ -42,6 +42,21 @@ function AboutSection() {
             <p className="font-medium text-ink">{aboutContent.closing}</p>
           </Reveal>
 
+        </div>
+
+        <div className="space-y-6 lg:pl-8">
+          <Reveal delay={180}>
+            <div className="aspect-[4/3] overflow-hidden rounded-[32px] shadow-soft">
+              <img
+                ref={imageRef}
+                src={aboutContent.image}
+                alt={aboutContent.imageAlt}
+                loading="lazy"
+                className="h-full w-full object-cover will-change-transform"
+              />
+            </div>
+          </Reveal>
+
           <div className="grid gap-4 sm:grid-cols-2">
             {pillars.map((pillar, index) => {
               const Icon = pillarIcons[index];
@@ -63,18 +78,6 @@ function AboutSection() {
             })}
           </div>
         </div>
-
-        <Reveal delay={180} className="lg:pl-8">
-          <div className="overflow-hidden rounded-[32px] shadow-soft">
-            <img
-              ref={imageRef}
-              src={aboutContent.image}
-              alt={aboutContent.imageAlt}
-              loading="lazy"
-              className="h-full min-h-[500px] w-full object-cover will-change-transform"
-            />
-          </div>
-        </Reveal>
       </div>
     </section>
   );

@@ -59,9 +59,8 @@ export const aboutContent = {
   ],
   closing:
     '¿Sintonizas con nuestra mirada? Te invitamos a conocernos, participar y seguir construyendo juntas una sociedad más justa.',
-  image:
-    'https://images.pexels.com/photos/7951920/pexels-photo-7951920.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  imageAlt: 'Grupo diverso de mujeres unidas en comunidad',
+  image: '/socias.png',
+  imageAlt: 'Socias de la asociación reunidas en un encuentro compartido',
 };
 
 export const pillars = [
@@ -79,7 +78,7 @@ export const activities = [
   {
     title: 'Miradas Alternativas',
     description:
-      'Exposición fotográfica en colaboración con la Asociación Xanas',
+      'Exposición fotográfica en colaboración con la Asociación Xanas. Visibilizando la diversidad de cuerpos no normativos.',
     image: '/susy.png',
   },
   {
