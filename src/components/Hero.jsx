@@ -24,7 +24,11 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[72vh] max-w-7xl items-center px-5 py-16 sm:min-h-[78vh] sm:px-6 lg:px-8">
         <Reveal className="max-w-xl lg:max-w-2xl">
           <h1 className="font-display text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
-            {heroContent.title}
+            {heroContent.title.split('\n').map((line, index) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-white/85 sm:text-xl">
             {heroContent.description}

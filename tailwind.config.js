@@ -19,8 +19,8 @@ export default {
         mist: '#675f78',
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Unna', 'Georgia', 'serif'],
+        sans: ['Unna', 'Georgia', 'serif'],
       },
       boxShadow: {
         soft: '0 20px 45px rgba(76, 29, 149, 0.12)',

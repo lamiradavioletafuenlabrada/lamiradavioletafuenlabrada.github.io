@@ -7,7 +7,7 @@ export const navigation = [
 ];
 
 export const heroContent = {
-  title: 'Asociación La Mirada Violeta',
+  title: 'Asociación\nLa Mirada Violeta',
   description:
     'Dando voz a las mujeres del pasado, del presente y del futuro en Fuenlabrada.',
   cta: { label: 'Descubre nuestras actividades', href: '#actividades' },
