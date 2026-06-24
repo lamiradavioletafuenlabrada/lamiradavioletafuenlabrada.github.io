@@ -67,7 +67,7 @@ function Footer() {
               className="flex items-center justify-center transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/logoayto2.png"
+                src="/logoayto3.png"
                 alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
                 className="h-11 w-auto max-w-[142px] object-contain"
               />
@@ -79,7 +79,7 @@ function Footer() {
               className="flex items-center justify-center transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/logofem2.png"
+                src="/logofem3.png"
                 alt="Logo del Centro 8 de Marzo de Fuenlabrada"
                 className="h-11 w-auto max-w-[146px] object-contain"
               />

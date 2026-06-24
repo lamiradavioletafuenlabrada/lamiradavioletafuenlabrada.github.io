@@ -100,7 +100,7 @@ export const calendarContent = {
   subtitle:
     'Conoce las últimas actividades, talleres y eventos en Fuenlabrada.',
   embedUrl:
-    'https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=M2RkYjFkZjFmMGFjOThjZjYyYmQ2NDMwYmYwZWFlOGRiYTI2MGUzN2IwN2I4YThmNzJmN2FhZjMwNDM0OTViOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237cb342&color=%230b8043',
+    'https://calendar.google.com/calendar/embed?src=3ddb1df1f0ac98cf62bd6430bf0eae8dba260e37b07b8a8f72f7aaf3043495b9%40group.calendar.google.com&ctz=Europe%2FMadrid',
 };
 
 export const contactContent = {
