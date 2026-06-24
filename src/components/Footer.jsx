@@ -59,29 +59,29 @@ function Footer() {
           <p className="text-[10px] uppercase tracking-[0.16em] text-white/45 sm:text-[11px]">
             Con la colaboración institucional de
           </p>
-          <div className="flex flex-wrap items-end justify-center gap-6 lg:justify-end">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
             <a
               href="https://www.ayto-fuenlabrada.es/"
               target="_blank"
               rel="noreferrer"
-              className="border-b border-white/10 px-2 pb-2 pt-1 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="flex h-20 w-[168px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-white/25 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
                 src="/logofuenla.png"
                 alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
-                className="h-11 w-auto max-w-full object-contain"
+                className="h-10 w-auto max-w-[132px] object-contain"
               />
             </a>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada"
               target="_blank"
               rel="noreferrer"
-              className="border-b border-white/10 px-2 pb-2 pt-1 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="flex h-20 w-[168px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-white/25 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
                 src="/logofeminismo.png"
                 alt="Logo del Centro 8 de Marzo de Fuenlabrada"
-                className="h-10 w-auto max-w-full object-contain"
+                className="h-10 w-auto max-w-[120px] object-contain"
               />
             </a>
           </div>
