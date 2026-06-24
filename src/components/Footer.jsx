@@ -64,24 +64,24 @@ function Footer() {
               href="https://www.ayto-fuenlabrada.es/"
               target="_blank"
               rel="noreferrer"
-              className="flex min-h-[56px] items-center justify-center border-b border-white/10 px-2 py-2 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="flex min-h-[54px] items-center justify-center border-b border-white/10 px-2 py-2 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/logofuenla.png"
+                src="/logoayto2.png"
                 alt="Logo institucional del Ayuntamiento de Fuenlabrada y del área de igualdad"
-                className="h-11 w-auto max-w-[148px] object-contain"
+                className="h-10 w-auto max-w-[138px] object-contain"
               />
             </a>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada"
               target="_blank"
               rel="noreferrer"
-              className="flex min-h-[56px] items-center justify-center border-b border-white/10 px-2 py-2 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="flex min-h-[54px] items-center justify-center border-b border-white/10 px-2 py-2 transition hover:border-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
             >
               <img
-                src="/logofeminismo.png"
+                src="/logofem2.png"
                 alt="Logo del Centro 8 de Marzo de Fuenlabrada"
-                className="h-11 w-auto max-w-[132px] object-contain"
+                className="h-10 w-auto max-w-[142px] object-contain"
               />
             </a>
           </div>
