@@ -21,25 +21,25 @@ function AboutSection() {
             align="left"
           />
 
-          <Reveal delay={120} className="space-y-5 text-base leading-8 text-mist sm:text-lg">
+          <Reveal delay={120} className="space-y-6 text-lg leading-8 text-mist sm:text-[1.35rem] sm:leading-9">
             {aboutContent.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
             <div className="space-y-4">
-              <h3 className="font-display text-2xl text-ink">{aboutContent.actionsHeading}</h3>
+              <h3 className="font-display text-[2rem] leading-tight text-ink sm:text-[2.35rem]">{aboutContent.actionsHeading}</h3>
               <ul className="space-y-3">
                 {aboutContent.actions.map((action) => (
                   <li key={action.title} className="flex gap-3">
                     <span className="mt-3 h-px w-3 flex-none bg-brand-500" aria-hidden="true" />
                     <p>
-                      <span className="font-semibold text-ink">{action.title}:</span>{' '}
+                      <span className="font-bold text-ink">{action.title}:</span>{' '}
                       {action.description}
                     </p>
                   </li>
                 ))}
               </ul>
             </div>
-            <p className="font-medium text-ink">{aboutContent.closing}</p>
+            <p className="font-bold text-ink">{aboutContent.closing}</p>
           </Reveal>
 
         </div>
@@ -71,8 +71,8 @@ function AboutSection() {
                   <div className="mb-4 inline-flex rounded-2xl bg-brand-100 p-3 text-brand-700 transition group-hover:scale-110 group-hover:bg-brand-200">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-lg font-semibold text-ink">{pillar.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-mist">{pillar.description}</p>
+                  <h3 className="text-[1.45rem] font-bold leading-tight text-ink">{pillar.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-mist sm:text-[1.05rem]">{pillar.description}</p>
                 </Reveal>
               );
             })}

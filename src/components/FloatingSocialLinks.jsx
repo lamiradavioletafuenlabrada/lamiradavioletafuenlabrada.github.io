@@ -31,7 +31,7 @@ function SocialButton({ link, compact = false }) {
       title={link.label}
     >
       <Icon className="h-4 w-4" />
-      {compact ? null : <span className="text-sm font-semibold">{link.label}</span>}
+      {compact ? null : <span className="text-base font-bold">{link.label}</span>}
     </a>
   );
 }

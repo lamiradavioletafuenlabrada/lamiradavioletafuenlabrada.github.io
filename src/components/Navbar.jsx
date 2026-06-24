@@ -28,7 +28,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
         <a
           href="#inicio"
-          className="font-display text-2xl text-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+          className="font-display text-[1.95rem] leading-none text-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white"
         >
           La Mirada Violeta
         </a>
@@ -57,7 +57,7 @@ function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block rounded-full px-4 py-2 text-sm font-medium text-ink transition hover:bg-brand-100 hover:text-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+                  className="block rounded-full px-4 py-2 text-base font-bold text-ink transition hover:bg-brand-100 hover:text-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
                   onClick={closeMenu}
                 >
                   {item.label}

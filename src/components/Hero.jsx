@@ -23,20 +23,20 @@ function Hero() {
 
       <div className="relative mx-auto flex min-h-[72vh] max-w-7xl items-center px-5 py-16 sm:min-h-[78vh] sm:px-6 lg:px-8">
         <Reveal className="max-w-xl lg:max-w-2xl">
-          <h1 className="font-display text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-5xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">
             {heroContent.title.split('\n').map((line, index) => (
-              <span key={line} className="block">
+              <span key={`${line}-${index}`} className="block">
                 {line}
               </span>
             ))}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-white/85 sm:text-xl">
+          <p className="mt-6 max-w-xl text-xl leading-8 text-white/90 sm:text-[1.45rem] sm:leading-9">
             {heroContent.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={heroContent.cta.href}
-              className="group inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
+              className="group inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
             >
               {heroContent.cta.label}
               <FaArrowRightLong className="h-4 w-4 transition group-hover:translate-x-1" />

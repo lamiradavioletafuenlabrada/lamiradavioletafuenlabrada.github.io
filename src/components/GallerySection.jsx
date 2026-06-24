@@ -30,7 +30,7 @@ function GallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent transition duration-500 group-hover:from-brand-900/85 group-hover:via-brand-700/25" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                <p className="translate-y-1 text-lg font-semibold transition duration-500 group-hover:translate-y-0">
+                <p className="translate-y-1 text-[1.45rem] font-bold leading-tight transition duration-500 group-hover:translate-y-0">
                   {item.title}
                 </p>
               </div>
