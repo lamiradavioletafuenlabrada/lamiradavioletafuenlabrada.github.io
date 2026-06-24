@@ -77,24 +77,22 @@ export const pillars = [
 
 export const activities = [
   {
-    title: 'Feria del libro 2026',
+    title: 'Miradas Alternativas',
     description:
-      'Compañeras de la asociación en compañía del Alcalde de Fuenlabrada, el Sr. Ayala.',
-    image: '/ayala.png',
+      'Exposición fotográfica en colaboración con la Asociación Xanas',
+    image: '/susy.png',
   },
   {
-    title: 'Teatro Fórum',
+    title: 'Microteatro',
     description:
-      'Dinámicas interactivas como "Elige tu propia aventura" para identificar y desarmar violencias machistas cotidianas.',
-    image:
-      'https://images.pexels.com/photos/8107614/pexels-photo-8107614.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'Charla y teatro exponiendo las diferentes violencias en colaboración con Más Madrid Fuenlabrada',
+    image: '/teatro.png',
   },
   {
     title: 'Conferencias y Debate',
     description:
-      'Espacios necesarios de reflexión social sobre las violencias sistemáticas ejercidas contra mujeres y niñas.',
-    image:
-      'https://images.pexels.com/photos/3810795/pexels-photo-3810795.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'Charlas tematizadas para el conocimiento de la población. En este caso, sobre el Patronato de Protección a la mujer',
+    image: '/patronato.png',
   },
 ];
 

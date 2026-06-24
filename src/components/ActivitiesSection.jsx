@@ -11,7 +11,7 @@ function ActivitiesSection() {
         <SectionHeading
           eyebrow="Programación reciente"
           title="Últimas iniciativas"
-          description="Actividades pensadas para compartir herramientas, abrir conversaciones y fortalecer redes de apoyo en la comunidad."
+          description="Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
