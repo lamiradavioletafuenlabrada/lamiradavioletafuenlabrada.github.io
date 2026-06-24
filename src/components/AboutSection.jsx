@@ -21,7 +21,7 @@ function AboutSection() {
             align="left"
           />
 
-          <Reveal delay={120} className="space-y-5 text-base leading-7 text-mist sm:text-lg sm:leading-8">
+          <Reveal delay={120} className="space-y-5 text-[1.05rem] leading-7 text-mist sm:text-lg sm:leading-8">
             {aboutContent.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -72,7 +72,7 @@ function AboutSection() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-[1.25rem] font-bold leading-tight text-ink">{pillar.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-mist sm:text-base sm:leading-7">{pillar.description}</p>
+                  <p className="mt-2 text-[0.98rem] leading-6 text-mist sm:text-base sm:leading-7">{pillar.description}</p>
                 </Reveal>
               );
             })}
