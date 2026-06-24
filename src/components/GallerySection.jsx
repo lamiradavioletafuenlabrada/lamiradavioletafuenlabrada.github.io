@@ -10,8 +10,8 @@ function GallerySection() {
 
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 px-5 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Nuestra comunidad en acción"
-          description="Una asociacion viva, tejida desde el encuentro, la escucha y la accion compartida."
+          title="Nuestras mujeres en acción"
+          description="Una asociación viva, tejida desde el encuentro, la escucha y la acción compartida."
         />
 
         <div className="grid gap-6 md:grid-cols-3">

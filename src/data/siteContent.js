@@ -16,22 +16,19 @@ export const heroContent = {
 
 export const galleryItems = [
   {
-    title: 'Encuentros íntimos',
-    image:
-      'https://images.pexels.com/photos/3811108/pexels-photo-3811108.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Grupo de mujeres conversando y compartiendo un momento de apoyo mutuo',
+    title: 'Colaboraciones destacadas',
+    image: '/Paca_montse_concejala.png',
+    alt: 'Participantes de la asociación junto a una representante institucional',
   },
   {
-    title: 'Talleres y Charlas',
-    image:
-      'https://images.pexels.com/photos/11000901/pexels-photo-11000901.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Mujeres participando en un taller creativo compartido',
+    title: 'Participación en ferias',
+    image: '/ayala.png',
+    alt: 'Miembros de la asociación participando en una feria local',
   },
   {
     title: 'Teatro y expresión',
-    image:
-      'https://images.pexels.com/photos/4834133/pexels-photo-4834133.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Grupo de mujeres bailando y expresándose al aire libre',
+    image: '/miradastodas.png',
+    alt: 'Foto grupal de las mujeres de la asociación',
   },
 ];
 
