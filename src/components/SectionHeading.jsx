@@ -17,7 +17,7 @@ function SectionHeading({ eyebrow, title, description, align = 'center' }) {
         {title}
       </h2>
       {description ? (
-        <p className="text-[1.05rem] leading-7 text-mist sm:text-lg sm:leading-8">{description}</p>
+        <p className="text-[1.1rem] leading-7 text-mist sm:text-[1.16rem] sm:leading-8">{description}</p>
       ) : null}
     </Reveal>
   );

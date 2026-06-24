@@ -34,7 +34,7 @@ function ActivitiesSection() {
                 <h3 className="text-[1.4rem] font-bold leading-tight text-ink transition group-hover:text-brand-700">
                   {activity.title}
                 </h3>
-                <p className="text-[0.98rem] leading-7 text-mist sm:text-base sm:leading-7">{activity.description}</p>
+                <p className="text-[1.03rem] leading-7 text-mist sm:text-[1.06rem] sm:leading-7">{activity.description}</p>
               </div>
             </Reveal>
           ))}
