@@ -113,7 +113,7 @@ export const contactContent = {
   location: 'Fuenlabrada, Madrid',
   locationUrl:
     'https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada',
-  email: 'lamiradavioletafuenlabrada@gmail.com',
+  email: 'contacto@lamiradavioleta.org',
 };
 
 export const socialLinks = [
@@ -131,6 +131,6 @@ export const socialLinks = [
   },
   {
     label: 'Correo electrónico',
-    href: 'mailto:lamiradavioletafuenlabrada@gmail.com',
+    href: 'mailto:contacto@lamiradavioleta.org',
   },
 ];
