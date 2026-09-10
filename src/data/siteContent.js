@@ -103,7 +103,7 @@ export const featuredActivity = {
     'Te invitamos a un paseo muy especial por Loranca (Fuenlabrada). Vamos a recorrer juntas nuestras calles mientras compartimos las historias, luchas y logros de las referentes históricas y referentes que hoy nos dan identidad.',
     'Un espacio para aprender, conectar, rendir homenaje y reapropiarnos de nuestra historia local mientras caminamos por el barrio.',
   ],
-  image: '/cartel.png',
+  image: '/loranca.png',
   imageAlt: 'Cartel de la actividad sobre las mujeres de las calles de Loranca',
   cta: {
     label: 'Inscríbete a la actividad aquí',
