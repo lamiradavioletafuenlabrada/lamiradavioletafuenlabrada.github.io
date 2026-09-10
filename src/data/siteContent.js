@@ -95,6 +95,22 @@ export const activities = [
   },
 ];
 
+export const featuredActivity = {
+  eyebrow: 'Nueva actividad en Loranca',
+  title: 'Las mujeres que dan nombre a nuestras calles',
+  paragraphs: [
+    '¿Alguna vez te has parado a pensar quiénes eran las mujeres que dan nombre a las calles de nuestro barrio? 🚶‍♀️✨',
+    'Te invitamos a un paseo muy especial por Loranca (Fuenlabrada). Vamos a recorrer juntas nuestras calles mientras compartimos las historias, luchas y logros de las referentes históricas y referentes que hoy nos dan identidad.',
+    'Un espacio para aprender, conectar, rendir homenaje y reapropiarnos de nuestra historia local mientras caminamos por el barrio.',
+  ],
+  image: '/cartel.png',
+  imageAlt: 'Cartel de la actividad sobre las mujeres de las calles de Loranca',
+  cta: {
+    label: 'Inscríbete a la actividad aquí',
+    href: 'https://forms.gle/pDQoGGL5dtKNzqqdA',
+  },
+};
+
 export const calendarContent = {
   title: 'Próximos eventos',
   subtitle:
