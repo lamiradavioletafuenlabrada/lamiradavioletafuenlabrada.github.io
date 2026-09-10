@@ -10,7 +10,7 @@ function ActivitiesSection() {
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 px-5 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Programación reciente"
-          title="Últimas iniciativas"
+          title="Actividades"
           description="Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo."
         />
 
