@@ -22,6 +22,15 @@ function Footer() {
           <p className="text-base leading-8 text-white/75 sm:text-[1.05rem]">
             Asociación feminista de Fuenlabrada comprometida con la igualdad, la participación y la acción colectiva.
           </p>
+          <p className="text-base text-white/75 sm:text-[1.02rem]">
+            Puedes consultar el aviso legal{' '}
+            <a
+              href="/aviso-legal/"
+              className="font-bold text-white underline decoration-white/50 underline-offset-4 transition hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+            >
+              aquí
+            </a>
+          </p>
           <p className="text-base text-white/55 sm:text-[1.02rem]">
             © 2026 Asociación La Mirada Violeta. Diseñado para la igualdad.
           </p>
