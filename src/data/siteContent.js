@@ -111,6 +111,15 @@ export const featuredActivity = {
   },
 };
 
+export const podcastContent = {
+  title: 'Se vienen cositas... y tu voz cuenta. 🎧💜',
+  text: 'Estamos preparando un nuevo podcast feminista y este espacio también es tuyo. ¿De qué temas te gustaría que hablemos? ¿Qué voces o debates echas en falta? Entra en el formulario, déjanos tus ideas y ayúdanos a construir los próximos episodios.',
+  cta: {
+    label: 'Déjanos tus ideas aquí',
+    href: 'https://forms.gle/jvptTa7dFfjkjGQc6',
+  },
+};
+
 export const calendarContent = {
   title: 'Próximos eventos',
   subtitle:

@@ -1,6 +1,6 @@
 import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
-import { activities, featuredActivity } from '../data/siteContent';
+import { activities, featuredActivity, podcastContent } from '../data/siteContent';
 
 function ActivitiesSection() {
   return (
@@ -47,6 +47,23 @@ function ActivitiesSection() {
                 {featuredActivity.cta.label}
               </a>
             </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="rounded-[28px] border border-brand-200 bg-brand-700 p-7 text-white shadow-soft sm:p-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-3xl space-y-3">
+              <h3 className="font-display text-[1.8rem] leading-tight sm:text-3xl">{podcastContent.title}</h3>
+              <p className="text-[1.05rem] leading-7 text-brand-50 sm:text-[1.1rem] sm:leading-8">{podcastContent.text}</p>
+            </div>
+            <a
+              href={podcastContent.cta.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-white px-6 py-3 text-base font-bold text-brand-700 shadow-card transition hover:-translate-y-1 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
+            >
+              {podcastContent.cta.label}
+            </a>
           </div>
         </Reveal>
 
