@@ -1,6 +1,6 @@
 import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
-import { activities, featuredActivity, podcastContent } from '../data/siteContent';
+import { activities, upcomingActivities, podcastContent } from '../data/siteContent';
 
 function ActivitiesSection() {
   return (
@@ -14,38 +14,24 @@ function ActivitiesSection() {
           description="Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo."
         />
 
-        <Reveal className="overflow-hidden rounded-[28px] border border-brand-200 bg-brand-50 shadow-soft">
-          <div className="grid items-stretch md:grid-cols-[minmax(250px,0.72fr)_minmax(0,1.28fr)]">
-            <div className="flex items-center justify-center bg-brand-100 p-5 sm:p-8 md:p-10">
-              <img
-                src={featuredActivity.image}
-                alt={featuredActivity.imageAlt}
-                loading="lazy"
-                className="h-auto max-h-[32rem] w-full max-w-sm rounded-2xl object-contain shadow-card"
-              />
+        <Reveal className="rounded-[28px] border border-brand-200 bg-brand-50 p-7 shadow-soft sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-center">
+            <div className="space-y-4">
+              <span className="inline-flex rounded-full bg-brand-200 px-4 py-1 text-[0.98rem] font-bold text-brand-700 sm:text-base">
+                Próximamente
+              </span>
+              <h3 className="font-display text-[2rem] leading-[1.08] text-ink sm:text-4xl">Próximas actividades</h3>
+              <p className="max-w-xl text-[1.05rem] leading-7 text-mist sm:text-[1.12rem] sm:leading-8">
+                Estas son las actividades que tenemos planificadas para este mes. A medida que nos confirmen los espacios que podamos destinar, actualizaremos la fecha, la hora y la localización exactas.
+              </p>
             </div>
-            <div className="flex flex-col justify-center gap-6 p-7 sm:p-10 lg:p-14">
-              <div className="space-y-4">
-                <span className="inline-flex rounded-full bg-brand-200 px-4 py-1 text-[0.98rem] font-bold text-brand-700 sm:text-base">
-                  {featuredActivity.eyebrow}
-                </span>
-                <h3 className="max-w-xl font-display text-[2rem] leading-[1.08] text-ink sm:text-4xl">
-                  {featuredActivity.title}
-                </h3>
-              </div>
-              <div className="max-w-2xl space-y-4 text-[1.05rem] leading-7 text-mist sm:text-[1.12rem] sm:leading-8">
-                {featuredActivity.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <a
-                href={featuredActivity.cta.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit items-center justify-center rounded-full bg-brand-700 px-6 py-3 text-base font-bold text-white shadow-card transition hover:-translate-y-1 hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700 focus-visible:ring-offset-2"
-              >
-                {featuredActivity.cta.label}
-              </a>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {upcomingActivities.map((activity) => (
+                <article key={activity.title} className="rounded-2xl border border-brand-200 bg-white p-5 shadow-card">
+                  <h4 className="text-[1.15rem] font-bold leading-tight text-ink">{activity.title}</h4>
+                  <p className="mt-2 text-sm leading-6 text-mist">{activity.details}</p>
+                </article>
+              ))}
             </div>
           </div>
         </Reveal>
