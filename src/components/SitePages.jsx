@@ -21,6 +21,69 @@ const activityAlts = {
   '/patronato.png': 'Público asistiendo a una charla con el logotipo de La Mirada Violeta proyectado en el escenario',
 };
 
+const membershipRules = [
+  {
+    title: 'Respeto y trato digno',
+    summary: 'Tratamos a todas las personas con respeto, sin insultos, burlas, humillaciones, amenazas ni actitudes agresivas.',
+    detail: 'Todas las personas deben ser tratadas con respeto, evitando insultos, burlas, humillaciones, amenazas, intimidaciones o actitudes agresivas.',
+  },
+  {
+    title: 'Tolerancia cero frente a la discriminación',
+    summary: 'No aceptamos comportamientos discriminatorios por circunstancias personales o sociales.',
+    detail: 'No se permitirán comportamientos o comentarios discriminatorios por razón de sexo, identidad o expresión de género, orientación sexual, origen, raza o etnia, edad, discapacidad, situación económica, religión, aspecto físico o cualquier otra circunstancia personal o social.',
+  },
+  {
+    title: 'Espacios libres de acoso y violencia',
+    summary: 'Cuidamos que nuestras actividades sean espacios seguros, sin acoso, violencia, abuso ni contacto físico no consentido.',
+    detail: 'No se tolerarán conductas de acoso, intimidación, violencia, abuso, presión, contacto físico no consentido o comportamientos que hagan sentir incómoda o insegura a otra persona.',
+  },
+  {
+    title: 'Respeto al consentimiento y a los límites personales',
+    summary: 'Cada persona decide qué compartir, en qué participar y cuáles son sus límites.',
+    detail: 'Cada persona puede decidir qué quiere compartir, en qué actividades desea participar y cuáles son sus límites. Nadie deberá sentirse obligada a hablar de experiencias personales o situaciones que no quiera compartir.',
+  },
+  {
+    title: 'Escucha y respeto de los turnos de palabra',
+    summary: 'Promovemos el diálogo y la escucha activa, sin interrupciones constantes, descalificaciones ni ataques personales.',
+    detail: 'Promovemos el diálogo, la escucha activa y el intercambio de ideas sin interrupciones constantes, descalificaciones ni ataques personales.',
+  },
+  {
+    title: 'Respeto a las diferentes experiencias y opiniones',
+    summary: 'Las discrepancias pueden expresarse desde el respeto, sin invalidar las experiencias de otras participantes.',
+    detail: 'No todas las personas vivimos las mismas realidades ni pensamos de la misma manera. Las discrepancias pueden expresarse siempre desde el respeto y sin cuestionar o invalidar las experiencias personales de otras participantes.',
+  },
+  {
+    title: 'Confidencialidad',
+    summary: 'Las experiencias compartidas en nuestras actividades se tratan con respeto y discreción.',
+    detail: 'Las experiencias personales compartidas en talleres, grupos de encuentro u otras actividades deberán tratarse con respeto y discreción. No deberán difundirse fuera del espacio sin el consentimiento de la persona que las haya compartido.',
+  },
+  {
+    title: 'Privacidad e imagen',
+    summary: 'No fotografiamos, grabamos ni compartimos imágenes de otras participantes sin su conocimiento y consentimiento.',
+    detail: 'No se realizarán ni compartirán fotografías, vídeos o grabaciones de otras participantes sin su conocimiento y consentimiento, especialmente cuando puedan aparecer testimonios, experiencias personales o situaciones sensibles.',
+  },
+  {
+    title: 'Convivencia respetuosa también en los espacios digitales',
+    summary: 'Las mismas normas se aplican a redes sociales, grupos de mensajería, videollamadas y comentarios.',
+    detail: 'Estas normas se aplican igualmente a redes sociales, grupos de mensajería, videollamadas, comentarios y cualquier otro canal vinculado a la asociación.',
+  },
+  {
+    title: 'Participación responsable',
+    summary: 'Respetamos horarios, espacios, materiales y la organización de las actividades.',
+    detail: 'Pedimos a las participantes que respeten los horarios, espacios, materiales y organización de las actividades, así como las indicaciones necesarias para garantizar el buen desarrollo de las mismas.',
+  },
+  {
+    title: 'Cuidado colectivo',
+    summary: 'Fomentamos el apoyo, la empatía y la libertad para retirarse, descansar o comunicar una situación incómoda.',
+    detail: 'Fomentamos una actitud de apoyo, empatía y colaboración. Si alguna persona necesita retirarse de una actividad, descansar o comunicar una situación que le haya hecho sentirse incómoda, podrá hacerlo libremente.',
+  },
+  {
+    title: 'Coherencia con los fines de la asociación',
+    summary: 'Nuestros espacios se alinean con la igualdad, los derechos de las mujeres, la diversidad y la prevención de las violencias machistas.',
+    detail: 'No se permitirán comportamientos contrarios a los principios de igualdad, derechos de las mujeres, prevención de las violencias machistas, diversidad, respeto y convivencia que forman parte de los valores de La Mirada Violeta.',
+  },
+];
+
 function LocalPhoto({ image, alt, className = 'photo', priority = false, sizes = '(min-width: 850px) 540px, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)' }) {
   const dimensions = imageDimensions[image];
   const base = image.replace(/\.png$/, '');
@@ -57,6 +120,20 @@ function ActionIcon({ type }) {
     local: <><path d="M4.5 18.5h15M6.5 18.5V9l5.5-4 5.5 4v9.5M9 18.5v-5h6v5" /><path d="M12 8.5v2" /></>,
   };
   return <svg className="action-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{paths[type]}</svg>;
+}
+
+function RuleMark() {
+  return <svg className="rule-mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="m8.5 12 2.2 2.2 4.8-5" /></svg>;
+}
+
+function MembershipRuleCard({ rule }) {
+  return (
+    <details className="membership-rule">
+      <summary><RuleMark /><span>{rule.title}</span></summary>
+      <p>{rule.summary}</p>
+      <div className="membership-rule-detail"><strong>Versión completa</strong><p>{rule.detail}</p></div>
+    </details>
+  );
 }
 
 function PageIntro({ title, eyebrow, children, showBack = true }) {
@@ -129,7 +206,7 @@ function ResourcesPage() {
 
       <section className="section container resource-section">
         <div className="section-heading"><p className="eyebrow">Atención inmediata</p><h2>Servicio 016</h2></div>
-        <div className="resource-grid resource-contact-grid">
+        <div className="resource-grid resource-grid-3 resource-contact-grid">
           <article className="resource-card resource-contact"><h3>Teléfono</h3><a className="resource-number" href="tel:016">{emergency.phone}</a><p>Información y atención psicosocial, gratuita y confidencial.</p><a className="button" href="tel:016">Llamar al 016</a></article>
           <article className="resource-card resource-contact"><h3>WhatsApp</h3><a className="resource-number" href="https://wa.me/34600000016" target="_blank" rel="noopener noreferrer">{emergency.whatsapp}</a><p>Canal de WhatsApp del servicio 016.</p><ResourceLink href="https://wa.me/34600000016" className="button">WhatsApp 016</ResourceLink></article>
           <article className="resource-card resource-contact"><h3>Correo y chat</h3><p><strong>Correo:</strong> <a href={`mailto:${emergency.email}`}>{emergency.email}</a><br /><strong>Chat online:</strong> disponible en la web oficial de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={emergency.officialUrl}>Web oficial del 016</ResourceLink></article>
@@ -144,28 +221,26 @@ function ResourcesPage() {
       </section>
 
       <section className="section container resource-section">
-        <div className="resource-grid">
+        <div className="resource-grid resource-grid-2">
           <article className="resource-card"><p className="eyebrow">Atención interdisciplinar</p><h2>Punto Municipal del Observatorio Regional</h2><p>Ofrece atención social, psicológica y jurídica, seguimiento y acompañamiento, y atención a menores cuando corresponde. Forma parte de la red de atención integral y se accede a través del programa municipal.</p><ResourceLink href={state.madridNetwork}>Consultar la red oficial</ResourceLink></article>
           <article className="resource-card"><p className="eyebrow">Protección</p><h2>Alojamiento y protección</h2><p>Existen recursos de alojamiento para mujeres víctimas de violencia de género destinados a proporcionar refugio, seguridad y protección. No publicamos direcciones de recursos protegidos.</p><ResourceLink href={municipal.officialUrl}>Consultar el servicio municipal</ResourceLink></article>
         </div>
       </section>
 
       <section className="section container resource-section">
-        <div className="resource-grid">
-          <article className="resource-card"><p className="eyebrow">Si tienes animales</p><h2>¿Y si tienes animales?</h2><p>ACOPET es un recurso de atención y acogida de animales de compañía para mujeres víctimas de violencia de género que acceden a recursos habitacionales. Las condiciones pueden cambiar.</p><div className="actions"><ResourceLink href={acopet.officialUrl}>Información municipal</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">Conocer ACOPET</ResourceLink></div></article>
+        <div className="resource-grid resource-grid-2">
+          <article className="resource-card"><p className="eyebrow">Si tienes animales</p><h2>¿Y si tienes animales?</h2><p>ACOPET es un recurso de atención y acogida de animales de compañía para mujeres víctimas de violencia de género que acceden a recursos habitacionales. Las condiciones pueden cambiar.</p><ResourceLink href={acopet.officialUrl}>Conocer ACOPET</ResourceLink></article>
           <article className="resource-card"><p className="eyebrow">Información actualizada</p><h2>Ayudas económicas</h2><p>Puede haber convocatorias de ayudas para mujeres víctimas de violencia de género. Las condiciones y cuantías dependen de cada convocatoria.</p><ResourceLink href={state.madridAid}>Consultar ayudas vigentes</ResourceLink></article>
         </div>
       </section>
 
       <section className="section section-tint resource-section">
-        <div className="container"><div className="section-heading"><p className="eyebrow">Más información</p><h2>Otros recursos</h2></div><div className="resource-grid"><article className="resource-card"><h3>016</h3><p>Información y atención psicosocial para mujeres y su entorno.</p><ResourceLink href={state.official016}>Información oficial</ResourceLink></article><article className="resource-card"><h3>ATENPRO</h3><p>Servicio telefónico de atención y protección para mujeres víctimas de violencia de género.</p><ResourceLink href={state.atenpro}>Conocer ATENPRO</ResourceLink></article><article className="resource-card"><h3>Buscador oficial de recursos</h3><p>Localiza recursos de apoyo y prevención próximos a través de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={state.finder}>Buscar recursos</ResourceLink></article></div></div>
+        <div className="container"><div className="section-heading"><p className="eyebrow">Más información</p><h2>Otros recursos</h2></div><div className="resource-grid resource-grid-3"><article className="resource-card"><h3>016</h3><p>Información y atención psicosocial para mujeres y su entorno.</p><ResourceLink href={state.official016}>Información oficial</ResourceLink></article><article className="resource-card"><h3>ATENPRO</h3><p>Servicio telefónico de atención y protección para mujeres víctimas de violencia de género.</p><ResourceLink href={state.atenpro}>Conocer ATENPRO</ResourceLink></article><article className="resource-card"><h3>Buscador oficial de recursos</h3><p>Localiza recursos de apoyo y prevención próximos a través de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={state.finder}>Buscar recursos</ResourceLink></article></div></div>
       </section>
 
       <section className="section container resource-section">
-        <div className="grid-2 resource-support">
-          <div className="prose content-narrow"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div>
-          <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p><a className="text-link" href="/contacto/">Contacta con La Mirada Violeta</a></div>
-        </div>
+        <div className="resource-help"><div className="prose content-narrow"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div></div>
+        <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.officialUrl} className="text-link">ACOPET</ResourceLink></p><a className="text-link" href="/contacto/">Contacta con La Mirada Violeta</a></div>
       </section>
     </>
   );
@@ -389,35 +464,18 @@ export default function SitePages({ page }) {
                 <article className="feature-panel"><h3>Una participación flexible</h3><p>No todas tenemos la misma disponibilidad, y cada aportación cuenta.</p></article>
                 <article className="feature-panel"><h3>Una asociación compartida</h3><p>Las propuestas, aprendizajes y cuidados se construyen entre todas.</p></article>
               </div>
-               <div className="grid-2 membership-details">
-                 <div><h2>Cuota</h2><p><strong>Cuota:</strong> 5 € al mes<br /><strong>Forma de pago:</strong> Bizum, transferencia bancaria o en efectivo.</p></div>
-                 <div><h2>Compromiso</h2><p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p></div>
-               </div>
-               <h2>Normas de convivencia y participación</h2>
-               <p>En <strong>La Mirada Violeta</strong> queremos crear espacios seguros, inclusivos y respetuosos en los que todas las personas puedan participar, expresarse y compartir experiencias con libertad.</p>
-               <p>La participación en nuestras actividades, espacios presenciales y canales digitales implica respetar las siguientes normas:</p>
-               <ul>
-                 <li><strong>Respeto y trato digno.</strong> Todas las personas deben ser tratadas con respeto, evitando insultos, burlas, humillaciones, amenazas, intimidaciones o actitudes agresivas.</li>
-                 <li><strong>Tolerancia cero frente a la discriminación.</strong> No se permitirán comportamientos o comentarios discriminatorios por razón de sexo, identidad o expresión de género, orientación sexual, origen, raza o etnia, edad, discapacidad, situación económica, religión, aspecto físico o cualquier otra circunstancia personal o social.</li>
-                 <li><strong>Espacios libres de acoso y violencia.</strong> No se tolerarán conductas de acoso, intimidación, violencia, abuso, presión, contacto físico no consentido o comportamientos que hagan sentir incómoda o insegura a otra persona.</li>
-                 <li><strong>Respeto al consentimiento y a los límites personales.</strong> Cada persona puede decidir qué quiere compartir, en qué actividades desea participar y cuáles son sus límites. Nadie deberá sentirse obligada a hablar de experiencias personales o situaciones que no quiera compartir.</li>
-                 <li><strong>Escucha y respeto de los turnos de palabra.</strong> Promovemos el diálogo, la escucha activa y el intercambio de ideas sin interrupciones constantes, descalificaciones ni ataques personales.</li>
-                 <li><strong>Respeto a las diferentes experiencias y opiniones.</strong> No todas las personas vivimos las mismas realidades ni pensamos de la misma manera. Las discrepancias pueden expresarse siempre desde el respeto y sin cuestionar o invalidar las experiencias personales de otras participantes.</li>
-                 <li><strong>Confidencialidad.</strong> Las experiencias personales compartidas en talleres, grupos de encuentro u otras actividades deberán tratarse con respeto y discreción. No deberán difundirse fuera del espacio sin el consentimiento de la persona que las haya compartido.</li>
-                 <li><strong>Privacidad e imagen.</strong> No se realizarán ni compartirán fotografías, vídeos o grabaciones de otras participantes sin su conocimiento y consentimiento, especialmente cuando puedan aparecer testimonios, experiencias personales o situaciones sensibles.</li>
-                 <li><strong>Convivencia respetuosa también en los espacios digitales.</strong> Estas normas se aplican igualmente a redes sociales, grupos de mensajería, videollamadas, comentarios y cualquier otro canal vinculado a la asociación.</li>
-                 <li><strong>Participación responsable.</strong> Pedimos a las participantes que respeten los horarios, espacios, materiales y organización de las actividades, así como las indicaciones necesarias para garantizar el buen desarrollo de las mismas.</li>
-                 <li><strong>Cuidado colectivo.</strong> Fomentamos una actitud de apoyo, empatía y colaboración. Si alguna persona necesita retirarse de una actividad, descansar o comunicar una situación que le haya hecho sentirse incómoda, podrá hacerlo libremente.</li>
-                 <li><strong>Coherencia con los fines de la asociación.</strong> No se permitirán comportamientos contrarios a los principios de igualdad, derechos de las mujeres, prevención de las violencias machistas, diversidad, respeto y convivencia que forman parte de los valores de La Mirada Violeta.</li>
-               </ul>
-               <h3>Ante situaciones de conflicto</h3>
-               <p>Si se produce una situación incómoda, un conflicto o un posible incumplimiento de estas normas, podrá comunicarse a una persona responsable de la asociación.</p>
-               <p>La Mirada Violeta podrá intervenir, mediar o adoptar las medidas que considere necesarias para proteger el bienestar de las participantes y el correcto funcionamiento de sus actividades.</p>
-               <p>En casos graves o reiterados, la asociación podrá solicitar a una persona que abandone una actividad o limitar su participación en futuros espacios organizados por la entidad.</p>
-               <p>Nuestro objetivo no es crear espacios en los que todas pensemos igual, sino espacios en los que podamos <strong>escucharnos, aprender, cuidarnos y participar con libertad y respeto</strong>.</p>
+                <div className="grid-2 membership-details">
+                  <article className="feature-panel membership-detail membership-fee"><p className="eyebrow">Aportación mensual</p><h2>Cuota</h2><p className="membership-price">5 € <span>al mes</span></p><p><strong>Forma de pago:</strong> Bizum, transferencia bancaria o en efectivo.</p></article>
+                  <article className="feature-panel membership-detail"><p className="eyebrow">A tu ritmo</p><h2>Compromiso</h2><p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p></article>
+                </div>
+                <section className="membership-rules" aria-labelledby="membership-rules-title">
+                  <div className="membership-rules-intro"><p className="eyebrow">Cuidarnos entre todas</p><h2 id="membership-rules-title">Normas de convivencia y participación</h2><p>En <strong>La Mirada Violeta</strong> queremos crear espacios seguros, inclusivos y respetuosos en los que todas las personas puedan participar, expresarse y compartir experiencias con libertad.</p><p>La participación en nuestras actividades, espacios presenciales y canales digitales implica respetar las siguientes normas:</p></div>
+                  <div className="membership-rules-grid">{membershipRules.map((rule) => <MembershipRuleCard key={rule.title} rule={rule} />)}</div>
+                  <div className="membership-conflict"><h3>Ante situaciones de conflicto</h3><p>Si se produce una situación incómoda, un conflicto o un posible incumplimiento de estas normas, podrá comunicarse a una persona responsable de la asociación.</p><p>La Mirada Violeta podrá intervenir, mediar o adoptar las medidas que considere necesarias para proteger el bienestar de las participantes y el correcto funcionamiento de sus actividades.</p><p>En casos graves o reiterados, la asociación podrá solicitar a una persona que abandone una actividad o limitar su participación en futuros espacios organizados por la entidad.</p><p>Nuestro objetivo no es crear espacios en los que todas pensemos igual, sino espacios en los que podamos <strong>escucharnos, aprender, cuidarnos y participar con libertad y respeto</strong>.</p></div>
+                </section>
              </div>
            </section>
-           <section className="section container"><div className="cta-panel"><h2>¿Quieres formar parte de La Mirada Violeta?</h2><p className="lead">Escríbenos un correo, preséntate y concertaremos una primera entrevista de acogida para contarte qué hacemos y si te alineas con nuestros objetivos, ¡contamos contigo!</p><a className="button" href={`mailto:${contactContent.email}`}>Quiero hacerme socia</a></div></section>
+            <section className="section container"><div className="cta-panel membership-cta"><p className="eyebrow">Da el paso</p><h2>¿Quieres formar parte de La Mirada Violeta?</h2><p className="lead">Escríbenos un correo, preséntate y concertaremos una primera entrevista de acogida para contarte qué hacemos y si te alineas con nuestros objetivos, ¡contamos contigo!</p><a className="button" href={`mailto:${contactContent.email}`}>Quiero hacerme socia</a></div></section>
         </>
       );
     case 'recursos':

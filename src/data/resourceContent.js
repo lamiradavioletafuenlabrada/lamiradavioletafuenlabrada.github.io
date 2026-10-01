@@ -17,7 +17,6 @@ export const officialResources = {
   },
   acopet: {
     officialUrl: 'https://www.ayto-fuenlabrada.es/web/portal/w/acogida-animales-mujeres-violencia-genero-acopet',
-    programUrl: 'https://acopet.es/',
   },
   state: {
     official016: 'https://violenciagenero.igualdad.gob.es/informacion-3/recursos/telefono016/',
