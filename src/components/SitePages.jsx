@@ -28,7 +28,7 @@ function LocalPhoto({ image, alt, className = 'photo', priority = false, sizes =
     <img className={className} src={dimensions ? `${base}-1200.webp` : image}
       srcSet={dimensions ? `${base}-640.webp 640w, ${base}-1200.webp ${Math.min(1200, dimensions[0])}w` : undefined}
       sizes={dimensions ? sizes : undefined} width={dimensions?.[0]} height={dimensions?.[1]}
-      alt={alt} loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : undefined} />
+       alt={alt} loading={priority ? 'eager' : 'lazy'} decoding="async" fetchpriority={priority ? 'high' : undefined} />
   );
 }
 

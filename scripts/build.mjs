@@ -41,10 +41,12 @@ function renderPageHtml(page, pageContent, { notFound = false } = {}) {
   const canonical = page.canonical || page.path;
   const robots = notFound || page.indexable === false ? 'noindex, follow' : 'index, follow';
   const canonicalTag = notFound ? '' : `<link rel="canonical" href="${domain}${canonical}" />`;
+  const heroPreload = page.id === 'inicio' ? '<link rel="preload" as="image" href="/miradastodas-1200.webp" imagesrcset="/miradastodas-640.webp 640w, /miradastodas-1200.webp 1200w" imagesizes="(min-width: 850px) 540px, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)" />' : '';
   return template
     .replace(/<title>.*?<\/title>/s, `<title>${escape(page.title)}</title>`)
     .replace(/<meta\s+(?:name="description"|property="og:[^"]+")[\s\S]*?\/>/g, '')
-    .replace('</head>', `<meta name="description" content="${escape(page.description)}" />
+    .replace('</head>', `${heroPreload}
+     <meta name="description" content="${escape(page.description)}" />
      ${canonicalTag}
      <meta name="robots" content="${robots}" />
      <meta property="og:site_name" content="La Mirada Violeta" />

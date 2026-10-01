@@ -85,7 +85,7 @@ export default function App({ page = 'inicio' }) {
       <header className="site-header" ref={header}>
         <div className="container header-inner">
           <a className="brand" href="/" aria-label="La Mirada Violeta, inicio">
-            <img src="/favicon.png" alt="" width="42" height="42" />
+             <img src="/favicon-96.png" alt="" width="42" height="42" decoding="async" />
             <span>La Mirada Violeta<small>Asociación de mujeres · Fuenlabrada</small></span>
           </a>
            <nav className="desktop-nav" aria-label="Navegación principal"><NavLinks page={page} scope="desktop" openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeAllDropdowns={closeAllDropdowns} /></nav>
@@ -104,7 +104,7 @@ export default function App({ page = 'inicio' }) {
              <FooterNavGroup title="Enlaces" page={page} links={[{ label: 'Quiénes somos', href: '/quienes-somos/' }, { label: 'Actividades', href: '/actividades/' }, { label: 'Socias', href: '/socias/' }, { label: 'Recursos', href: '/recursos/' }, { label: 'Contacto', href: '/contacto/' }]} />
              <div className="footer-social"><h2>Síguenos</h2>{socialLinks.filter((link) => ['Instagram', 'TikTok', 'LinkedIn', 'YouTube'].includes(link.label)).map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>
           </div>
-          <div className="partners"><p>Con la colaboración institucional de</p><a href="https://www.ayto-fuenlabrada.es/" target="_blank" rel="noopener noreferrer"><img src="/logo_aytofuenlabrada_vector.svg" alt="Ayuntamiento de Fuenlabrada" width="120" height="67" loading="lazy" /></a><a href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer"><img src="/logo_fuenlafeminismo_vector.svg" alt="Concejalía de Feminismo y Diversidad de Fuenlabrada" width="160" height="74" loading="lazy" /></a></div>
+           <div className="partners"><p>Con la colaboración institucional de</p><a href="https://www.ayto-fuenlabrada.es/" target="_blank" rel="noopener noreferrer"><img src="/logo_aytofuenlabrada_vector.svg" alt="Ayuntamiento de Fuenlabrada" width="120" height="67" loading="lazy" decoding="async" /></a><a href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer"><img src="/logo_fuenlafeminismo_vector.svg" alt="Concejalía de Feminismo y Diversidad de Fuenlabrada" width="160" height="74" loading="lazy" decoding="async" /></a></div>
            <div className="footer-bottom"><p>© 2026 La Mirada Violeta</p><div className="footer-legal"><a href="/aviso-legal/">Aviso legal</a><a href="/politica-privacidad/">Política de privacidad</a></div></div>
         </div>
       </footer>
