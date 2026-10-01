@@ -12,6 +12,7 @@ function NavLinks({ page }) {
 
 export default function App({ page = 'inicio' }) {
   const menu = useRef(null);
+  const header = useRef(null);
   useEffect(() => {
     const closeMenu = (event) => {
       if (event.key === 'Escape' && menu.current?.open) {
@@ -20,6 +21,9 @@ export default function App({ page = 'inicio' }) {
       }
     };
     document.addEventListener('keydown', closeMenu);
+    const updateHeader = () => header.current?.classList.toggle('is-scrolled', window.scrollY > 32);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
     // Preserve links shared before the move from anchor sections to pages.
     const followOldLink = () => {
       const oldSection = window.location.hash.slice(1);
@@ -31,6 +35,7 @@ export default function App({ page = 'inicio' }) {
     window.addEventListener('hashchange', followOldLink);
     return () => {
       document.removeEventListener('keydown', closeMenu);
+      window.removeEventListener('scroll', updateHeader);
       window.removeEventListener('hashchange', followOldLink);
     };
   }, [page]);
@@ -38,7 +43,7 @@ export default function App({ page = 'inicio' }) {
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <header className="site-header">
+      <header className="site-header" ref={header}>
         <div className="container header-inner">
           <a className="brand" href="/" aria-label="La Mirada Violeta, inicio">
             <img src="/favicon.png" alt="" width="42" height="42" />

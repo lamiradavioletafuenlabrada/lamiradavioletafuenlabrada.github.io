@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   heroContent,
   aboutContent,
@@ -74,49 +73,24 @@ function SharedCTA() {
 }
 
 function CalendarPage() {
-  const [showCalendar, setShowCalendar] = useState(false);
-
   return (
     <>
       <section id="calendario" className="section container scroll-mt-28">
         <PageIntro title="Calendario" eyebrow={calendarContent.title}>
           <p>{calendarContent.subtitle}</p>
         </PageIntro>
-        <div className="calendar-panel">
-          <h2>Consulta el calendario</h2>
-          <p>
-            El calendario es un servicio externo de Google. No se carga automáticamente.
-            Al pulsar «Mostrar calendario de Google», se establecerá una conexión con Google,
-            que podrá tratar datos de navegación conforme a su política de privacidad.
-          </p>
-          <div className="actions">
-            <button
-              type="button"
-              className="button"
-              aria-expanded={showCalendar}
-              aria-controls="google-calendar"
-              onClick={() => setShowCalendar(!showCalendar)}
-            >
-              {showCalendar ? 'Ocultar calendario de Google' : 'Mostrar calendario de Google'}
-            </button>
-            <a className="text-link" href={calendarContent.embedUrl} target="_blank" rel="noopener noreferrer">
-              Abrir el calendario directamente en Google
-            </a>
-          </div>
-          <div id="google-calendar">
-            {showCalendar && (
-              <>
-                <p className="muted" role="status">Se carga el calendario mediante el servicio externo de Google.</p>
-                <iframe
-                  title="Calendario de actividades de La Mirada Violeta"
-                  src={calendarContent.embedUrl}
-                  width="100%"
-                  height="600"
-                  loading="lazy"
-                />
-              </>
-            )}
-          </div>
+        <div className="calendar-container" id="google-calendar">
+          <iframe
+            title="Calendario de actividades de La Mirada Violeta"
+            src={`${calendarContent.embedUrl}&mode=AGENDA&hl=es`}
+            width="100%"
+            height="680"
+          />
+        </div>
+        <div className="actions">
+          <a className="text-link" href={calendarContent.embedUrl} target="_blank" rel="noopener noreferrer">
+            Abrir calendario en Google
+          </a>
         </div>
       </section>
       <SharedCTA />
@@ -140,7 +114,7 @@ export default function SitePages({ page }) {
                   <a className="button button-secondary" href="/quienes-somos/">Conócenos</a>
                 </div>
               </div>
-              <LocalPhoto image="/miradastodas.png" alt={galleryItems[2].alt} priority />
+              <div className="hero-portrait"><LocalPhoto image="/miradastodas.png" alt={galleryItems[2].alt} priority /></div>
             </div>
           </section>
           <section id="quienes-somos" className="section container scroll-mt-28">
@@ -151,7 +125,8 @@ export default function SitePages({ page }) {
             </div>
             <a className="text-link" href="/quienes-somos/">Conoce la asociación</a>
           </section>
-          <section id="actividades" className="section container scroll-mt-28">
+          <section id="actividades" className="section section-tint scroll-mt-28">
+            <div className="container">
             <div className="section-heading">
               <p className="eyebrow">Programación reciente</p>
               <h2>Actividades destacadas</h2>
@@ -160,6 +135,7 @@ export default function SitePages({ page }) {
               {activities.slice(0, 2).map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
             </div>
             <div className="actions"><a className="text-link" href="/actividades/">Ver todas las actividades</a></div>
+            </div>
           </section>
           <section className="section container">
             <div className="section-heading">

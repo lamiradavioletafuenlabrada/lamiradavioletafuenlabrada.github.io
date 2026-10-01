@@ -26,7 +26,12 @@ for (const page of pages) {
   assert.ok(html.includes(`property="og:url" content="${domain}${page.path}"`));
   assert.ok(html.includes('name="description" content="'));
   assert.ok(html.includes('property="og:image" content="https://'));
-  assert.ok(!html.includes('<iframe'), 'Calendar must not load until requested');
+  assert.equal((html.match(/<iframe\b/g) || []).length, page.id === 'calendario' ? 1 : 0, 'Only the calendar page embeds Google directly');
+  if (page.id === 'calendario') {
+    assert.ok(html.includes('src="https://calendar.google.com/calendar/embed?'));
+    assert.ok(!html.includes('Mostrar calendario de Google'));
+    assert.ok(!/<iframe[^>]*loading="lazy"/.test(html), 'Calendar must load immediately');
+  }
   assert.ok(!html.includes('.render/'), 'Build-only rendering bundle must not ship');
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const value = match[1].replaceAll('&amp;', '&');

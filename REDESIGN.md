@@ -46,7 +46,8 @@ No se crearon páginas vacías de Noticias o Recursos.
 Cada página tiene un `index.html` completo generado durante la compilación.
 Node.js solo interviene en desarrollo y build; la publicación contiene archivos estáticos.
 No se utiliza router de servidor, backend ni nuevas dependencias de la aplicación.
-El menú móvil nativo funciona sin JavaScript. React añade la carga voluntaria del calendario.
+El menú móvil nativo funciona sin JavaScript. El calendario se muestra directamente
+mediante un iframe responsive y mantiene un enlace alternativo a Google.
 
 El diseño comparte variables CSS, componentes de fotografías, tarjetas y títulos,
 con fondos crema, texto carbón y violeta en acentos. Georgia aporta personalidad
@@ -83,7 +84,8 @@ identificaba como el logo del Centro 8 de Marzo.
 - Menú móvil con teclado, Enter, Tab, Escape y recuperación del foco.
 - Todas las páginas y menú móvil con JavaScript desactivado.
 - Compatibilidad con los fragmentos antiguos al entrar y al cambiar el hash.
-- Calendario sin iframe inicial; prueba de mostrar/ocultar con respuesta externa simulada.
+- En la primera fase se verificó la carga voluntaria del calendario; la segunda fase
+  sustituye ese comportamiento por un iframe presente desde el HTML inicial.
 - Comparación de todos los párrafos, apartados y elementos de lista legales con el original.
 - Sin errores de JavaScript, hidratación o respuestas HTTP locales fallidas.
 - Preferencia de movimiento reducido y revisión visual de capturas de inicio y actividades.
@@ -103,3 +105,23 @@ inscripción diferente del formulario de ideas enlazado y necesita contrastarse 
 los servicios externos y el tratamiento de fotografías. No se reescribió contenido
 legal sin validación. Confirmar también el buzón `gestion@lamiradavioleta.org`.
 Completar pruebas con lector de pantalla y comprobar el sitio tras su publicación.
+
+## Segunda pasada visual
+
+Se mantienen las ocho páginas, sus rutas, contenido y recursos. La paleta, espaciado,
+radios y duración de transiciones se centralizan en variables CSS. El hero reduce
+el título y conserva las personas como foco de la fotografía, con una forma lavanda
+abstracta detrás. Las actividades destacadas usan una franja lavanda clara y tarjetas
+fotográficas; las llamadas a participar y el pie utilizan lavanda con detalles curvos.
+El header sticky reduce discretamente su altura al desplazarse.
+
+El calendario se carga sin consentimiento intermedio, por petición expresa.
+La vista de agenda evita la cuadrícula estrecha en móvil; el iframe ocupa todo el
+ancho del contenedor y el enlace directo sigue disponible. Se elimina el botón y
+el texto que describían la carga voluntaria. El contenido legal no se modifica.
+
+La segunda pasada se comprobó en las ocho páginas a 375, 430, 768, 1024 y 1440 píxeles,
+con apertura directa, recarga, teclado, foco, imágenes y axe sobre el contenido local.
+Se verificó además el calendario real de Google: respuesta HTTP 200, eventos visibles
+y ausencia de desbordamiento horizontal tanto en la página como dentro del iframe
+en los cinco tamaños. La interfaz del calendario se solicita en español.

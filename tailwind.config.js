@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: 'var(--violet)',
-        ink: 'var(--text)',
-        mist: 'var(--muted)',
+        brand: 'var(--color-primary)',
+        ink: 'var(--color-text)',
+        mist: 'var(--color-text-muted)',
       },
       fontFamily: {
         display: ['var(--font-heading)'],
