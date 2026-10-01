@@ -17,8 +17,8 @@ npm run build
 
 El archivo `CNAME` debe permanecer en `public/` para GitHub Pages.
 
-El build genera ocho paginas con HTML completo en `dist/`: inicio, quienes-somos,
-actividades, iniciativas, calendario, contacto, aviso-legal y actualizacion-correo.
+El build genera nueve paginas con HTML completo en `dist`: inicio, quienes-somos,
+actividades, iniciativas, calendario, contacto, aviso-legal, politica-privacidad y actualizacion-correo.
 Cada ruta interior tiene su propio `index.html`, metadatos y canonical. No necesita
 backend, reglas de reescritura ni Node.js en produccion. Las paginas son legibles y
 el menu movil funciona sin JavaScript. El calendario de Google se carga directamente

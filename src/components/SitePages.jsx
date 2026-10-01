@@ -11,6 +11,7 @@ import {
   socialLinks,
   imageDimensions,
 } from '../data/siteContent';
+import { privacySections } from '../data/privacyContent';
 
 const activityAlts = {
   '/susy.png': 'Una participante junto a una fotografía de cuerpos no normativos en la exposición Miradas Alternativas',
@@ -317,6 +318,19 @@ export default function SitePages({ page }) {
             <h2>7. Derechos de los usuarios</h2>
             <p>Puede ejercer en cualquier momento sus derechos de <strong>acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad</strong>. Para ello, puede enviar una solicitud por escrito adjuntando copia de su documento de identidad a la dirección de correo electrónico: <strong>gestion@lamiradavioleta.org</strong>.</p>
             <p>Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <a className="text-link" href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">www.aepd.es</a> si considera que sus derechos han sido vulnerados.</p>
+            <div className="actions"><a className="button" href="/">Volver a la página principal</a></div>
+          </div>
+        </section>
+      );
+    case 'politica-privacidad':
+      return (
+        <section id="politica-privacidad" className="section container scroll-mt-28">
+          <PageIntro title="Política de Privacidad y Protección de Datos" eyebrow="La Mirada Violeta">
+            <p>La Asociación de Mujeres La Mirada Violeta se compromete a proteger la privacidad y los datos personales de las personas que participan en sus actividades, contactan con la Asociación o utilizan los formularios disponibles en su página web.</p>
+            <p>El tratamiento de los datos personales se realizará de conformidad con el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
+          </PageIntro>
+          <div className="prose privacy-prose">
+            {privacySections.map((section) => <section key={section.title}><h2>{section.title}</h2>{section.content}</section>)}
             <div className="actions"><a className="button" href="/">Volver a la página principal</a></div>
           </div>
         </section>

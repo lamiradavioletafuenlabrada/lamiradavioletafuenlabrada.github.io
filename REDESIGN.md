@@ -76,7 +76,7 @@ identificaba como el logo del Centro 8 de Marzo.
 
 ## Verificación realizada
 
-- Build de producción y comprobación de ocho páginas y 271 referencias locales.
+- Build de producción y comprobación de nueve páginas y 311 referencias locales.
 - Apertura directa y recarga en un servidor estático sin fallback de rutas.
 - Navegación, fotografías y ausencia de desbordamientos a 320, 390, 768, 1024 y 1440 píxeles.
 - axe en las cuarenta combinaciones de página y tamaño, sin infracciones detectadas
@@ -108,7 +108,9 @@ Completar pruebas con lector de pantalla y comprobar el sitio tras su publicaci�
 
 ## Segunda pasada visual
 
-Se mantienen las ocho páginas, sus rutas, contenido y recursos. La paleta, espaciado,
+Se mantienen las páginas existentes, sus rutas, contenido y recursos. Se añade la ruta
+independiente `/politica-privacidad/` con la política ampliada facilitada por la asociación.
+La paleta, espaciado,
 radios y duración de transiciones se centralizan en variables CSS. El hero reduce
 el título y conserva las personas como foco de la fotografía, con una forma lavanda
 abstracta detrás. Las actividades destacadas usan una franja lavanda clara y tarjetas
@@ -120,7 +122,7 @@ La vista de agenda evita la cuadrícula estrecha en móvil; el iframe ocupa todo
 ancho del contenedor y el enlace directo sigue disponible. Se elimina el botón y
 el texto que describían la carga voluntaria. El contenido legal no se modifica.
 
-La segunda pasada se comprobó en las ocho páginas a 375, 430, 768, 1024 y 1440 píxeles,
+La segunda pasada se comprobó en las nueve páginas a 375, 430, 768, 1024 y 1440 píxeles,
 con apertura directa, recarga, teclado, foco, imágenes y axe sobre el contenido local.
 Se verificó además el calendario real de Google: respuesta HTTP 200, eventos visibles
 y ausencia de desbordamiento horizontal tanto en la página como dentro del iframe

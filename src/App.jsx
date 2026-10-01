@@ -67,7 +67,7 @@ export default function App({ page = 'inicio' }) {
             <div className="footer-social"><h2>Sigamos en contacto</h2>{socialLinks.filter((link) => !link.href.startsWith('mailto:')).map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>
           </div>
           <div className="partners"><p>Con la colaboración institucional de</p><a href="https://www.ayto-fuenlabrada.es/" target="_blank" rel="noopener noreferrer"><img src="/logo_aytofuenlabrada_vector.svg" alt="Ayuntamiento de Fuenlabrada" width="120" height="67" loading="lazy" /></a><a href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer"><img src="/logo_fuenlafeminismo_vector.svg" alt="Concejalía de Feminismo y Diversidad de Fuenlabrada" width="160" height="74" loading="lazy" /></a></div>
-          <div className="footer-bottom"><p>© 2026 Asociación La Mirada Violeta. Diseñado para la igualdad.</p><a href="/aviso-legal/">Aviso legal y privacidad</a><a href="/actualizacion-correo/">Comunicado de contacto</a></div>
+          <div className="footer-bottom"><p>© 2026 Asociación La Mirada Violeta. Diseñado para la igualdad.</p><a href="/aviso-legal/">Aviso legal</a><a href="/politica-privacidad/">Política de privacidad</a><a href="/actualizacion-correo/">Comunicado de contacto</a></div>
         </div>
       </footer>
     </>

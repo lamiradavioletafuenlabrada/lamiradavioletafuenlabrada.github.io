@@ -115,6 +115,7 @@ figure { margin: 0; }
 .cta-panel h2 { color: var(--color-primary-dark); }
 .prose { max-width: 68ch; overflow-wrap: anywhere; }
 .prose h2 { font-size: 1.65rem; margin-top: var(--space-lg); }
+.privacy-prose > section:first-child h2 { margin-top: 0; }
 .prose ul { list-style: disc; padding-left: var(--space-md); margin-bottom: var(--space-md); }
 .prose .contact-panel { margin-block: var(--space-lg); }
 .prose .contact-panel h2 { margin-top: 0; }
@@ -164,6 +165,43 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
   .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
   .feature-panel, .contact-panel { padding: var(--space-lg); }
   .calendar-container iframe { height: 680px; }
+}
+@media (max-width: 639px) {
+  body { font-size: .96rem; line-height: 1.62; }
+  .container { width: min(100% - 2rem, 1120px); }
+  .site-header { --header-height: 72px; }
+  .header-inner { min-height: var(--header-height); }
+  .brand { font-size: 1.03rem; gap: .55rem; }
+  .brand img { width: 36px; height: 36px; }
+  .brand small { font-size: .57rem; margin-top: 2px; }
+  .mobile-menu nav { padding: .4rem .75rem .65rem; max-height: min(70dvh, 480px); }
+  .mobile-menu nav a { min-height: 44px; padding: .55rem .75rem; }
+  .home-hero { padding-block: 1.75rem 1.5rem; }
+  .home-hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); margin-block: .4rem .8rem; }
+  .home-hero .lead { font-size: 1rem; line-height: 1.58; }
+  .home-hero .actions { margin-top: 1rem; }
+  .home-hero .hero-portrait { margin-top: .25rem; }
+  .section { padding-block: 1.65rem; }
+  .page-intro { padding-bottom: 1.1rem; }
+  .page-intro > .text-link { margin-bottom: 1.1rem; }
+  .page-intro h1 { font-size: clamp(2.05rem, 9vw, 2.8rem); }
+  .lead { font-size: 1rem; line-height: 1.62; }
+  .section-heading { margin-bottom: 1.25rem; }
+  .section-heading h2 { font-size: 1.85rem; }
+  .card-body { padding: 1rem; }
+  .card-body p { font-size: .9rem; line-height: 1.55; }
+  .activity-image { aspect-ratio: 3 / 2; }
+  .feature-panel, .contact-panel { padding: 1.1rem; }
+  .feature-panel h2, .contact-panel h2 { font-size: 1.65rem; }
+  .upcoming-list { margin-top: 1.25rem; }
+  .upcoming-item { padding-block: .9rem; }
+  .upcoming-item p { font-size: .9rem; line-height: 1.5; }
+  .cta-panel { padding: 1.35rem; }
+  .cta-panel h2 { font-size: 1.85rem; }
+  .calendar-container iframe { height: 470px; }
+  .privacy-prose h2 { font-size: 1.45rem; }
+  .privacy-prose p, .privacy-prose li { line-height: 1.6; }
+  .floating-social-mobile { right: 1rem; bottom: 1rem; }
 }
 @media (min-width: 850px) {
   .split { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
