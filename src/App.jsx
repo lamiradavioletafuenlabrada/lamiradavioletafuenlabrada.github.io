@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { navigation, contactContent, socialLinks } from './data/siteContent';
 import SitePages from './components/SitePages';
+import FloatingSocialLinks from './components/FloatingSocialLinks';
 
 function NavLinks({ page }) {
   return navigation.map((link) => (
@@ -57,6 +58,7 @@ export default function App({ page = 'inicio' }) {
         </div>
       </header>
       <main id="contenido" tabIndex={-1}><SitePages page={page} /></main>
+      <FloatingSocialLinks />
       <footer className="site-footer">
         <div className="container">
           <div className="footer-grid">
