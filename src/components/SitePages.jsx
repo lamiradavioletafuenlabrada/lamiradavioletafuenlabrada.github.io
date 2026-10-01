@@ -65,7 +65,7 @@ function PageIntro({ title, eyebrow, children, showBack = true }) {
       {showBack && <a className="text-link" href="/">Inicio</a>}
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h1>{title}</h1>
-      {children && <div className="lead">{children}</div>}
+      {children && <div className="lead content-narrow">{children}</div>}
     </div>
   );
 }
@@ -162,8 +162,10 @@ function ResourcesPage() {
       </section>
 
       <section className="section container resource-section">
-        <div className="prose"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div>
-        <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p><a className="text-link" href="/contacto/">Contacta con La Mirada Violeta</a></div>
+        <div className="grid-2 resource-support">
+          <div className="prose content-narrow"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div>
+          <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p><a className="text-link" href="/contacto/">Contacta con La Mirada Violeta</a></div>
+        </div>
       </section>
     </>
   );
@@ -251,10 +253,10 @@ export default function SitePages({ page }) {
           <section id="quienes-somos" className="section container scroll-mt-28">
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split">
-              <div className="prose">
+               <div className="prose content-narrow">
                 {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-              <LocalPhoto image={aboutContent.image} alt={aboutContent.imageAlt} />
+               <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
             </div>
           </section>
           <section className="section container">
@@ -332,22 +334,22 @@ export default function SitePages({ page }) {
             <PageIntro title="Misión, valores y objetivos" eyebrow="Nuestra identidad" showBack={false}>
               <p>La Mirada Violeta es una asociación feminista de Fuenlabrada comprometida con la igualdad, la justicia social y la transformación desde lo local y lo colectivo.</p>
             </PageIntro>
-            <div className="prose">
-              <h2>Nuestra misión</h2>
-              <p>{aboutContent.paragraphs[0]}</p>
-              <h2>Nuestra visión</h2>
-              <p>Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p>
-              <h2>Nuestros valores</h2>
-              <div className="grid-two identity-grid">
-                {pillars.map((pillar) => <article className="feature-panel values-panel" key={pillar.title}><h3>{pillar.title}</h3><p>{pillar.description}</p></article>)}
-              </div>
-              <h2>Nuestros objetivos</h2>
-              <ul>{aboutContent.actions.map((action) => <li key={action.title}><strong>{action.title}:</strong> {action.description}</li>)}</ul>
-              <h2>Cómo trabajamos</h2>
-              <p>{aboutContent.paragraphs[1]} Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p>
-              <h2>Nuestro ámbito</h2>
-              <p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p>
-            </div>
+             <div className="prose identity-prose">
+               <div className="identity-intro">
+                 <div><h2>Nuestra misión</h2><p>{aboutContent.paragraphs[0]}</p></div>
+                 <div><h2>Nuestra visión</h2><p>Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p></div>
+               </div>
+               <h2>Nuestros valores</h2>
+               <div className="grid-three identity-grid identity-values">
+                 {pillars.map((pillar) => <article className="feature-panel values-panel" key={pillar.title}><h3>{pillar.title}</h3><p>{pillar.description}</p></article>)}
+               </div>
+               <h2>Nuestros objetivos</h2>
+               <ul className="identity-objectives">{aboutContent.actions.map((action) => <li key={action.title}><strong>{action.title}:</strong> {action.description}</li>)}</ul>
+               <div className="identity-work">
+                 <div><h2>Cómo trabajamos</h2><p>{aboutContent.paragraphs[1]} Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p></div>
+                 <div className="feature-panel identity-scope"><h2>Nuestro ámbito</h2><p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>
+               </div>
+             </div>
           </section>
           <SharedCTA />
         </>
@@ -378,7 +380,7 @@ export default function SitePages({ page }) {
             <PageIntro title="Hazte socia" eyebrow="Forma parte" showBack={false}>
               <p>La asociación crece con la participación, las ideas y los conocimientos de las mujeres que la forman.</p>
             </PageIntro>
-            <div className="prose">
+             <div className="prose membership-prose">
               <h2>¿Por qué hacerte socia?</h2>
               <p>Ser socia te permite participar en la asociación, proponer ideas, participar en actividades y colaborar en proyectos. También es una forma de compartir tu experiencia y conocimientos y apoyar la continuidad de La Mirada Violeta.</p>
               <h2>¿Qué puedes aportar?</h2>
@@ -387,10 +389,10 @@ export default function SitePages({ page }) {
                 <article className="feature-panel"><h3>Una participación flexible</h3><p>No todas tenemos la misma disponibilidad, y cada aportación cuenta.</p></article>
                 <article className="feature-panel"><h3>Una asociación compartida</h3><p>Las propuestas, aprendizajes y cuidados se construyen entre todas.</p></article>
               </div>
-               <h2>Cuota</h2>
-               <p><strong>Cuota:</strong> 5 € al mes<br /><strong>Forma de pago:</strong> Bizum, transferencia bancaria o en efectivo.</p>
-               <h2>Compromiso</h2>
-               <p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p>
+               <div className="grid-2 membership-details">
+                 <div><h2>Cuota</h2><p><strong>Cuota:</strong> 5 € al mes<br /><strong>Forma de pago:</strong> Bizum, transferencia bancaria o en efectivo.</p></div>
+                 <div><h2>Compromiso</h2><p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p></div>
+               </div>
                <h2>Normas de convivencia y participación</h2>
                <p>En <strong>La Mirada Violeta</strong> queremos crear espacios seguros, inclusivos y respetuosos en los que todas las personas puedan participar, expresarse y compartir experiencias con libertad.</p>
                <p>La participación en nuestras actividades, espacios presenciales y canales digitales implica respetar las siguientes normas:</p>
