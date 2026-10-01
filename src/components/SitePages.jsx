@@ -387,15 +387,35 @@ export default function SitePages({ page }) {
                 <article className="feature-panel"><h3>Una participación flexible</h3><p>No todas tenemos la misma disponibilidad, y cada aportación cuenta.</p></article>
                 <article className="feature-panel"><h3>Una asociación compartida</h3><p>Las propuestas, aprendizajes y cuidados se construyen entre todas.</p></article>
               </div>
-              <h2>Cuota</h2>
-              <p><strong>Cuota:</strong> [CUOTA]<br /><strong>Periodicidad:</strong> [PERIODICIDAD]<br /><strong>Forma de pago:</strong> [FORMA DE PAGO]</p>
-              <h2>Compromiso</h2>
-              <p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p>
-              <h2>Normas básicas</h2>
-              <ul><li>Respeto y trato digno.</li><li>No discriminación.</li><li>Escucha y confidencialidad de las experiencias personales.</li><li>Respeto por las demás participantes.</li><li>Convivencia respetuosa presencial y digital.</li><li>Coherencia con los fines y valores de la asociación.</li></ul>
-            </div>
-          </section>
-          <section className="section container"><div className="cta-panel"><h2>¿Quieres formar parte?</h2><p className="lead">Déjanos tus datos cuando preparemos el formulario de incorporación.</p><a className="button" href="#contacto-socias">Quiero hacerme socia</a><p id="contacto-socias" className="muted cta-note">Próximamente habilitaremos el formulario o correo de contacto.</p></div></section>
+               <h2>Cuota</h2>
+               <p><strong>Cuota:</strong> 5 € al mes<br /><strong>Forma de pago:</strong> Bizum, transferencia bancaria o en efectivo.</p>
+               <h2>Compromiso</h2>
+               <p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p>
+               <h2>Normas de convivencia y participación</h2>
+               <p>En <strong>La Mirada Violeta</strong> queremos crear espacios seguros, inclusivos y respetuosos en los que todas las personas puedan participar, expresarse y compartir experiencias con libertad.</p>
+               <p>La participación en nuestras actividades, espacios presenciales y canales digitales implica respetar las siguientes normas:</p>
+               <ul>
+                 <li><strong>Respeto y trato digno.</strong> Todas las personas deben ser tratadas con respeto, evitando insultos, burlas, humillaciones, amenazas, intimidaciones o actitudes agresivas.</li>
+                 <li><strong>Tolerancia cero frente a la discriminación.</strong> No se permitirán comportamientos o comentarios discriminatorios por razón de sexo, identidad o expresión de género, orientación sexual, origen, raza o etnia, edad, discapacidad, situación económica, religión, aspecto físico o cualquier otra circunstancia personal o social.</li>
+                 <li><strong>Espacios libres de acoso y violencia.</strong> No se tolerarán conductas de acoso, intimidación, violencia, abuso, presión, contacto físico no consentido o comportamientos que hagan sentir incómoda o insegura a otra persona.</li>
+                 <li><strong>Respeto al consentimiento y a los límites personales.</strong> Cada persona puede decidir qué quiere compartir, en qué actividades desea participar y cuáles son sus límites. Nadie deberá sentirse obligada a hablar de experiencias personales o situaciones que no quiera compartir.</li>
+                 <li><strong>Escucha y respeto de los turnos de palabra.</strong> Promovemos el diálogo, la escucha activa y el intercambio de ideas sin interrupciones constantes, descalificaciones ni ataques personales.</li>
+                 <li><strong>Respeto a las diferentes experiencias y opiniones.</strong> No todas las personas vivimos las mismas realidades ni pensamos de la misma manera. Las discrepancias pueden expresarse siempre desde el respeto y sin cuestionar o invalidar las experiencias personales de otras participantes.</li>
+                 <li><strong>Confidencialidad.</strong> Las experiencias personales compartidas en talleres, grupos de encuentro u otras actividades deberán tratarse con respeto y discreción. No deberán difundirse fuera del espacio sin el consentimiento de la persona que las haya compartido.</li>
+                 <li><strong>Privacidad e imagen.</strong> No se realizarán ni compartirán fotografías, vídeos o grabaciones de otras participantes sin su conocimiento y consentimiento, especialmente cuando puedan aparecer testimonios, experiencias personales o situaciones sensibles.</li>
+                 <li><strong>Convivencia respetuosa también en los espacios digitales.</strong> Estas normas se aplican igualmente a redes sociales, grupos de mensajería, videollamadas, comentarios y cualquier otro canal vinculado a la asociación.</li>
+                 <li><strong>Participación responsable.</strong> Pedimos a las participantes que respeten los horarios, espacios, materiales y organización de las actividades, así como las indicaciones necesarias para garantizar el buen desarrollo de las mismas.</li>
+                 <li><strong>Cuidado colectivo.</strong> Fomentamos una actitud de apoyo, empatía y colaboración. Si alguna persona necesita retirarse de una actividad, descansar o comunicar una situación que le haya hecho sentirse incómoda, podrá hacerlo libremente.</li>
+                 <li><strong>Coherencia con los fines de la asociación.</strong> No se permitirán comportamientos contrarios a los principios de igualdad, derechos de las mujeres, prevención de las violencias machistas, diversidad, respeto y convivencia que forman parte de los valores de La Mirada Violeta.</li>
+               </ul>
+               <h3>Ante situaciones de conflicto</h3>
+               <p>Si se produce una situación incómoda, un conflicto o un posible incumplimiento de estas normas, podrá comunicarse a una persona responsable de la asociación.</p>
+               <p>La Mirada Violeta podrá intervenir, mediar o adoptar las medidas que considere necesarias para proteger el bienestar de las participantes y el correcto funcionamiento de sus actividades.</p>
+               <p>En casos graves o reiterados, la asociación podrá solicitar a una persona que abandone una actividad o limitar su participación en futuros espacios organizados por la entidad.</p>
+               <p>Nuestro objetivo no es crear espacios en los que todas pensemos igual, sino espacios en los que podamos <strong>escucharnos, aprender, cuidarnos y participar con libertad y respeto</strong>.</p>
+             </div>
+           </section>
+           <section className="section container"><div className="cta-panel"><h2>¿Quieres formar parte de La Mirada Violeta?</h2><p className="lead">Escríbenos un correo, preséntate y concertaremos una primera entrevista de acogida para contarte qué hacemos y si te alineas con nuestros objetivos, ¡contamos contigo!</p><a className="button" href={`mailto:${contactContent.email}`}>Quiero hacerme socia</a></div></section>
         </>
       );
     case 'recursos':

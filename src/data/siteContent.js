@@ -1,7 +1,7 @@
 export const navigation = [
   { label: 'Inicio', href: '/' },
   {
-    label: 'La asociación',
+    label: 'La Asociación',
     children: [
       { label: 'Quiénes somos', href: '/quienes-somos/' },
       { label: 'Misión, valores y objetivos', href: '/mision-valores/' },
@@ -14,7 +14,7 @@ export const navigation = [
       { label: 'Podcast', href: '/podcast/' },
     ],
   },
-  { label: 'Socias', href: '/socias/' },
+  { label: 'Hazte Socia', href: '/socias/' },
   { label: 'Recursos', href: '/recursos/' },
   { label: 'Contacto', href: '/contacto/' },
 ];
