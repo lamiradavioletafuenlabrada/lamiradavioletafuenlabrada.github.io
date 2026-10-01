@@ -6,12 +6,14 @@ import {
   activities,
   upcomingActivities,
   podcastContent,
+  podcastEpisodes,
   calendarContent,
   contactContent,
   socialLinks,
   imageDimensions,
 } from '../data/siteContent';
 import { privacySections } from '../data/privacyContent';
+import { officialResources } from '../data/resourceContent';
 
 const activityAlts = {
   '/susy.png': 'Una participante junto a una fotografía de cuerpos no normativos en la exposición Miradas Alternativas',
@@ -82,29 +84,102 @@ function SharedCTA() {
   );
 }
 
-function CalendarPage() {
+function CalendarEmbed() {
+  return (
+    <section className="section container calendar-section" id="calendario">
+      <div className="section-heading">
+        <p className="eyebrow">Calendario</p>
+        <h2>Calendario</h2>
+        <p className="lead">Consulta aquí nuestras próximas actividades, encuentros y eventos.</p>
+      </div>
+      <div className="calendar-container" id="google-calendar">
+        <iframe
+          title="Calendario de actividades de La Mirada Violeta"
+          src={`${calendarContent.embedUrl}&mode=AGENDA&hl=es`}
+          width="100%"
+          height="680"
+        />
+      </div>
+      <div className="actions">
+        <a className="text-link" href={calendarContent.embedUrl} target="_blank" rel="noopener noreferrer">Abrir calendario en Google</a>
+      </div>
+    </section>
+  );
+}
+
+function ResourceLink({ href, children, className = 'button button-secondary' }) {
+  return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+}
+
+function ResourcesPage() {
+  const { emergency, municipal, acopet, state } = officialResources;
   return (
     <>
-      <section id="calendario" className="section container scroll-mt-28">
-        <PageIntro title="Calendario" eyebrow={calendarContent.title} showBack={false}>
-          <p>{calendarContent.subtitle}</p>
+      <section className="section container">
+        <PageIntro title="Recursos para mujeres" eyebrow="Información y ayuda" showBack={false}>
+          <p>Información práctica y recursos de apoyo para mujeres de Fuenlabrada y alrededores.</p>
+          <p>Esta página reúne recursos oficiales de información, orientación y atención. Si existe peligro inmediato, llama al 112.</p>
         </PageIntro>
-        <div className="calendar-container" id="google-calendar">
-          <iframe
-            title="Calendario de actividades de La Mirada Violeta"
-            src={`${calendarContent.embedUrl}&mode=AGENDA&hl=es`}
-            width="100%"
-            height="680"
-          />
-        </div>
-        <div className="actions">
-          <a className="text-link" href={calendarContent.embedUrl} target="_blank" rel="noopener noreferrer">
-            Abrir calendario en Google
-          </a>
+        <div className="resource-alert">
+          <div><p className="eyebrow">Emergencias</p><strong>112</strong><p>Si hay peligro inmediato, llama a emergencias.</p></div>
+          <div><h2>{emergency.title}</h2><p className="muted">Recursos gratuitos y confidenciales. El 016 ofrece información general y atención psicosocial 24 horas y puede derivar emergencias al 112.</p></div>
         </div>
       </section>
-      <SharedCTA />
+
+      <section className="section container resource-section">
+        <div className="section-heading"><p className="eyebrow">Atención inmediata</p><h2>Servicio 016</h2></div>
+        <div className="resource-grid resource-contact-grid">
+          <article className="resource-card resource-contact"><h3>Teléfono</h3><a className="resource-number" href="tel:016">{emergency.phone}</a><p>Información y atención psicosocial, gratuita y confidencial.</p><a className="button" href="tel:016">Llamar al 016</a></article>
+          <article className="resource-card resource-contact"><h3>WhatsApp</h3><a className="resource-number" href="https://wa.me/34600000016" target="_blank" rel="noopener noreferrer">{emergency.whatsapp}</a><p>Canal de WhatsApp del servicio 016.</p><ResourceLink href="https://wa.me/34600000016" className="button">WhatsApp 016</ResourceLink></article>
+          <article className="resource-card resource-contact"><h3>Correo y chat</h3><p><strong>Correo:</strong> <a href={`mailto:${emergency.email}`}>{emergency.email}</a><br /><strong>Chat online:</strong> disponible en la web oficial de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={emergency.officialUrl}>Web oficial del 016</ResourceLink></article>
+        </div>
+      </section>
+
+      <section className="section section-tint resource-section">
+        <div className="container">
+          <div className="section-heading"><p className="eyebrow">Atención local</p><h2>Dónde acudir en Fuenlabrada</h2></div>
+          <article className="resource-card resource-wide"><h3>{municipal.title}</h3><p>Este programa incluye atención social, psicológica y jurídica, atención psicológica a hijos e hijas menores, coordinación con otros recursos y recursos de alojamiento.</p><div className="resource-details"><p><strong>Casa de la Mujer</strong><br />{municipal.address}</p><p><strong>Teléfono:</strong> <a href="tel:+34916067412">{municipal.phone}</a><br /><strong>Correo:</strong> <a href={`mailto:${municipal.email}`}>{municipal.email}</a><br /><strong>Urgencias e información:</strong> <a href={`mailto:${municipal.urgentEmail}`}>{municipal.urgentEmail}</a>, <a href="tel:010">010</a> y <a href="tel:016">016</a></p></div><ResourceLink href={municipal.officialUrl}>Información oficial del Ayuntamiento</ResourceLink></article>
+        </div>
+      </section>
+
+      <section className="section container resource-section">
+        <div className="resource-grid">
+          <article className="resource-card"><p className="eyebrow">Atención interdisciplinar</p><h2>Punto Municipal del Observatorio Regional</h2><p>Ofrece atención social, psicológica y jurídica, seguimiento y acompañamiento, y atención a menores cuando corresponde. Forma parte de la red de atención integral y se accede a través del programa municipal.</p><ResourceLink href={state.madridNetwork}>Consultar la red oficial</ResourceLink></article>
+          <article className="resource-card"><p className="eyebrow">Protección</p><h2>Alojamiento y protección</h2><p>Existen recursos de alojamiento para mujeres víctimas de violencia de género destinados a proporcionar refugio, seguridad y protección. No publicamos direcciones de recursos protegidos.</p><ResourceLink href={municipal.officialUrl}>Consultar el servicio municipal</ResourceLink></article>
+        </div>
+      </section>
+
+      <section className="section container resource-section">
+        <div className="resource-grid">
+          <article className="resource-card"><p className="eyebrow">Si tienes animales</p><h2>¿Y si tienes animales?</h2><p>ACOPET es un recurso de atención y acogida de animales de compañía para mujeres víctimas de violencia de género que acceden a recursos habitacionales. Las condiciones pueden cambiar.</p><div className="actions"><ResourceLink href={acopet.officialUrl}>Información municipal</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">Conocer ACOPET</ResourceLink></div></article>
+          <article className="resource-card"><p className="eyebrow">Información actualizada</p><h2>Ayudas económicas</h2><p>Puede haber convocatorias de ayudas para mujeres víctimas de violencia de género. Las condiciones y cuantías dependen de cada convocatoria.</p><ResourceLink href={state.madridAid}>Consultar ayudas vigentes</ResourceLink></article>
+        </div>
+      </section>
+
+      <section className="section section-tint resource-section">
+        <div className="container"><div className="section-heading"><p className="eyebrow">Más información</p><h2>Otros recursos</h2></div><div className="resource-grid"><article className="resource-card"><h3>016</h3><p>Información y atención psicosocial para mujeres y su entorno.</p><ResourceLink href={state.official016}>Información oficial</ResourceLink></article><article className="resource-card"><h3>ATENPRO</h3><p>Servicio telefónico de atención y protección para mujeres víctimas de violencia de género.</p><ResourceLink href={state.atenpro}>Conocer ATENPRO</ResourceLink></article><article className="resource-card"><h3>Buscador oficial de recursos</h3><p>Localiza recursos de apoyo y prevención próximos a través de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={state.finder}>Buscar recursos</ResourceLink></article></div></div>
+      </section>
+
+      <section className="section container resource-section">
+        <div className="prose"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div>
+        <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p></div>
+      </section>
     </>
+  );
+}
+
+function CalendarPage() {
+  return (
+    <section className="section container" id="calendario">
+      <PageIntro title="Actividades" eyebrow="Programación" showBack={false}>
+        <p>El calendario se ha integrado en la página de Actividades para reunir toda la programación en un mismo lugar.</p>
+      </PageIntro>
+      <div className="feature-panel">
+        <h2>Calendario</h2>
+        <p>Consulta el calendario completo de actividades, encuentros y eventos.</p>
+        <a className="button" href="/actividades/#calendario">Ver el calendario en Actividades</a>
+      </div>
+    </section>
   );
 }
 
@@ -180,24 +255,7 @@ export default function SitePages({ page }) {
             </div>
           </section>
           <section className="section container">
-            <div className="section-heading"><h2>{aboutContent.actionsHeading}</h2></div>
-            <div className="grid-three">
-              {aboutContent.actions.map((action, index) => (
-                <article className="card" key={action.title}>
-                  <div className="card-body"><ActionIcon type={['safe', 'community', 'local'][index]} /><h3>{action.title}</h3><p>{action.description}</p></div>
-                </article>
-              ))}
-            </div>
-          </section>
-          <section className="section container">
-            <div className="section-heading"><h2>Nuestros valores</h2></div>
-            <div className="grid-two">
-              {pillars.map((pillar) => (
-                <article className="feature-panel values-panel" key={pillar.title}>
-                  <h3>{pillar.title}</h3><p>{pillar.description}</p>
-                </article>
-              ))}
-            </div>
+            <div className="feature-panel"><p className="eyebrow">Nuestra identidad</p><h2>Misión, valores y objetivos</h2><p>Conoce las líneas de trabajo, los valores y la forma de trabajar de La Mirada Violeta.</p><a className="text-link" href="/mision-valores/">Conoce nuestra identidad</a></div>
           </section>
           <section className="section container">
             <div className="section-heading"><h2>Nuestras mujeres en acción</h2><p className="lead">Una asociación viva, tejida desde el encuentro, la escucha y la acción compartida.</p></div>
@@ -217,7 +275,7 @@ export default function SitePages({ page }) {
       return (
         <>
           <section id="actividades" className="section container scroll-mt-28">
-            <PageIntro title="Actividades" eyebrow="Encuentros y acción comunitaria" showBack={false}>
+            <PageIntro title="Actividades" eyebrow="Programación" showBack={false}>
               <p>Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo.</p>
             </PageIntro>
             <div className="feature-panel">
@@ -240,34 +298,105 @@ export default function SitePages({ page }) {
             </div>
           </section>
           <section className="section container">
-            <div className="section-heading"><p className="eyebrow">Programación reciente</p><h2>Lo que hemos compartido</h2></div>
+            <div className="section-heading"><p className="eyebrow">Programación reciente</p><h2>Actividades destacadas</h2></div>
             <div className="grid-three">
-              {activities.map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
+              {activities.slice(0, 2).map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
             </div>
-            <div className="actions"><a className="text-link" href="/iniciativas/">Conoce nuestras iniciativas</a></div>
           </section>
+          <section className="section container">
+            <div className="section-heading"><p className="eyebrow">Archivo</p><h2>Actividades anteriores</h2></div>
+            <div className="grid-three">
+              {activities.slice(2).map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
+            </div>
+          </section>
+          <CalendarEmbed />
           <SharedCTA />
         </>
       );
     case 'iniciativas':
       return (
+        <section className="section container">
+          <PageIntro title="Podcast" eyebrow="Voces y conversaciones" showBack={false}>
+            <p>Esta página se ha reorganizado dentro de la nueva sección del podcast.</p>
+          </PageIntro>
+          <div className="feature-panel"><a className="button" href="/podcast/">Ir al podcast</a></div>
+        </section>
+      );
+    case 'mision-valores':
+      return (
         <>
-          <section id="iniciativas" className="section container scroll-mt-28">
-            <PageIntro title="Iniciativas" eyebrow="Tu voz cuenta" showBack={false} />
-            <div className="feature-panel">
-              <p className="tag">Podcast en preparación</p>
-              <h2>{podcastContent.title}</h2>
-              <p className="lead">{podcastContent.text}</p>
-              <div className="actions">
-                <a className="button" href={podcastContent.cta.href} target="_blank" rel="noopener noreferrer">
-                  {podcastContent.cta.label}
-                </a>
+          <section className="section container">
+            <PageIntro title="Misión, valores y objetivos" eyebrow="Nuestra identidad" showBack={false}>
+              <p>La Mirada Violeta es una asociación feminista de Fuenlabrada comprometida con la igualdad, la justicia social y la transformación desde lo local y lo colectivo.</p>
+            </PageIntro>
+            <div className="prose">
+              <h2>Nuestra misión</h2>
+              <p>{aboutContent.paragraphs[0]}</p>
+              <h2>Nuestra visión</h2>
+              <p>Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p>
+              <h2>Nuestros valores</h2>
+              <div className="grid-two identity-grid">
+                {pillars.map((pillar) => <article className="feature-panel values-panel" key={pillar.title}><h3>{pillar.title}</h3><p>{pillar.description}</p></article>)}
               </div>
+              <h2>Nuestros objetivos</h2>
+              <ul>{aboutContent.actions.map((action) => <li key={action.title}><strong>{action.title}:</strong> {action.description}</li>)}</ul>
+              <h2>Cómo trabajamos</h2>
+              <p>{aboutContent.paragraphs[1]} Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p>
+              <h2>Nuestro ámbito</h2>
+              <p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p>
             </div>
           </section>
           <SharedCTA />
         </>
       );
+    case 'podcast':
+      return (
+        <section className="section container">
+          <PageIntro title="Podcast" eyebrow="Voces y conversaciones" showBack={false}>
+            <p>Estamos preparando un espacio para hablar de mujeres, feminismo, cultura, igualdad y experiencias que merecen ser escuchadas.</p>
+          </PageIntro>
+          <div className="feature-panel podcast-coming-soon">
+            <p className="tag">Próximamente</p>
+            <h2>{podcastContent.title}</h2>
+            <p>{podcastContent.text}</p>
+            <div className="podcast-platforms" aria-label="Plataformas previstas para el podcast">
+              <span>Spotify</span><span>YouTube</span>
+            </div>
+            <div className="actions"><a className="button button-secondary" href={podcastContent.cta.href} target="_blank" rel="noopener noreferrer">{podcastContent.cta.label}</a></div>
+          </div>
+          <div className="section-heading episode-heading"><h2>Próximos episodios</h2><p className="muted">Cuando publiquemos episodios aparecerán aquí con su portada, fecha, descripción y enlaces para escucharlos.</p></div>
+          <div className="podcast-episodes">{podcastEpisodes.map((episode) => <article className="card podcast-episode" key={episode.title}><img src={episode.image} alt="" /><div className="card-body"><p className="eyebrow">{episode.date}</p><h3>{episode.title}</h3><p>{episode.description}</p><div className="actions"><a className="button button-secondary" href={episode.spotify}>Spotify</a><a className="button button-secondary" href={episode.youtube}>YouTube</a></div></div></article>)}</div>
+        </section>
+      );
+    case 'socias':
+      return (
+        <>
+          <section className="section container">
+            <PageIntro title="Hazte socia" eyebrow="Forma parte" showBack={false}>
+              <p>La asociación crece con la participación, las ideas y los conocimientos de las mujeres que la forman.</p>
+            </PageIntro>
+            <div className="prose">
+              <h2>¿Por qué hacerte socia?</h2>
+              <p>Ser socia te permite participar en la asociación, proponer ideas, participar en actividades y colaborar en proyectos. También es una forma de compartir tu experiencia y conocimientos y apoyar la continuidad de La Mirada Violeta.</p>
+              <h2>¿Qué puedes aportar?</h2>
+              <p>Cada mujer puede implicarse según su disponibilidad. Puedes aportar tiempo, ideas, conocimientos, experiencia o participación en los encuentros y actividades.</p>
+              <div className="grid-two membership-grid">
+                <article className="feature-panel"><h3>Una participación flexible</h3><p>No todas tenemos la misma disponibilidad, y cada aportación cuenta.</p></article>
+                <article className="feature-panel"><h3>Una asociación compartida</h3><p>Las propuestas, aprendizajes y cuidados se construyen entre todas.</p></article>
+              </div>
+              <h2>Cuota</h2>
+              <p><strong>Cuota:</strong> [CUOTA]<br /><strong>Periodicidad:</strong> [PERIODICIDAD]<br /><strong>Forma de pago:</strong> [FORMA DE PAGO]</p>
+              <h2>Compromiso</h2>
+              <p>Hacerse socia no significa tener la obligación de participar continuamente ni asistir a todas las actividades. La implicación puede cambiar con el tiempo y adaptarse a cada momento personal.</p>
+              <h2>Normas básicas</h2>
+              <ul><li>Respeto y trato digno.</li><li>No discriminación.</li><li>Escucha y confidencialidad de las experiencias personales.</li><li>Respeto por las demás participantes.</li><li>Convivencia respetuosa presencial y digital.</li><li>Coherencia con los fines y valores de la asociación.</li></ul>
+            </div>
+          </section>
+          <section className="section container"><div className="cta-panel"><h2>¿Quieres formar parte?</h2><p className="lead">Déjanos tus datos cuando preparemos el formulario de incorporación.</p><a className="button" href="#contacto-socias">Quiero hacerme socia</a><p id="contacto-socias" className="muted cta-note">Próximamente habilitaremos el formulario o correo de contacto.</p></div></section>
+        </>
+      );
+    case 'recursos':
+      return <ResourcesPage />;
     case 'calendario':
       return <CalendarPage />;
     case 'contacto':

@@ -1,9 +1,21 @@
 export const navigation = [
   { label: 'Inicio', href: '/' },
-  { label: 'Quiénes somos', href: '/quienes-somos/' },
-  { label: 'Actividades', href: '/actividades/' },
-  { label: 'Iniciativas', href: '/iniciativas/' },
-  { label: 'Calendario', href: '/calendario/' },
+  {
+    label: 'La asociación',
+    children: [
+      { label: 'Quiénes somos', href: '/quienes-somos/' },
+      { label: 'Misión, valores y objetivos', href: '/mision-valores/' },
+    ],
+  },
+  {
+    label: 'Qué hacemos',
+    children: [
+      { label: 'Actividades', href: '/actividades/' },
+      { label: 'Podcast', href: '/podcast/' },
+    ],
+  },
+  { label: 'Socias', href: '/socias/' },
+  { label: 'Recursos', href: '/recursos/' },
   { label: 'Contacto', href: '/contacto/' },
 ];
 
@@ -134,6 +146,9 @@ export const podcastContent = {
     href: 'https://forms.gle/jvptTa7dFfjkjGQc6',
   },
 };
+
+// Add future episodes here without changing the podcast page structure.
+export const podcastEpisodes = [];
 
 export const calendarContent = {
   title: 'Próximos eventos',

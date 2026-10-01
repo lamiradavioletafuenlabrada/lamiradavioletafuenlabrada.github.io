@@ -16,12 +16,12 @@ for (const page of pages) {
     .replace(/<title>.*?<\/title>/s, `<title>${escape(page.title)}</title>`)
     .replace(/<meta\s+(?:name="description"|property="og:[^"]+")[\s\S]*?\/>/g, '')
     .replace('</head>', `<meta name="description" content="${escape(page.description)}" />
-    <link rel="canonical" href="${domain}${page.path}" />
+     <link rel="canonical" href="${domain}${page.canonical || page.path}" />
     <meta property="og:title" content="${escape(page.title)}" />
     <meta property="og:description" content="${escape(page.description)}" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
-    <meta property="og:url" content="${domain}${page.path}" />
+     <meta property="og:url" content="${domain}${page.canonical || page.path}" />
     <meta property="og:image" content="${domain}/banner-izq-vacio.png" />
     <meta property="og:image:alt" content="La Mirada Violeta" />
     </head>`)

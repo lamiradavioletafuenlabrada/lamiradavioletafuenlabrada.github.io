@@ -22,12 +22,12 @@ for (const page of pages) {
   titles.add(title);
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `Expected one h1: ${page.path}`);
   assert.ok(html.includes('<html lang="es">'));
-  assert.ok(html.includes(`rel="canonical" href="${domain}${page.path}"`));
-  assert.ok(html.includes(`property="og:url" content="${domain}${page.path}"`));
+   assert.ok(html.includes(`rel="canonical" href="${domain}${page.canonical || page.path}"`));
+   assert.ok(html.includes(`property="og:url" content="${domain}${page.canonical || page.path}"`));
   assert.ok(html.includes('name="description" content="'));
   assert.ok(html.includes('property="og:image" content="https://'));
-  assert.equal((html.match(/<iframe\b/g) || []).length, page.id === 'calendario' ? 1 : 0, 'Only the calendar page embeds Google directly');
-  if (page.id === 'calendario') {
+   assert.equal((html.match(/<iframe\b/g) || []).length, page.id === 'actividades' ? 1 : 0, 'Only the activities page embeds Google directly');
+   if (page.id === 'actividades') {
     assert.ok(html.includes('src="https://calendar.google.com/calendar/embed?'));
     assert.ok(!html.includes('Mostrar calendario de Google'));
     assert.ok(!/<iframe[^>]*loading="lazy"/.test(html), 'Calendar must load immediately');
@@ -35,7 +35,7 @@ for (const page of pages) {
   assert.ok(!html.includes('.render/'), 'Build-only rendering bundle must not ship');
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const value = match[1].replaceAll('&amp;', '&');
-    if (/^(https?:|mailto:)/.test(value)) continue;
+     if (/^(https?:|mailto:|tel:)/.test(value)) continue;
     const url = new URL(value, `http://static.test${page.path}`);
     const target = await exists(decodeURIComponent(url.pathname));
     if (url.hash) {
