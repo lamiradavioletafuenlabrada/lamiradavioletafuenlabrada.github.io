@@ -1,16 +1,28 @@
 export const navigation = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Quiénes somos', href: '#quienes-somos' },
-  { label: 'Actividades', href: '#actividades' },
-  { label: 'Calendario', href: '#calendario' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Quiénes somos', href: '/quienes-somos/' },
+  { label: 'Actividades', href: '/actividades/' },
+  { label: 'Iniciativas', href: '/iniciativas/' },
+  { label: 'Calendario', href: '/calendario/' },
+  { label: 'Contacto', href: '/contacto/' },
 ];
+
+// Original dimensions; responsive WebP derivatives sit beside the source files.
+export const imageDimensions = {
+  '/miradastodas.png': [1600, 1200],
+  '/socias.png': [1448, 1086],
+  '/Paca_montse_concejala.png': [1600, 1200],
+  '/ayala.png': [1124, 1406],
+  '/susy.png': [1200, 1600],
+  '/teatro.png': [1200, 1600],
+  '/patronato.png': [2000, 1126],
+};
 
 export const heroContent = {
   title: 'Asociación\nLa Mirada Violeta',
   description:
     'Dando voz a las mujeres del pasado, del presente y del futuro en Fuenlabrada.',
-  cta: { label: 'Descubre nuestras actividades', href: '#actividades' },
+  cta: { label: 'Ver actividades', href: '/actividades/' },
   image: '/banner-sinletras.png',
 };
 
@@ -115,7 +127,7 @@ export const upcomingActivities = [
 ];
 
 export const podcastContent = {
-  title: 'Se vienen cositas... y tu voz cuenta. 🎧💜',
+  title: 'Se vienen cositas... y tu voz cuenta.',
   text: 'Estamos preparando un nuevo podcast feminista y este espacio también es tuyo. ¿De qué temas te gustaría que hablemos? ¿Qué voces o debates echas en falta? Entra en el formulario, déjanos tus ideas y ayúdanos a construir los próximos episodios.',
   cta: {
     label: 'Déjanos tus ideas aquí',
