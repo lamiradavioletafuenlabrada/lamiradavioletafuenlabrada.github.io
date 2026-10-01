@@ -14,6 +14,7 @@ const exists = async (pathname) => {
 };
 assert.equal((await readFile('dist/CNAME', 'utf8')).trim(), 'www.lamiradavioleta.org');
 const titles = new Set();
+const sitemapPaths = ['/', '/quienes-somos/', '/mision-valores/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/'];
 let checked = 0;
 for (const page of pages) {
   const html = await readFile(`dist${page.path}index.html`, 'utf8');
@@ -25,7 +26,12 @@ for (const page of pages) {
    assert.ok(html.includes(`rel="canonical" href="${domain}${page.canonical || page.path}"`));
    assert.ok(html.includes(`property="og:url" content="${domain}${page.canonical || page.path}"`));
   assert.ok(html.includes('name="description" content="'));
+  assert.ok(html.includes('name="twitter:card" content="summary_large_image"'));
   assert.ok(html.includes('property="og:image" content="https://'));
+  const jsonLd = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+  assert.ok(jsonLd, `Missing JSON-LD: ${page.path}`);
+  assert.doesNotThrow(() => JSON.parse(jsonLd), `Invalid JSON-LD: ${page.path}`);
+  for (const image of html.matchAll(/<img\b([^>]*)>/g)) assert.ok(/\balt="/.test(image[1]), `Image without alt: ${page.path}`);
    assert.equal((html.match(/<iframe\b/g) || []).length, page.id === 'actividades' ? 1 : 0, 'Only the activities page embeds Google directly');
    if (page.id === 'actividades') {
     assert.ok(html.includes('src="https://calendar.google.com/calendar/embed?'));
@@ -54,4 +60,10 @@ for (const page of pages) {
 }
 await exists('/sitemap.xml');
 await exists('/robots.txt');
+const sitemap = await readFile('dist/sitemap.xml', 'utf8');
+assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => new URL(match[1]).pathname), sitemapPaths);
+const notFound = await readFile('dist/404.html', 'utf8');
+assert.equal((notFound.match(/<h1[\s>]/g) || []).length, 1, '404 must have one h1');
+assert.ok(notFound.includes('name="robots" content="noindex, follow"'));
+for (const path of ['/actividades/', '/recursos/']) assert.ok(notFound.includes(`href="${path}"`), `404 missing link: ${path}`);
 console.log(`Verified ${pages.length} pages and ${checked} local references. CNAME preserved.`);

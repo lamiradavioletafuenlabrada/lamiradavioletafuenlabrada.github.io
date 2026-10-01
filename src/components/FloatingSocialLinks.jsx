@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaInstagram, FaLinkedinIn, FaShareAlt } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedinIn, FaShareAlt, FaYoutube } from 'react-icons/fa';
 import { FaTiktok, FaXmark } from 'react-icons/fa6';
 import { socialLinks } from '../data/siteContent';
 
@@ -7,6 +7,7 @@ const iconByLabel = {
   Instagram: FaInstagram,
   TikTok: FaTiktok,
   LinkedIn: FaLinkedinIn,
+  YouTube: FaYoutube,
   'Correo electrónico': FaEnvelope,
 };
 

@@ -185,6 +185,10 @@ export const socialLinks = [
     href: 'https://www.linkedin.com/company/asociacion-la-mirada-violeta',
   },
   {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@lamiradavioletafuenla',
+  },
+  {
     label: 'Correo electrónico',
     href: 'mailto:contacto@lamiradavioleta.org',
   },

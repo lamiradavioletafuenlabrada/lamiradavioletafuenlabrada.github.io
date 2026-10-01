@@ -43,6 +43,7 @@ export function ActivityCard({ activity, href = activity.href }) {
       />
       <div className="card-body">
         <h3>{href ? <a className="text-link" href={href}>{activity.title}</a> : activity.title}</h3>
+        {activity.startDate && <p><time dateTime={activity.startDate}>{activity.dateLabel || activity.startDate}</time>{activity.location && <> · <span>{activity.location}</span></>}</p>}
         <p>{activity.description}</p>
       </div>
     </article>
@@ -162,7 +163,7 @@ function ResourcesPage() {
 
       <section className="section container resource-section">
         <div className="prose"><h2>¿Quieres ayudar a una amiga, familiar o conocida?</h2><p>Escuchar sin juzgar y buscar orientación profesional puede ser útil. El 016 también ofrece información al entorno de las mujeres que sufren violencia. Prioriza siempre los recursos profesionales y llama al 112 ante una emergencia.</p><div className="privacy-note"><strong>Seguridad y privacidad:</strong> si crees que alguien controla tu dispositivo, utiliza uno seguro para buscar ayuda cuando sea posible.</div></div>
-        <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p></div>
+        <div className="sources"><h2>Fuentes oficiales</h2><p><ResourceLink href="https://www.ayto-fuenlabrada.es/" className="text-link">Ayuntamiento de Fuenlabrada</ResourceLink><ResourceLink href="https://violenciagenero.igualdad.gob.es/" className="text-link">Delegación del Gobierno contra la Violencia de Género</ResourceLink><ResourceLink href="https://www.comunidad.madrid/" className="text-link">Comunidad de Madrid</ResourceLink><ResourceLink href={acopet.programUrl} className="text-link">ACOPET</ResourceLink></p><p className="muted">Última revisión de la información: [FECHA]</p><a className="text-link" href="/contacto/">Contacta con La Mirada Violeta</a></div>
       </section>
     </>
   );
@@ -237,8 +238,10 @@ export default function SitePages({ page }) {
           </section>
           <SharedCTA />
           <div className="container legacy-links">
-            <a id="calendario" className="text-link" href="/calendario/">Consultar el calendario</a>
-            <a id="contacto" className="text-link" href="/contacto/">Contactar con la asociación</a>
+             <a id="calendario" className="text-link" href="/actividades/#calendario">Consultar el calendario de actividades</a>
+             <a id="contacto" className="text-link" href="/contacto/">Contactar con la asociación</a>
+             <a className="text-link" href="/socias/">Hazte socia</a>
+             <a className="text-link" href="/recursos/">Recursos para mujeres</a>
           </div>
         </>
       );
@@ -276,7 +279,7 @@ export default function SitePages({ page }) {
         <>
           <section id="actividades" className="section container scroll-mt-28">
             <PageIntro title="Actividades" eyebrow="Programación" showBack={false}>
-              <p>Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo.</p>
+              <p>En Fuenlabrada, creamos espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo.</p>
             </PageIntro>
             <div className="feature-panel">
               <p className="tag">Nuevas actividades</p>
@@ -287,12 +290,12 @@ export default function SitePages({ page }) {
               <ul className="upcoming-list">
                 {upcomingActivities.map((activity) => (
                   <li className="upcoming-item" key={activity.title}>
-                    <h3>{activity.title}</h3><p className="muted">{activity.details}</p>
+                    <h3>{activity.title}</h3><p className="muted">{activity.startDate ? <time dateTime={activity.startDate}>{activity.dateLabel || activity.startDate}</time> : activity.details}{activity.location && <> · <span>{activity.location}</span></>}</p>
                   </li>
                 ))}
               </ul>
               <div className="actions">
-                <a className="button" href="/calendario/">Consultar el calendario</a>
+                <a className="button" href="/actividades/#calendario">Consultar el calendario</a>
                 <a className="text-link" href="/contacto/">Consultar los detalles</a>
               </div>
             </div>
@@ -365,7 +368,7 @@ export default function SitePages({ page }) {
             <div className="actions"><a className="button button-secondary" href={podcastContent.cta.href} target="_blank" rel="noopener noreferrer">{podcastContent.cta.label}</a></div>
           </div>
           <div className="section-heading episode-heading"><h2>Próximos episodios</h2><p className="muted">Cuando publiquemos episodios aparecerán aquí con su portada, fecha, descripción y enlaces para escucharlos.</p></div>
-          <div className="podcast-episodes">{podcastEpisodes.map((episode) => <article className="card podcast-episode" key={episode.title}><img src={episode.image} alt="" /><div className="card-body"><p className="eyebrow">{episode.date}</p><h3>{episode.title}</h3><p>{episode.description}</p><div className="actions"><a className="button button-secondary" href={episode.spotify}>Spotify</a><a className="button button-secondary" href={episode.youtube}>YouTube</a></div></div></article>)}</div>
+          <div className="podcast-episodes">{podcastEpisodes.map((episode) => <article className="card podcast-episode" key={episode.title}><img src={episode.image} alt={episode.imageAlt || episode.title} width={episode.width} height={episode.height} loading="lazy" /><div className="card-body"><p className="eyebrow">{episode.date}</p><h3>{episode.title}</h3><p>{episode.description}</p><div className="actions"><a className="button button-secondary" href={episode.spotify}>Spotify</a><a className="button button-secondary" href={episode.youtube}>YouTube</a></div></div></article>)}</div>
         </section>
       );
     case 'socias':
@@ -502,6 +505,19 @@ export default function SitePages({ page }) {
               <a className="button button-secondary" href="/">Volver a la web principal</a>
             </div>
             <p className="muted">La Mirada Violeta · Fuenlabrada, Madrid · Página informativa sobre la actualización del correo de contacto.</p>
+          </div>
+        </section>
+      );
+    case '404':
+      return (
+        <section className="section container">
+          <PageIntro title="Página no encontrada" eyebrow="Error 404" showBack={false}>
+            <p>La página que buscas no está disponible o ha cambiado de dirección.</p>
+          </PageIntro>
+          <div className="actions">
+            <a className="button" href="/">Ir al inicio</a>
+            <a className="button button-secondary" href="/actividades/">Ver actividades</a>
+            <a className="text-link" href="/recursos/">Consultar recursos para mujeres</a>
           </div>
         </section>
       );
