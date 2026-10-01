@@ -40,7 +40,7 @@ como imagen Open Graph; la portada utiliza una fotografía real de la asociació
 ## Arquitectura y diseño
 
 Navegación: Inicio, Quiénes somos, Actividades, Iniciativas, Calendario y Contacto.
-El pie también enlaza Aviso legal y privacidad y el comunicado de correo.
+El pie enlaza por separado Aviso legal, Política de privacidad y el comunicado de correo.
 No se crearon páginas vacías de Noticias o Recursos.
 
 Cada página tiene un `index.html` completo generado durante la compilación.
@@ -52,12 +52,13 @@ mediante un iframe responsive y mantiene un enlace alternativo a Google.
 El diseño comparte variables CSS, componentes de fotografías, tarjetas y títulos,
 con fondos crema, texto carbón y violeta en acentos. Georgia aporta personalidad
 a los títulos y la tipografía de sistema facilita la lectura sin peticiones de fuentes externas.
-Se eliminaron parallax, animaciones de aparición y redes flotantes para evitar
-movimiento innecesario, contenido invisible y controles superpuestos en móvil.
+Se eliminaron parallax y animaciones de aparición. Las redes sociales se muestran
+en un control flotante recuperado del diseño anterior, con menú accesible en móvil.
 
 Los documentos antes ubicados en `public/aviso-legal/index.html` y
 `public/actualizacion-correo/index.html` se integraron en `SitePages.jsx` para compartir
-diseño y navegación. Sus URLs y contenidos se conservan en la salida generada.
+diseño y navegación. Aviso legal, Política de privacidad y comunicado tienen rutas
+independientes y sus contenidos se generan en la salida publicada.
 Se retiraron los componentes de la antigua landing y el hook de parallax, ya sin uso.
 
 ## Decisiones editoriales
@@ -86,7 +87,7 @@ identificaba como el logo del Centro 8 de Marzo.
 - Compatibilidad con los fragmentos antiguos al entrar y al cambiar el hash.
 - En la primera fase se verificó la carga voluntaria del calendario; la segunda fase
   sustituye ese comportamiento por un iframe presente desde el HTML inicial.
-- Comparación de todos los párrafos, apartados y elementos de lista legales con el original.
+- Comprobación de los apartados del Aviso Legal y de los 15 apartados de la Política de Privacidad.
 - Sin errores de JavaScript, hidratación o respuestas HTTP locales fallidas.
 - Preferencia de movimiento reducido y revisión visual de capturas de inicio y actividades.
 - Ocho destinos externos comprobados por HTTP, sin 404. LinkedIn restringe algunos clientes
@@ -102,8 +103,9 @@ Confirmar fechas y vigencia de la programación, y publicar fichas de actividade
 cuando existan datos suficientes. Añadir episodios al podcast cuando estén disponibles.
 Revisar con la asociación la política de privacidad: describe un formulario de
 inscripción diferente del formulario de ideas enlazado y necesita contrastarse con
-los servicios externos y el tratamiento de fotografías. No se reescribió contenido
-legal sin validación. Confirmar también el buzón `gestion@lamiradavioleta.org`.
+los servicios externos y el tratamiento de fotografías. El contenido legal facilitado
+queda publicado, pendiente de validación jurídica por la asociación. Confirmar también
+el buzón `gestion@lamiradavioleta.org`.
 Completar pruebas con lector de pantalla y comprobar el sitio tras su publicación.
 
 ## Segunda pasada visual
@@ -120,7 +122,8 @@ El header sticky reduce discretamente su altura al desplazarse.
 El calendario se carga sin consentimiento intermedio, por petición expresa.
 La vista de agenda evita la cuadrícula estrecha en móvil; el iframe ocupa todo el
 ancho del contenedor y el enlace directo sigue disponible. Se elimina el botón y
-el texto que describían la carga voluntaria. El contenido legal no se modifica.
+el texto que describían la carga voluntaria. El contenido legal y de privacidad quedan
+separados en sus respectivas rutas.
 
 La segunda pasada se comprobó en las nueve páginas a 375, 430, 768, 1024 y 1440 píxeles,
 con apertura directa, recarga, teclado, foco, imágenes y axe sobre el contenido local.

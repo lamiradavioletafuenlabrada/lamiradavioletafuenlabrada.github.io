@@ -5,7 +5,7 @@ export const pages = [
   { id: 'iniciativas', path: '/iniciativas/', title: 'Iniciativas | La Mirada Violeta', description: 'Ayúdanos a construir nuestro podcast feminista. Comparte temas, voces y debates para un espacio hecho entre todas.' },
   { id: 'calendario', path: '/calendario/', title: 'Calendario | La Mirada Violeta', description: 'Consulta el calendario de actividades, talleres y encuentros de La Mirada Violeta en Fuenlabrada.' },
   { id: 'contacto', path: '/contacto/', title: 'Contacto | La Mirada Violeta', description: 'Contacta con La Mirada Violeta para participar, proponer actividades o colaborar. Correo y redes oficiales de la asociación.' },
-  { id: 'aviso-legal', path: '/aviso-legal/', title: 'Aviso legal y privacidad | La Mirada Violeta', description: 'Política de privacidad y protección de datos de la Asociación de Mujeres La Mirada Violeta.' },
+  { id: 'aviso-legal', path: '/aviso-legal/', title: 'Aviso legal | La Mirada Violeta', description: 'Aviso legal de la Asociación de Mujeres La Mirada Violeta, entidad sin ánimo de lucro de Fuenlabrada.' },
   { id: 'politica-privacidad', path: '/politica-privacidad/', title: 'Política de privacidad | La Mirada Violeta', description: 'Información sobre el tratamiento y la protección de datos personales de La Mirada Violeta.' },
   { id: 'actualizacion-correo', path: '/actualizacion-correo/', title: 'Actualización de correo | La Mirada Violeta', description: 'Comunicado oficial sobre el correo de contacto de La Mirada Violeta: contacto@lamiradavioleta.org.' },
 ];

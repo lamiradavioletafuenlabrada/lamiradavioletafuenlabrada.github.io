@@ -212,12 +212,10 @@ export default function SitePages({ page }) {
               <p>Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo.</p>
             </PageIntro>
             <div className="feature-panel">
-              <p className="tag">Información publicada</p>
+              <p className="tag">Nuevas actividades</p>
               <h2>Próximas actividades</h2>
               <p>
-                La fecha publicada de «Huelga en minifalda» es el 7 de octubre, sin año indicado.
-                Esta información no confirma una agenda vigente. Las demás fechas, horas y localizaciones
-                están por confirmar. Consulta el calendario o escríbenos para confirmar los detalles antes de acudir.
+                Actualizaremos aquí las actividades a medida que confirmemos espacios. Las actividades que no tengan más información es porque tanto la fecha, hora y localización está por confirmar. Consulta el calendario o escríbenos para confirmar los detalles antes de acudir. Apúntate, todas son siempre gratuitas.
               </p>
               <ul className="upcoming-list">
                 {upcomingActivities.map((activity) => (
@@ -281,8 +279,8 @@ export default function SitePages({ page }) {
                   <a className="text-link" key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
                 ))}
               </div>
-              <h3>Referencia en el mapa</h3>
-              <p>El enlace al mapa señala el Centro 8 de Marzo de Fuenlabrada como referencia, no como sede de la asociación. Confirma con nosotras el lugar de cada encuentro.</p>
+               <h3>Sede oficial de la Asociación</h3>
+               <p>Actualmente no disponemos de espacio propio, esperamos contar con ello próximamente. En el mapa, verás que nos ubicamos en el Centro 8 de Marzo de Fuenlabrada como referencia. Confirma con nosotras el lugar de cada encuentro.</p>
               <a className="text-link" href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer">Ver el Centro 8 de Marzo en Google Maps</a>
             </div>
           </div>
@@ -291,33 +289,45 @@ export default function SitePages({ page }) {
     case 'aviso-legal':
       return (
         <section id="aviso-legal" className="section container scroll-mt-28">
-          <PageIntro title="Política de privacidad y protección de datos" eyebrow="La Mirada Violeta" />
+          <PageIntro title="Aviso Legal" eyebrow="La Mirada Violeta" />
           <div className="prose">
-            <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), se informa a los participantes sobre el tratamiento de sus datos personales:</p>
-            <h2>1. Responsable del Tratamiento</h2>
-            <ul>
-              <li><strong>Denominación:</strong> Asociación de Mujeres La Mirada Violeta</li>
-              <li><strong>NIF:</strong> G-56468705</li>
-              <li><strong>Domicilio:</strong> C/ de Tesillo, 28944, Fuenlabrada, Madrid.</li>
-              <li><strong>Correo electrónico de contacto:</strong> contacto@lamiradavioleta.org</li>
-            </ul>
-            <h2>2. Datos objeto de tratamiento</h2>
-            <p>Los datos recogidos a través del formulario corresponden a las categorías de datos identificativos: nombre, apellidos, número de teléfono, DNI, email.</p>
-            <h2>3. Finalidad del tratamiento</h2>
-            <p>Sus datos se utilizarán exclusivamente para:</p>
-            <ul>
-              <li>Gestionar la lista de inscritos a la actividad solicitada.</li>
-              <li>Coordinar la asistencia y enviar comunicaciones relativas al desarrollo o incidencias de dicha actividad.</li>
-            </ul>
-            <h2>4. Legitimación</h2>
-            <p>La base legal para el tratamiento de sus datos es el <strong>consentimiento explícito</strong> otorgado al marcar la casilla de aceptación y enviar el formulario de inscripción.</p>
-            <h2>5. Plazo de conservación</h2>
-            <p>Los datos se conservarán únicamente durante el tiempo estrictamente necesario para la realización de la actividad y la atención de posibles responsabilidades derivadas de la misma. Finalizado este periodo, serán suprimidos de forma segura.</p>
-            <h2>6. Destinatarios</h2>
-            <p>No se cederán datos personales a terceros ni se realizarán transferencias internacionales de datos, salvo obligación legal o en caso de ser estrictamente necesario para la seguridad de la actividad.</p>
-            <h2>7. Derechos de los usuarios</h2>
-            <p>Puede ejercer en cualquier momento sus derechos de <strong>acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad</strong>. Para ello, puede enviar una solicitud por escrito adjuntando copia de su documento de identidad a la dirección de correo electrónico: <strong>gestion@lamiradavioleta.org</strong>.</p>
-            <p>Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <a className="text-link" href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">www.aepd.es</a> si considera que sus derechos han sido vulnerados.</p>
+            <h2>1. Información general</h2>
+            <p>En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos identificativos de la entidad responsable de este sitio web:</p>
+            <p><strong>Titular:</strong> Asociación de Mujeres La Mirada Violeta<br /><strong>NIF:</strong> G56468705<br /><strong>Domicilio:</strong> C/ de Tesillo, 28944 Fuenlabrada, Madrid<br /><strong>Correo electrónico:</strong> contacto@lamiradavioleta.org<br /><strong>Sitio web:</strong> www.lamiradavioleta.org<br /><strong>Registro:</strong> Registro de Asociaciones de la Comunidad de Madrid<br /><strong>Número de inscripción:</strong> 40614</p>
+            <p>La Asociación de Mujeres La Mirada Violeta es una entidad sin ánimo de lucro.</p>
+            <h2>2. Objeto del sitio web</h2>
+            <p>El sitio web de La Mirada Violeta tiene como finalidad informar sobre la Asociación, sus fines, actividades, talleres, encuentros, campañas, proyectos y otras iniciativas relacionadas con su actividad asociativa.</p>
+            <p>Asimismo, podrá facilitar información sobre próximas actividades y proporcionar medios para contactar con la Asociación o inscribirse en determinadas actividades.</p>
+            <h2>3. Condiciones de uso</h2>
+            <p>El acceso y utilización de este sitio web atribuye la condición de persona usuaria e implica la aceptación de las presentes condiciones de uso.</p>
+            <p>Las personas usuarias se comprometen a hacer un uso adecuado de los contenidos y servicios disponibles y a no utilizarlos para realizar actividades contrarias a la legislación vigente, los derechos de terceros o el orden público.</p>
+            <p>La Mirada Violeta podrá modificar, actualizar o retirar contenidos de la página web cuando resulte necesario.</p>
+            <h2>4. Propiedad intelectual e industrial</h2>
+            <p>Los textos, diseños, logotipos, fotografías, vídeos y demás contenidos publicados en este sitio web podrán estar protegidos por derechos de propiedad intelectual e industrial.</p>
+            <p>Salvo que se indique expresamente lo contrario, dichos contenidos pertenecen a La Mirada Violeta o se utilizan con la correspondiente autorización.</p>
+            <p>No está permitida su reproducción, distribución, modificación o utilización con fines comerciales sin autorización previa de sus titulares, salvo en los casos permitidos por la legislación vigente.</p>
+            <p>La utilización de contenidos de este sitio web con fines informativos o de difusión deberá respetar, en todo caso, la autoría y procedencia de los mismos.</p>
+            <h2>5. Enlaces a páginas de terceros</h2>
+            <p>Este sitio web puede contener enlaces a páginas web, redes sociales u otros servicios de terceros.</p>
+            <p>La Mirada Violeta no controla necesariamente dichos sitios externos y no se responsabiliza de sus contenidos, disponibilidad, políticas de privacidad o funcionamiento.</p>
+            <p>La inclusión de un enlace no implica necesariamente que exista una relación, colaboración o aprobación de los contenidos del sitio enlazado.</p>
+            <h2>6. Responsabilidad</h2>
+            <p>La Mirada Violeta procura que la información publicada en su página web sea correcta y esté actualizada.</p>
+            <p>No obstante, no puede garantizar la inexistencia de errores puntuales, interrupciones del servicio o problemas técnicos ajenos a su control.</p>
+            <p>La información relativa a actividades, fechas, horarios, espacios o condiciones de participación podrá sufrir modificaciones. Cuando sea posible, dichas modificaciones serán comunicadas a través de los canales habituales de la Asociación.</p>
+            <h2>7. Protección de datos personales</h2>
+            <p>El tratamiento de los datos personales realizado a través de este sitio web se regula en la <strong>Política de Privacidad y Protección de Datos</strong> de La Mirada Violeta.</p>
+            <p>Las personas usuarias pueden consultar dicha política para conocer qué datos se recogen, con qué finalidad se utilizan, durante cuánto tiempo se conservan y cómo ejercer sus derechos.</p>
+            <div className="actions"><a className="button button-secondary" href="/politica-privacidad/">Consultar la Política de Privacidad</a></div>
+            <h2>8. Uso de imágenes</h2>
+            <p>Las fotografías y vídeos publicados en este sitio web se utilizarán respetando la normativa aplicable y los derechos de las personas que aparezcan en ellos.</p>
+            <p>Cuando resulte necesario, La Mirada Violeta solicitará la correspondiente autorización para la utilización y difusión de imágenes.</p>
+            <h2>9. Legislación aplicable</h2>
+            <p>El presente Aviso Legal se rige por la legislación española.</p>
+            <p>Cualquier controversia derivada del acceso o utilización de este sitio web se resolverá de acuerdo con la normativa y los órganos jurisdiccionales que resulten legalmente competentes.</p>
+            <h2>10. Modificación del Aviso Legal</h2>
+            <p>La Mirada Violeta podrá modificar este Aviso Legal cuando resulte necesario para adaptarlo a cambios legislativos, técnicos o relacionados con el funcionamiento del sitio web.</p>
+            <p>La versión vigente será la publicada en esta página.</p>
             <div className="actions"><a className="button" href="/">Volver a la página principal</a></div>
           </div>
         </section>
