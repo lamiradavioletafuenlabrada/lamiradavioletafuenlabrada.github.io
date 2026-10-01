@@ -47,10 +47,19 @@ export function ActivityCard({ activity, href = activity.href }) {
   );
 }
 
-function PageIntro({ title, eyebrow, children }) {
+function ActionIcon({ type }) {
+  const paths = {
+    safe: <><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5v9M7.5 12h9" /></>,
+    community: <><circle cx="9" cy="9" r="2.5" /><circle cx="16.5" cy="10" r="2" /><path d="M4.5 18c.4-2.7 2-4 4.5-4s4.1 1.3 4.5 4M14 15c2.5-.7 4.3.3 5 2.7" /></>,
+    local: <><path d="M4.5 18.5h15M6.5 18.5V9l5.5-4 5.5 4v9.5M9 18.5v-5h6v5" /><path d="M12 8.5v2" /></>,
+  };
+  return <svg className="action-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{paths[type]}</svg>;
+}
+
+function PageIntro({ title, eyebrow, children, showBack = true }) {
   return (
     <div className="page-intro">
-      <a className="text-link" href="/">Inicio</a>
+      {showBack && <a className="text-link" href="/">Inicio</a>}
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h1>{title}</h1>
       {children && <div className="lead">{children}</div>}
@@ -77,7 +86,7 @@ function CalendarPage() {
   return (
     <>
       <section id="calendario" className="section container scroll-mt-28">
-        <PageIntro title="Calendario" eyebrow={calendarContent.title}>
+        <PageIntro title="Calendario" eyebrow={calendarContent.title} showBack={false}>
           <p>{calendarContent.subtitle}</p>
         </PageIntro>
         <div className="calendar-container" id="google-calendar">
@@ -144,9 +153,9 @@ export default function SitePages({ page }) {
               <h2>{aboutContent.actionsHeading}</h2>
             </div>
             <div className="grid-three">
-              {aboutContent.actions.map((action) => (
+              {aboutContent.actions.map((action, index) => (
                 <article className="card" key={action.title}>
-                  <div className="card-body"><h3>{action.title}</h3><p>{action.description}</p></div>
+                  <div className="card-body"><ActionIcon type={['safe', 'community', 'local'][index]} /><h3>{action.title}</h3><p>{action.description}</p></div>
                 </article>
               ))}
             </div>
@@ -162,7 +171,7 @@ export default function SitePages({ page }) {
       return (
         <>
           <section id="quienes-somos" className="section container scroll-mt-28">
-            <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} />
+            <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split">
               <div className="prose">
                 {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -173,9 +182,9 @@ export default function SitePages({ page }) {
           <section className="section container">
             <div className="section-heading"><h2>{aboutContent.actionsHeading}</h2></div>
             <div className="grid-three">
-              {aboutContent.actions.map((action) => (
+              {aboutContent.actions.map((action, index) => (
                 <article className="card" key={action.title}>
-                  <div className="card-body"><h3>{action.title}</h3><p>{action.description}</p></div>
+                  <div className="card-body"><ActionIcon type={['safe', 'community', 'local'][index]} /><h3>{action.title}</h3><p>{action.description}</p></div>
                 </article>
               ))}
             </div>
@@ -184,7 +193,7 @@ export default function SitePages({ page }) {
             <div className="section-heading"><h2>Nuestros valores</h2></div>
             <div className="grid-two">
               {pillars.map((pillar) => (
-                <article className="feature-panel" key={pillar.title}>
+                <article className="feature-panel values-panel" key={pillar.title}>
                   <h3>{pillar.title}</h3><p>{pillar.description}</p>
                 </article>
               ))}
@@ -208,7 +217,7 @@ export default function SitePages({ page }) {
       return (
         <>
           <section id="actividades" className="section container scroll-mt-28">
-            <PageIntro title="Actividades" eyebrow="Encuentros y acción comunitaria">
+            <PageIntro title="Actividades" eyebrow="Encuentros y acción comunitaria" showBack={false}>
               <p>Espacios para comprender el feminismo, visibilizar el conocimiento de las mujeres y tejer redes de apoyo mutuo.</p>
             </PageIntro>
             <div className="feature-panel">
@@ -244,7 +253,7 @@ export default function SitePages({ page }) {
       return (
         <>
           <section id="iniciativas" className="section container scroll-mt-28">
-            <PageIntro title="Iniciativas" eyebrow="Tu voz cuenta" />
+            <PageIntro title="Iniciativas" eyebrow="Tu voz cuenta" showBack={false} />
             <div className="feature-panel">
               <p className="tag">Podcast en preparación</p>
               <h2>{podcastContent.title}</h2>
@@ -264,7 +273,7 @@ export default function SitePages({ page }) {
     case 'contacto':
       return (
         <section id="contacto" className="section container scroll-mt-28">
-          <PageIntro title={contactContent.title} eyebrow={contactContent.location} />
+          <PageIntro title={contactContent.title} eyebrow={contactContent.location} showBack={false} />
           <div className="split">
             <div className="prose">
               <h2>{contactContent.heading}</h2>
