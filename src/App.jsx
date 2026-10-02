@@ -37,10 +37,18 @@ function FooterNavGroup({ title, links, page }) {
 
 export default function App({ page = 'inicio' }) {
   const header = useRef(null);
+  const mobileMenu = useRef(null);
+  const openDropdownRef = useRef(null);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const closeAllDropdowns = (focus = false) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  openDropdownRef.current = openDropdown;
+  const closeAllDropdowns = (focus = false, closeMenu = false) => {
     const activeSummary = document.activeElement?.closest('.nav-group > summary');
     setOpenDropdown(null);
+    if (closeMenu && mobileMenu.current) {
+      mobileMenu.current.open = false;
+      setMobileMenuOpen(false);
+    }
     if (focus) activeSummary?.focus();
   };
   const toggleDropdown = (label) => {
@@ -50,11 +58,12 @@ export default function App({ page = 'inicio' }) {
   useEffect(() => {
     const closeMenu = (event) => {
       if (event.key === 'Escape') {
-        closeAllDropdowns(true);
+        if (openDropdownRef.current) closeAllDropdowns(true);
+        else closeAllDropdowns(false, true);
       }
     };
     const closeOnOutsideClick = (event) => {
-      if (!header.current?.contains(event.target)) closeAllDropdowns();
+      if (!header.current?.contains(event.target)) closeAllDropdowns(false, true);
     };
     setOpenDropdown(null);
     document.addEventListener('keydown', closeMenu);
@@ -89,9 +98,9 @@ export default function App({ page = 'inicio' }) {
             <span>La Mirada Violeta<small>Asociación de mujeres · Fuenlabrada</small></span>
           </a>
            <nav className="desktop-nav" aria-label="Navegación principal"><NavLinks page={page} scope="desktop" openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeAllDropdowns={closeAllDropdowns} /></nav>
-           <details className="mobile-menu">
-             <summary><span className="menu-icon" aria-hidden="true"><i /><i /><i /></span><span>Menú</span></summary>
-              <nav aria-label="Navegación principal móvil"><NavLinks page={page} scope="mobile" openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeAllDropdowns={closeAllDropdowns} /></nav>
+            <details className="mobile-menu" ref={mobileMenu} onToggle={(event) => { setMobileMenuOpen(event.currentTarget.open); if (!event.currentTarget.open) setOpenDropdown(null); }}>
+             <summary aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation"><span className="menu-icon" aria-hidden="true"><i /><i /><i /></span><span>Menú</span></summary>
+               <nav id="mobile-navigation" aria-label="Navegación principal móvil"><NavLinks page={page} scope="mobile" openDropdown={openDropdown} toggleDropdown={toggleDropdown} closeAllDropdowns={(focus) => closeAllDropdowns(focus, true)} /></nav>
           </details>
         </div>
       </header>

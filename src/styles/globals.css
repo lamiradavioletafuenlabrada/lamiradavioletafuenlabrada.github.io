@@ -80,17 +80,20 @@ figure { margin: 0; }
 .mobile-menu summary::-webkit-details-marker { display: none; }
 .nav-group > summary { list-style: none; cursor: pointer; }
 .nav-group > summary::-webkit-details-marker { display: none; }
-.nav-group > summary::after { content: "⌄"; display: inline-block; margin-left: .45rem; color: var(--color-primary-light); font-size: .8em; }
+.nav-group > summary::after { content: "⌄"; display: inline-block; margin-left: .45rem; color: var(--color-primary-light); font-size: .8em; transition: transform var(--duration); }
 .nav-group[open] > summary::after { transform: rotate(180deg); }
-.mobile-menu .nav-group > summary { min-height: 48px; padding: var(--space-sm) var(--space-md); color: var(--color-primary-dark); border-left: 3px solid transparent; }
+.mobile-menu nav { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+.mobile-menu nav > a, .mobile-menu nav > .nav-group { width: 100%; }
+.mobile-menu nav a, .mobile-menu .nav-group > summary { text-align: left; }
+.mobile-menu nav a { display: block; min-height: 48px; padding: .7rem 24px; text-decoration: none; border-left: 3px solid transparent; }
+.mobile-menu .nav-group > summary { display: flex; align-items: center; justify-content: flex-start; min-height: 48px; padding: .7rem 24px; color: var(--color-primary-dark); border-left: 3px solid transparent; }
 .mobile-menu .nav-group > summary[aria-current="page"] { border-color: var(--color-primary); background: var(--color-lavender); font-weight: 700; }
-.mobile-menu .nav-submenu { padding-left: var(--space-md); border-left: 1px solid var(--color-border-accent); margin-left: var(--space-md); }
-.mobile-menu .nav-submenu a { padding-left: var(--space-sm); }
+.mobile-menu .nav-submenu { padding: 0 0 .35rem; margin: 0; border-left: 1px solid var(--color-border-accent); margin-left: 24px; }
+.mobile-menu .nav-submenu a { min-height: 40px; padding: .5rem 24px; padding-left: 16px; color: var(--color-text-muted); font-size: .92rem; }
 .menu-icon { display: grid; gap: 4px; width: 19px; }
 .menu-icon i { height: 2px; background: currentColor; transition: width var(--duration); }
 .mobile-menu[open] .menu-icon i:nth-child(2) { width: 12px; }
-.mobile-menu nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: var(--space-sm) var(--space-md) var(--space-md); box-shadow: 0 8px 16px var(--color-shadow); max-height: calc(100dvh - var(--header-height)); overflow: auto; }
-.mobile-menu nav a { display: block; min-height: 48px; padding: var(--space-sm) var(--space-md); text-decoration: none; border-left: 3px solid transparent; }
+.mobile-menu nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: .5rem 0 .65rem; box-shadow: 0 4px 10px var(--color-shadow); max-height: calc(100dvh - var(--header-height)); overflow: auto; }
 .mobile-menu nav a[aria-current="page"] { border-color: var(--color-primary); background: var(--color-lavender); font-weight: 700; }
 .home-hero { padding-block: var(--space-lg) var(--space-section); }
 .home-hero h1 { color: var(--color-primary-dark); max-width: 10ch; font-size: clamp(2.5rem, 5.2vw, 3.9rem); line-height: 1.12; }
@@ -258,10 +261,9 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
   .brand { font-size: 1.03rem; gap: .55rem; }
   .brand img { width: 36px; height: 36px; }
   .brand small { font-size: .57rem; margin-top: 2px; }
-  .mobile-menu nav { padding: .4rem .75rem .65rem; max-height: min(70dvh, 480px); }
-  .mobile-menu nav a { min-height: 44px; padding: .55rem .75rem; }
-  .mobile-menu .nav-group > summary { min-height: 44px; padding: .55rem .75rem; }
-  .mobile-menu .nav-submenu { padding-left: .5rem; margin-left: .75rem; }
+  .mobile-menu nav { max-height: min(70dvh, 480px); }
+  .mobile-menu nav a, .mobile-menu .nav-group > summary { min-height: 44px; padding-block: .58rem; }
+  .mobile-menu .nav-submenu a { min-height: 38px; padding-block: .45rem; }
   .home-hero { padding-block: 1.75rem 1.5rem; }
   .home-hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); margin-block: .4rem .8rem; }
   .home-hero .lead { font-size: 1rem; line-height: 1.58; }
