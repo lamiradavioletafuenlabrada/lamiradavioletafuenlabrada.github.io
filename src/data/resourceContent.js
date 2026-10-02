@@ -15,6 +15,14 @@ export const officialResources = {
     urgentEmail: 'puntoviolencia@ayto-fuenlabrada.es',
     officialUrl: 'https://www.ayto-fuenlabrada.es/web/portal/w/programa-municipal-de-atencion-integral-a-mujeres-victimas-de-violencia-de-genero',
   },
+  victoria: {
+    title: 'ASOCIACIÓN VICTORIA',
+    subtitle: 'Asociación de Mujeres contra la Violencia de Género',
+    address: 'C/ Francisco Escolar, 1 · Fuenlabrada',
+    phone: '670 607 463',
+    email: 'asoci.victoria@gmail.com',
+    officialUrl: 'https://asociacionvictoria.es/',
+  },
   acopet: {
     officialUrl: 'https://www.ayto-fuenlabrada.es/web/portal/w/acogida-animales-mujeres-violencia-genero-acopet',
   },

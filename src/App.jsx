@@ -13,18 +13,21 @@ function NavLinks({ page, scope, openDropdown, toggleDropdown, closeAllDropdowns
     const currentChild = link.children?.some((child) => isCurrent(child, page));
     if (link.children) {
       const submenuId = `nav-submenu-${scope}-${link.label.toLowerCase().replaceAll(' ', '-')}`;
+      const isOpen = openDropdown === link.label;
       return (
-        <details className="nav-group" key={link.label} open={openDropdown === link.label}>
-          <summary
+        <div className={`nav-group${isOpen ? ' is-open' : ''}`} key={link.label}>
+          <button
+            type="button"
+            className="nav-trigger"
             aria-current={currentChild ? 'page' : undefined}
-            aria-expanded={openDropdown === link.label}
+            aria-expanded={isOpen}
             aria-controls={submenuId}
-            onClick={(event) => { event.preventDefault(); toggleDropdown(link.label); }}
-          >{link.label}</summary>
-          <div className="nav-submenu" id={submenuId}>
+            onClick={() => toggleDropdown(link.label)}
+          >{link.label}</button>
+          <div className="nav-submenu" id={submenuId} hidden={!isOpen}>
             {link.children.map((child) => <a key={child.href} href={child.href} aria-current={isCurrent(child, page) ? 'page' : undefined} onClick={closeAllDropdowns}>{child.label}</a>)}
           </div>
-        </details>
+        </div>
       );
     }
     return <a key={link.href} href={link.href} aria-current={isCurrent(link, page) ? 'page' : undefined} onClick={closeAllDropdowns}>{link.label}</a>;
@@ -43,7 +46,7 @@ export default function App({ page = 'inicio' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   openDropdownRef.current = openDropdown;
   const closeAllDropdowns = (focus = false, closeMenu = false) => {
-    const activeSummary = document.activeElement?.closest('.nav-group > summary');
+    const activeSummary = document.activeElement?.closest('.nav-group > .nav-trigger');
     setOpenDropdown(null);
     if (closeMenu && mobileMenu.current) {
       mobileMenu.current.open = false;
@@ -114,7 +117,7 @@ export default function App({ page = 'inicio' }) {
              <div className="footer-social"><h2>Síguenos</h2>{socialLinks.filter((link) => ['Instagram', 'TikTok', 'LinkedIn', 'YouTube'].includes(link.label)).map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>
           </div>
            <div className="partners"><p>Con la colaboración institucional de</p><a href="https://www.ayto-fuenlabrada.es/" target="_blank" rel="noopener noreferrer"><img src="/logo_aytofuenlabrada_vector.svg" alt="Ayuntamiento de Fuenlabrada" width="120" height="67" loading="lazy" decoding="async" /></a><a href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer"><img src="/logo_fuenlafeminismo_vector.svg" alt="Concejalía de Feminismo y Diversidad de Fuenlabrada" width="160" height="74" loading="lazy" decoding="async" /></a></div>
-           <div className="footer-bottom"><p>© 2026 La Mirada Violeta</p><div className="footer-legal"><a href="/aviso-legal/">Aviso legal</a><a href="/politica-privacidad/">Política de privacidad</a></div></div>
+            <div className="footer-bottom"><p>© 2026 La Mirada Violeta · Creada por mujeres, con mirada violeta</p><div className="footer-legal"><a href="/aviso-legal/">Aviso legal</a><a href="/politica-privacidad/">Política de privacidad</a></div></div>
         </div>
       </footer>
     </>

@@ -190,7 +190,7 @@ function ResourceLink({ href, children, className = 'button button-secondary' })
 }
 
 function ResourcesPage() {
-  const { emergency, municipal, acopet, state } = officialResources;
+  const { emergency, municipal, victoria, acopet, state } = officialResources;
   return (
     <>
       <section className="section container">
@@ -209,7 +209,7 @@ function ResourcesPage() {
         <div className="resource-grid resource-grid-3 resource-contact-grid">
           <article className="resource-card resource-contact"><h3>Teléfono</h3><a className="resource-number" href="tel:016">{emergency.phone}</a><p>Información y atención psicosocial, gratuita y confidencial.</p><a className="button" href="tel:016">Llamar al 016</a></article>
           <article className="resource-card resource-contact"><h3>WhatsApp</h3><a className="resource-number" href="https://wa.me/34600000016" target="_blank" rel="noopener noreferrer">{emergency.whatsapp}</a><p>Canal de WhatsApp del servicio 016.</p><ResourceLink href="https://wa.me/34600000016" className="button">WhatsApp 016</ResourceLink></article>
-          <article className="resource-card resource-contact"><h3>Correo y chat</h3><p><strong>Correo:</strong> <a href={`mailto:${emergency.email}`}>{emergency.email}</a><br /><strong>Chat online:</strong> disponible en la web oficial de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={emergency.officialUrl}>Web oficial del 016</ResourceLink></article>
+          <article className="resource-card resource-contact"><h3>Correo y chat</h3><p><strong>Correo:</strong> <a href={`mailto:${emergency.email}`}>{emergency.email}</a><br /><strong>Chat online:</strong> disponible en la web oficial de la Delegación del Gobierno contra la Violencia de Género.</p><ResourceLink href={emergency.officialUrl} className="button">Web oficial del 016</ResourceLink></article>
         </div>
       </section>
 
@@ -217,6 +217,7 @@ function ResourcesPage() {
         <div className="container">
           <div className="section-heading"><p className="eyebrow">Atención local</p><h2>Dónde acudir en Fuenlabrada</h2></div>
           <article className="resource-card resource-wide"><h3>{municipal.title}</h3><p>Este programa incluye atención social, psicológica y jurídica, atención psicológica a hijos e hijas menores, coordinación con otros recursos y recursos de alojamiento.</p><div className="resource-details"><p><strong>Casa de la Mujer</strong><br />{municipal.address}</p><p><strong>Teléfono:</strong> <a href="tel:+34916067412">{municipal.phone}</a><br /><strong>Correo:</strong> <a href={`mailto:${municipal.email}`}>{municipal.email}</a><br /><strong>Urgencias e información:</strong> <a href={`mailto:${municipal.urgentEmail}`}>{municipal.urgentEmail}</a>, <a href="tel:010">010</a> y <a href="tel:016">016</a></p></div><ResourceLink href={municipal.officialUrl}>Información oficial del Ayuntamiento</ResourceLink></article>
+          <article className="resource-card resource-wide"><h3>{victoria.title}</h3><p><strong>{victoria.subtitle}</strong></p><p>Entidad sin ánimo de lucro de Fuenlabrada que ofrece atención integral y gratuita a mujeres víctimas de violencia de género de la Comunidad de Madrid y apoyo a su entorno.</p><p>Cuenta con profesionales de psicología, asesoría jurídica, trabajo social y otras áreas. Ofrece, entre otros recursos:</p><ul className="resource-list"><li>atención psicológica individual;</li><li>asesoramiento jurídico;</li><li>apoyo emocional;</li><li>orientación laboral y búsqueda de empleo;</li><li>formación en nuevas tecnologías;</li><li>talleres para madres;</li><li>autocuidado y empoderamiento;</li><li>defensa personal femenina;</li><li>acompañamiento y orientación.</li></ul><div className="resource-details"><p><strong>Casa de la Mujer</strong><br />{victoria.address}</p><p><strong>Teléfono / WhatsApp:</strong> <a href="tel:+34670607463">{victoria.phone}</a><br /><strong>Correo:</strong> <a href={`mailto:${victoria.email}`}>{victoria.email}</a></p></div><ResourceLink href={victoria.officialUrl}>Conocer Asociación Victoria</ResourceLink></article>
         </div>
       </section>
 
