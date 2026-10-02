@@ -329,7 +329,7 @@ export default function SitePages({ page }) {
         <>
            <section id="quienes-somos" className="section container about-page-section scroll-mt-28">
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
-            <div className="split">
+            <div className="split about-intro">
                <div className="prose content-narrow">
                  {aboutPageContent.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                  <div className="about-presence">
