@@ -321,6 +321,12 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
   .site-header .container, .site-footer .container { width: min(1280px, calc(100% - 4rem)); }
   .site-header { --header-height: 86px; }
   .site-header.is-scrolled { --header-height: 74px; }
+  .home-hero .split { grid-template-columns: .9fr 1.1fr; gap: clamp(2.5rem, 5vw, 5rem); }
+  .home-hero .split > div:first-child { padding: var(--space-md) clamp(1.5rem, 4vw, 4.5rem) var(--space-md) clamp(2rem, 4vw, 4.5rem); }
+  .home-hero h1 { max-width: 12ch; margin-block: .85rem 1rem; }
+  .home-hero .eyebrow { margin-bottom: .9rem; }
+  .home-hero .lead { max-width: 36rem; margin-bottom: 1.5rem; }
+  .home-hero .actions { margin-top: 0; }
   .mobile-menu { display: none; }
   .desktop-nav { display: flex; align-items: center; gap: var(--space-md); }
    .desktop-nav a, .desktop-nav .nav-group > .nav-trigger { min-height: 44px; padding-block: var(--space-sm); font-size: .86rem; text-decoration: none; border-bottom: 2px solid transparent; color: var(--color-text-muted); transition: color var(--duration), border-color var(--duration); }
