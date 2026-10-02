@@ -332,14 +332,20 @@ export default function SitePages({ page }) {
             <div className="split">
                <div className="prose content-narrow">
                  {aboutPageContent.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                 <div className="about-presence">
+                   <h2>Nuestra forma de estar</h2>
+                   <div className="about-presence-list">
+                     {aboutPageContent.presence.map((item) => <div className="about-presence-item" key={item.title}><strong>{item.title}:</strong><span>{item.description}</span></div>)}
+                   </div>
+                 </div>
                </div>
                <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
              </div>
            </section>
            <section className="section container about-page-section about-activities">
-             <div className="section-heading about-section-heading"><h2>Qué hacemos</h2><p className="lead">{aboutPageContent.whatWeDo}</p></div>
+             <div className="section-heading about-section-heading"><h2>Qué hacemos</h2><div className="lead about-what-copy">{aboutPageContent.whatWeDo.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
              <div className="about-activity-list">
-               {aboutPageContent.activityTypes.map((activity) => <div className="about-activity-item" key={activity}><h3>{activity}</h3></div>)}
+               {aboutPageContent.activityTypes.map((activity) => <div className="about-activity-item" key={activity.title}><h3>{activity.title}</h3><p>{activity.description}</p></div>)}
              </div>
            </section>
            <section className="section container about-page-section">

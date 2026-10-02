@@ -92,11 +92,19 @@ export const aboutPageContent = {
     'La Mirada Violeta somos una asociación feminista de Fuenlabrada vinculada a nuestros barrios y comprometida con la igualdad, la justicia social y la transformación desde lo local.',
     'Somos mujeres de distintas edades, trayectorias e intereses que compartimos una mirada feminista y las ganas de aprender, crear y construir comunidad juntas.',
   ],
-  whatWeDo: 'Organizamos talleres, charlas, encuentros y actividades gratuitas con perspectiva feminista. Queremos crear propuestas accesibles y cercanas donde aprender, compartir, reflexionar y disfrutar.',
+  presence: [
+    { title: 'Cercanas', description: 'trabajamos desde Fuenlabrada y nuestros barrios.' },
+    { title: 'Participativas', description: 'las ideas y propuestas se construyen entre todas.' },
+    { title: 'Diversas', description: 'compartimos experiencias, edades e intereses distintos.' },
+  ],
+  whatWeDo: [
+    'Organizamos talleres, charlas, encuentros y actividades gratuitas con perspectiva feminista. Queremos crear propuestas accesibles y cercanas donde aprender, compartir, reflexionar y disfrutar.',
+    'También generamos espacios de participación entre socias, compartimos contenidos en redes y buscamos que nuevas ideas puedan convertirse en actividades y proyectos.',
+  ],
   activityTypes: [
-    'Talleres y actividades',
-    'Encuentros y debate',
-    'Comunidad y participación',
+    { title: 'Talleres y actividades', description: 'Propuestas gratuitas y abiertas con perspectiva feminista.' },
+    { title: 'Encuentros y debate', description: 'Espacios para aprender, compartir experiencias y reflexionar juntas.' },
+    { title: 'Comunidad y participación', description: 'Una asociación donde las socias pueden proponer, colaborar y crear.' },
   ],
   sections: [
     {
