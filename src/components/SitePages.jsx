@@ -148,14 +148,14 @@ function PageIntro({ title, eyebrow, children, showBack = true }) {
   );
 }
 
-function SharedCTA() {
+function SharedCTA({ about = false }) {
   return (
-    <section className="section container">
-      <div className="cta-panel">
+    <section className={`section container${about ? ' about-page-section' : ''}`}>
+      <div className={`cta-panel${about ? ' about-cta' : ''}`}>
         <h2>Sigamos construyendo juntas</h2>
-        <p className="lead">{aboutContent.closing}</p>
+        <p className="lead">{about ? '¿Sintonizas con nuestra mirada? Conoce nuestras actividades o descubre cómo formar parte de La Mirada Violeta.' : aboutContent.closing}</p>
         <div className="actions">
-          <a className="button" href="/contacto/">Contacta con nosotras</a>
+          <a className="button" href={about ? '/socias/' : '/contacto/'}>{about ? 'Hazte socia' : 'Contacta con nosotras'}</a>
           <a className="button button-secondary" href="/actividades/">Conoce nuestras actividades</a>
         </div>
       </div>
@@ -282,7 +282,7 @@ export default function SitePages({ page }) {
               <div className="hero-portrait"><LocalPhoto image="/miradastodas.png" alt={galleryItems[2].alt} priority /></div>
             </div>
           </section>
-          <section id="quienes-somos" className="section container scroll-mt-28">
+           <section id="quienes-somos" className="section container scroll-mt-28">
             <div className="section-heading">
               <p className="eyebrow">{aboutContent.title}</p>
               <h2>Una mirada local y colectiva</h2>
@@ -327,7 +327,7 @@ export default function SitePages({ page }) {
     case 'quienes-somos':
       return (
         <>
-          <section id="quienes-somos" className="section container scroll-mt-28">
+           <section id="quienes-somos" className="section container about-page-section scroll-mt-28">
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split">
                <div className="prose content-narrow">
@@ -336,20 +336,23 @@ export default function SitePages({ page }) {
                <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
              </div>
            </section>
-           <section className="section container">
-             <div className="feature-panel about-feature"><h2>Qué hacemos</h2>{aboutPageContent.whatWeDo.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+           <section className="section container about-page-section about-activities">
+             <div className="section-heading about-section-heading"><h2>Qué hacemos</h2><p className="lead">{aboutPageContent.whatWeDo}</p></div>
+             <div className="about-activity-list">
+               {aboutPageContent.activityTypes.map((activity) => <div className="about-activity-item" key={activity}><h3>{activity}</h3></div>)}
+             </div>
            </section>
-           <section className="section container">
+           <section className="section container about-page-section">
              <div className="grid-two about-grid">
                {aboutPageContent.sections.map((section) => (
                  <article className="feature-panel about-card" key={section.title}>
                    <h2>{section.title}</h2>
-                   {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                   <p>{section.description}</p>
                  </article>
                ))}
              </div>
            </section>
-          <SharedCTA />
+           <SharedCTA about />
         </>
       );
     case 'actividades':
