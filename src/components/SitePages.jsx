@@ -1,6 +1,7 @@
 import {
   heroContent,
   aboutContent,
+  aboutPageContent,
   galleryItems,
   pillars,
   activities,
@@ -330,25 +331,24 @@ export default function SitePages({ page }) {
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split">
                <div className="prose content-narrow">
-                {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
+                 {aboutPageContent.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+               </div>
                <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
-            </div>
-          </section>
-          <section className="section container">
-            <div className="feature-panel"><p className="eyebrow">Nuestra identidad</p><h2>Misión, valores y objetivos</h2><p>Conoce las líneas de trabajo, los valores y la forma de trabajar de La Mirada Violeta.</p><a className="text-link" href="/mision-valores/">Conoce nuestra identidad</a></div>
-          </section>
-          <section className="section container">
-            <div className="section-heading"><h2>Nuestras mujeres en acción</h2><p className="lead">Una asociación viva, tejida desde el encuentro, la escucha y la acción compartida.</p></div>
-            <div className="gallery-grid">
-              {galleryItems.map((item) => (
-                <figure key={item.image}>
-                  <LocalPhoto image={item.image} alt={item.alt} sizes="(min-width: 640px) 33vw, calc(100vw - 40px)" />
-                  <figcaption>{item.title}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </section>
+             </div>
+           </section>
+           <section className="section container">
+             <div className="feature-panel about-feature"><h2>Qué hacemos</h2>{aboutPageContent.whatWeDo.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+           </section>
+           <section className="section container">
+             <div className="grid-two about-grid">
+               {aboutPageContent.sections.map((section) => (
+                 <article className="feature-panel about-card" key={section.title}>
+                   <h2>{section.title}</h2>
+                   {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                 </article>
+               ))}
+             </div>
+           </section>
           <SharedCTA />
         </>
       );

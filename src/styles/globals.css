@@ -124,6 +124,8 @@ figure { margin: 0; }
 .values-panel { position: relative; }
 .values-panel::before { content: ""; display: block; width: 2rem; height: 2px; margin-bottom: var(--space-sm); background: var(--color-primary-light); }
 .feature-panel p:last-child { margin-bottom: 0; }
+.about-feature { max-width: 760px; }
+.about-card h2 { margin-top: 0; font-size: 1.65rem; }
 .tag { display: inline-block; padding: var(--space-xs) var(--space-sm); color: var(--color-primary-dark); background: var(--color-surface); border: 1px solid var(--color-border-accent); border-radius: var(--radius-sm); font-size: .8rem; font-weight: 650; }
 .cta-panel { background: var(--color-lavender); border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg); padding: 1.5rem var(--space-lg) var(--space-lg); position: relative; }
 .cta-panel h2 { color: var(--color-primary-dark); }

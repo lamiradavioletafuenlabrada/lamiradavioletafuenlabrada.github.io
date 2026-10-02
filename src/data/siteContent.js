@@ -87,6 +87,48 @@ export const aboutContent = {
   imageAlt: 'Socias de la asociación reunidas en un encuentro compartido',
 };
 
+export const aboutPageContent = {
+  intro: [
+    'La Mirada Violeta somos una asociación feminista de Fuenlabrada profundamente vinculada a nuestros barrios. Nacemos del compromiso con la igualdad, la justicia social y la transformación desde lo local, pero también de las ganas de encontrarnos, compartir, aprender y construir juntas.',
+    'Lo que nos hace fuertes es nuestra diversidad. Somos mujeres de distintas edades, trayectorias, profesiones, intereses y experiencias, unidas por una mirada feminista común y por la convicción de que compartir saberes, apoyarnos y crear comunidad también es una forma de transformar nuestro entorno.',
+  ],
+  whatWeDo: [
+    'Organizamos talleres, charlas, encuentros y actividades gratuitas con perspectiva feminista para acercar la igualdad y la participación a todas las mujeres interesadas de Fuenlabrada.',
+    'Queremos que nuestras propuestas sean accesibles, cercanas y abiertas, y que sirvan tanto para aprender como para generar espacios de encuentro, reflexión y disfrute.',
+  ],
+  sections: [
+    {
+      title: 'Cómo nos organizamos',
+      paragraphs: [
+        'Aunque todavía no contamos con una sede propia, nos reunimos periódicamente para organizar las actividades del mes, preparar nuevos proyectos, coordinar nuestras redes sociales y decidir juntas qué contenidos queremos compartir y cómo hacerlo.',
+        'La organización de la asociación también forma parte de nuestro trabajo colectivo: repartimos tareas, compartimos responsabilidades y buscamos que cada socia pueda participar según su disponibilidad.',
+      ],
+    },
+    {
+      title: 'Una asociación abierta a nuevas ideas',
+      paragraphs: [
+        'Somos una asociación muy participativa y creativa. Estamos siempre abiertas a nuevas ideas y propuestas de nuestras socias, porque creemos que cada mujer puede aportar algo distinto: conocimientos, tiempo, experiencia, habilidades, inquietudes o simplemente ganas de formar parte.',
+        'Muchas de nuestras actividades nacen precisamente de esas ideas compartidas.',
+      ],
+    },
+    {
+      title: 'Redes para llegar a más mujeres',
+      paragraphs: [
+        'Las redes sociales son una herramienta importante para nosotras. Intentamos mantenerlas activas para dar a conocer nuestras actividades, compartir contenidos y acercarnos tanto a mujeres jóvenes como a mujeres de otras edades.',
+        'Aunque nuestro trabajo nace en Fuenlabrada, queremos que lo que hacemos pueda llegar también a mujeres de otros municipios.',
+      ],
+    },
+    {
+      title: 'Aprender y crecer juntas',
+      paragraphs: [
+        'También queremos que la propia asociación sea un espacio de aprendizaje.',
+        'Por eso organizaremos encuentros periódicos de formación, debate e intercambio entre socias, donde podamos compartir conocimientos, reflexionar sobre distintos temas y aprender unas de otras.',
+        'La Mirada Violeta es, sobre todo, un espacio para participar, crear, aprender y tejer redes entre mujeres desde una perspectiva feminista, cercana y comunitaria.',
+      ],
+    },
+  ],
+};
+
 export const pillars = [
   {
     title: 'Sororidad',
