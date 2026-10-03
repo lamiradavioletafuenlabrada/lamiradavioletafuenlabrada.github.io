@@ -331,7 +331,13 @@ export default function SitePages({ page }) {
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split about-intro">
                <div className="prose content-narrow">
-                 {aboutPageContent.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  {aboutPageContent.intro.map((paragraph, index) => (
+                    <p key={paragraph}>
+                      {index === 0 ? (
+                        <>{paragraph.split('feminista, antirracista y transincluyente')[0]}<strong className="about-identity">feminista, antirracista y transincluyente</strong>{paragraph.split('feminista, antirracista y transincluyente')[1]}</>
+                      ) : paragraph}
+                    </p>
+                  ))}
                  <div className="about-presence">
                    <h2>Nuestra forma de estar</h2>
                    <div className="about-presence-list">

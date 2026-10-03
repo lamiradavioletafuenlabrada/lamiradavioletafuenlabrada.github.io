@@ -125,6 +125,7 @@ figure { margin: 0; }
 .values-panel::before { content: ""; display: block; width: 2rem; height: 2px; margin-bottom: var(--space-sm); background: var(--color-primary-light); }
 .feature-panel p:last-child { margin-bottom: 0; }
 .about-section-heading { max-width: 760px; margin-bottom: var(--space-md); }
+.about-identity { color: var(--color-primary-dark); font-weight: 650; }
 .about-presence { margin-top: var(--space-lg); }
 .prose .about-presence h2 { margin: 0 0 var(--space-sm); font-size: 1.35rem; color: var(--color-primary-dark); }
 .about-presence-list { display: grid; gap: .65rem; }
