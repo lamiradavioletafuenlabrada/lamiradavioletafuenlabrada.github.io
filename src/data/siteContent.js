@@ -99,6 +99,13 @@ export const aboutPageContent = {
     { title: 'Diversas', description: 'compartimos experiencias, edades e intereses distintos.' },
     { title: 'Comunitarias', description: 'tejemos redes de apoyo, aprendizaje y colaboración.' },
   ],
+  board: [
+    { role: 'Presidenta', name: 'Susana' },
+    { role: 'Vicepresidenta', name: 'Angéles' },
+    { role: 'Secretaria', name: 'Lidia' },
+    { role: 'Tesorera', name: 'Cynthia' },
+    { role: 'Vocal', name: 'Lía' },
+  ],
   whatWeDo: [
     'Organizamos talleres, charlas, encuentros y actividades gratuitas con perspectiva feminista. Queremos crear propuestas accesibles y cercanas donde aprender, compartir, reflexionar y disfrutar.',
     'También generamos espacios de participación entre socias, compartimos contenidos en redes y buscamos que nuevas ideas puedan convertirse en actividades y proyectos.',

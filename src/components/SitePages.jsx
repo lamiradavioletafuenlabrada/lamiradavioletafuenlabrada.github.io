@@ -341,8 +341,23 @@ export default function SitePages({ page }) {
                </div>
                <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
              </div>
-           </section>
-           <section className="section container about-page-section about-activities">
+            </section>
+            <section className="section container about-page-section about-board" aria-labelledby="junta-directiva-title">
+              <div className="section-heading about-section-heading">
+                <p className="eyebrow">Junta directiva</p>
+                <h2 id="junta-directiva-title">Quién está detrás de La Mirada Violeta</h2>
+                <p className="lead">La asociación se organiza de forma colectiva, con una Junta Directiva que coordina el funcionamiento y acompaña el trabajo común.</p>
+              </div>
+              <div className="about-board-grid">
+                {aboutPageContent.board.map((member) => (
+                  <article className="about-board-member" key={member.role}>
+                    <p>{member.role}</p>
+                    <strong>{member.name}</strong>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="section container about-page-section about-activities">
              <div className="section-heading about-section-heading"><h2>Qué hacemos</h2><div className="lead about-what-copy">{aboutPageContent.whatWeDo.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
              <div className="about-activity-list">
                {aboutPageContent.activityTypes.map((activity) => <div className="about-activity-item" key={activity.title}><h3>{activity.title}</h3><p>{activity.description}</p></div>)}
