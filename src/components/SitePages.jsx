@@ -279,7 +279,7 @@ export default function SitePages({ page }) {
                   <a className="button button-secondary" href="/quienes-somos/">Conócenos</a>
                 </div>
               </div>
-              <div className="hero-portrait"><LocalPhoto image="/miradastodas.png" alt={galleryItems[2].alt} priority /></div>
+              <div className="hero-portrait"><LocalPhoto image="/chicas_fondo.jpg" alt="Mujeres de la asociación reunidas ante un fondo violeta" priority /></div>
             </div>
           </section>
            <section id="quienes-somos" className="section container scroll-mt-28">
