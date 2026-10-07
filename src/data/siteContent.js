@@ -231,15 +231,15 @@ export const activities = [
 export const upcomingActivities = [
   {
     title: 'Huelga en minifalda',
-    details: '7 de octubre · Plaza de la Constitución, Fuenlabrada',
+    details: '7 de octubre · 18:30 - 19:15 · Plaza de la Constitución, Fuenlabrada',
   },
   {
     title: 'Charla: El cáncer no es rosa',
-    details: 'Fecha, hora y localización por confirmar',
+    details: '22 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
   },
   {
     title: 'Palestina desde los ojos de sus mujeres',
-    details: 'Fecha, hora y localización por confirmar',
+    details: '29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
   },
   {
     title: 'Charla: Sexualidad en la madurez',
