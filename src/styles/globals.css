@@ -239,6 +239,7 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
 .identity-work-block h2 { margin-top: 0; }
 .identity-work-block p { max-width: 42ch; }
 .identity-values, .identity-objectives { margin-block: var(--space-md) var(--space-lg); }
+.identity-page .identity-objectives { margin-bottom: var(--space-xl); }
 .identity-scope { margin-top: var(--space-lg); }
 .podcast-coming-soon { width: 100%; }
 .podcast-platforms { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }

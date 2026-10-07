@@ -467,13 +467,7 @@ export default function SitePages({ page }) {
           <section className="section container">
             <div className="section-heading"><p className="eyebrow">Programación reciente</p><h2>Actividades destacadas</h2></div>
             <div className="grid-three">
-              {activities.slice(0, 2).map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
-            </div>
-          </section>
-          <section className="section container">
-            <div className="section-heading"><p className="eyebrow">Archivo</p><h2>Actividades anteriores</h2></div>
-            <div className="grid-three">
-              {activities.slice(2).map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
+              {activities.map((activity) => <ActivityCard key={activity.title} activity={activity} />)}
             </div>
           </section>
           <CalendarEmbed />
@@ -520,7 +514,7 @@ export default function SitePages({ page }) {
               <p className="lead">¿Sintonizas con nuestra mirada? Conoce nuestras actividades o descubre cómo formar parte de La Mirada Violeta.</p>
               <div className="actions">
                 <a className="button" href="/socias/">Hazte socia</a>
-                <a className="button button-secondary" href="/actividades/">Conoce nuestras actividades</a>
+                <a className="button" href="/actividades/">Conoce nuestras actividades</a>
               </div>
             </div>
           </section>
