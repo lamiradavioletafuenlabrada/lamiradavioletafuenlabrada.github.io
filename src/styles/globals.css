@@ -126,6 +126,8 @@ figure { margin: 0; }
 .feature-panel p:last-child { margin-bottom: 0; }
 .about-section-heading { max-width: 760px; margin-bottom: var(--space-md); }
 .about-identity { color: var(--color-primary-dark); font-weight: 650; }
+.identity-chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin: var(--space-lg) 0; }
+.identity-chip { padding: .45rem .7rem; border: 1px solid var(--color-border-accent); border-radius: 999px; background: var(--color-lavender-light); color: var(--color-primary-dark); font-size: .78rem; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
 .about-presence { margin-top: var(--space-lg); }
 .prose .about-presence h2 { margin: 0 0 var(--space-sm); font-size: 1.35rem; color: var(--color-primary-dark); }
 .about-presence-list { display: grid; gap: .65rem; }
@@ -148,6 +150,16 @@ figure { margin: 0; }
 .about-card::before { content: ""; display: block; width: 1.5rem; height: 2px; margin-bottom: .7rem; background: var(--color-primary-light); }
 .about-card h2 { margin-top: 0; margin-bottom: .5rem; font-size: 1.4rem; }
 .about-card p { margin-bottom: 0; color: var(--color-text-muted); font-size: .95rem; line-height: 1.55; }
+.defended-grid { align-items: stretch; }
+.defended-card { min-height: 0; padding: var(--space-md); }
+.defended-card h3 { color: var(--color-primary-dark); }
+.defended-card p { margin-bottom: 0; color: var(--color-text-muted); font-size: .94rem; line-height: 1.55; }
+.transparency-grid { align-items: stretch; }
+.transparency-card { display: flex; flex-direction: column; align-items: flex-start; }
+.transparency-card h3 { color: var(--color-primary-dark); }
+.transparency-card p:not(.eyebrow) { color: var(--color-text-muted); }
+.transparency-card .button { margin-top: auto; }
+.button-disabled { cursor: not-allowed; opacity: .62; }
 .about-cta { padding: 1.25rem var(--space-lg); }
 .tag { display: inline-block; padding: var(--space-xs) var(--space-sm); color: var(--color-primary-dark); background: var(--color-surface); border: 1px solid var(--color-border-accent); border-radius: var(--radius-sm); font-size: .8rem; font-weight: 650; }
 .cta-panel { background: var(--color-lavender); border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg); padding: 1.5rem var(--space-lg) var(--space-lg); position: relative; }
@@ -158,6 +170,14 @@ figure { margin: 0; }
 .identity-intro h2, .identity-work h2, .membership-details h2 { margin-top: 0; }
 .membership-prose > h2, .membership-prose > h3, .membership-prose > p, .membership-prose > ul { max-width: 740px; }
 .membership-grid, .membership-details { align-items: stretch; }
+.membership-overview { margin-block: var(--space-xl); }
+.membership-overview > h2 { margin-top: 0; }
+.membership-overview-grid { align-items: stretch; margin-top: var(--space-md); }
+.membership-list-card { height: 100%; }
+.membership-list-card h3 { color: var(--color-primary-dark); }
+.membership-list-card ul { margin: 0; padding-left: 1.2rem; color: var(--color-text-muted); }
+.membership-list-card li { margin-bottom: .45rem; padding-left: .15rem; }
+.membership-list-card li:last-child { margin-bottom: 0; }
 .membership-detail { height: 100%; }
 .membership-price { margin-block: var(--space-sm) var(--space-md); color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: 1; }
 .membership-price span { font-family: var(--font-body); font-size: 1rem; color: var(--color-text-muted); }

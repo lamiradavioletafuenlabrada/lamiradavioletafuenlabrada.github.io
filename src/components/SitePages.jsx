@@ -2,6 +2,7 @@ import {
   heroContent,
   aboutContent,
   aboutPageContent,
+  membershipContent,
   galleryItems,
   pillars,
   activities,
@@ -156,7 +157,7 @@ function SharedCTA({ about = false }) {
         <p className="lead">{about ? '¿Sintonizas con nuestra mirada? Conoce nuestras actividades o descubre cómo formar parte de La Mirada Violeta.' : aboutContent.closing}</p>
         <div className="actions">
           <a className="button" href={about ? '/socias/' : '/contacto/'}>{about ? 'Hazte socia' : 'Contacta con nosotras'}</a>
-          <a className="button button-secondary" href="/actividades/">Conoce nuestras actividades</a>
+          <a className="button" href="/actividades/">Conoce nuestras actividades</a>
         </div>
       </div>
     </section>
@@ -186,7 +187,7 @@ function CalendarEmbed() {
   );
 }
 
-function ResourceLink({ href, children, className = 'button button-secondary' }) {
+function ResourceLink({ href, children, className = 'button' }) {
   return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
 }
 
@@ -276,7 +277,7 @@ export default function SitePages({ page }) {
                 <p className="lead">{heroContent.description}</p>
                 <div className="actions">
                   <a className="button" href="/actividades/">{heroContent.cta.label}</a>
-                  <a className="button button-secondary" href="/quienes-somos/">Conócenos</a>
+                  <a className="button" href="/quienes-somos/">Conócenos</a>
                 </div>
               </div>
               <div className="hero-portrait"><LocalPhoto image="/portada_definitiva.png" alt="Mujeres de la asociación reunidas" priority /></div>
@@ -331,13 +332,12 @@ export default function SitePages({ page }) {
             <PageIntro title={aboutContent.title} eyebrow={aboutContent.eyebrow} showBack={false} />
             <div className="split about-intro">
                <div className="prose content-narrow">
-                  {aboutPageContent.intro.map((paragraph, index) => (
-                    <p key={paragraph}>
-                      {index === 0 ? (
-                        <>{paragraph.split('feminista, antirracista y transincluyente')[0]}<strong className="about-identity">feminista, antirracista y transincluyente</strong>{paragraph.split('feminista, antirracista y transincluyente')[1]}</>
-                      ) : paragraph}
-                    </p>
-                  ))}
+                   {aboutPageContent.intro.map((paragraph, index) => (
+                     <p key={paragraph}>{paragraph}</p>
+                   ))}
+                   <div className="identity-chips" aria-label="Identidad de la asociación">
+                     {aboutPageContent.identity.map((identity) => <span className="identity-chip" key={identity}>{identity}</span>)}
+                   </div>
                  <div className="about-presence">
                    <h2>Nuestra forma de estar</h2>
                    <div className="about-presence-list">
@@ -346,9 +346,19 @@ export default function SitePages({ page }) {
                  </div>
                </div>
                <LocalPhoto className="photo about-photo" image={aboutContent.image} alt={aboutContent.imageAlt} />
-             </div>
-            </section>
-            <section className="section container about-page-section about-board" aria-labelledby="junta-directiva-title">
+              </div>
+             </section>
+             <section className="section container about-page-section" aria-labelledby="defendemos-title">
+               <div className="section-heading about-section-heading">
+                 <p className="eyebrow">Nuestros principios</p>
+                 <h2 id="defendemos-title">Qué defendemos</h2>
+                 <p className="lead">Trabajamos desde la igualdad, la participación y el respeto para transformar nuestra comunidad.</p>
+               </div>
+               <div className="grid-three defended-grid">
+                 {aboutPageContent.defendedValues.map((value) => <article className="feature-panel defended-card" key={value.title}><h3>{value.title}</h3><p>{value.description}</p></article>)}
+               </div>
+             </section>
+             <section className="section container about-page-section about-board" aria-labelledby="junta-directiva-title">
               <div className="section-heading about-section-heading">
                 <p className="eyebrow">Junta directiva</p>
                 <h2 id="junta-directiva-title">Quién está detrás de La Mirada Violeta</h2>
@@ -369,7 +379,7 @@ export default function SitePages({ page }) {
                {aboutPageContent.activityTypes.map((activity) => <div className="about-activity-item" key={activity.title}><h3>{activity.title}</h3><p>{activity.description}</p></div>)}
              </div>
            </section>
-           <section className="section container about-page-section">
+            <section className="section container about-page-section">
              <div className="grid-two about-grid">
                {aboutPageContent.sections.map((section) => (
                  <article className="feature-panel about-card" key={section.title}>
@@ -378,8 +388,39 @@ export default function SitePages({ page }) {
                  </article>
                ))}
              </div>
-           </section>
-           <SharedCTA about />
+            </section>
+            <section className="section container about-page-section transparency-section" aria-labelledby="transparency-title">
+              <div className="section-heading about-section-heading">
+                <p className="eyebrow">Una asociación abierta</p>
+                <h2 id="transparency-title">Transparencia</h2>
+                <p className="lead">Creemos en una asociación abierta, democrática y transparente. Aquí puedes consultar la documentación básica de La Mirada Violeta y conocer mejor cómo funciona nuestra entidad.</p>
+              </div>
+              <div className="grid-two transparency-grid">
+                <article className="feature-panel transparency-card">
+                  <p className="eyebrow">Documentación</p>
+                  <h3>Estatutos de la Asociación</h3>
+                  <p>Consulta los estatutos que regulan el funcionamiento de La Mirada Violeta.</p>
+                  <span className="button button-disabled" aria-disabled="true">Consultar estatutos</span>
+                </article>
+                <article className="feature-panel transparency-card">
+                  <p className="eyebrow">Organización</p>
+                  <h3>Junta Directiva actual</h3>
+                  <p>Conoce a las personas que actualmente forman parte de la Junta Directiva.</p>
+                  <a className="button" href="#junta-directiva-title">Ver la Junta Directiva</a>
+                </article>
+                <article className="feature-panel transparency-card">
+                  <p className="eyebrow">Próximamente</p>
+                  <h3>Memoria anual de actividades</h3>
+                  <p>Próximamente podrás consultar aquí nuestras memorias de actividades.</p>
+                </article>
+                <article className="feature-panel transparency-card">
+                  <p className="eyebrow">Próximamente</p>
+                  <h3>Información económica y subvenciones</h3>
+                  <p>Este apartado irá incorporando información económica y sobre subvenciones recibidas.</p>
+                </article>
+              </div>
+            </section>
+            <SharedCTA about />
         </>
       );
     case 'actividades':
@@ -487,9 +528,17 @@ export default function SitePages({ page }) {
               <p>La asociación crece con la participación, las ideas y los conocimientos de las mujeres que la forman.</p>
             </PageIntro>
              <div className="prose membership-prose">
-              <h2>¿Por qué hacerte socia?</h2>
-              <p>Ser socia te permite participar en la asociación, proponer ideas, participar en actividades y colaborar en proyectos. También es una forma de compartir tu experiencia y conocimientos y apoyar la continuidad de La Mirada Violeta.</p>
-              <h2>¿Qué puedes aportar?</h2>
+               <h2>¿Por qué hacerte socia?</h2>
+               <p>Ser socia te permite participar en la asociación, proponer ideas, participar en actividades y colaborar en proyectos. También es una forma de compartir tu experiencia y conocimientos y apoyar la continuidad de La Mirada Violeta.</p>
+               <section className="membership-overview" aria-labelledby="membership-overview-title">
+                 <h2 id="membership-overview-title">Ser socia de La Mirada Violeta</h2>
+                 <p>{membershipContent.introduction}</p>
+                 <div className="grid-two membership-overview-grid">
+                   <article className="feature-panel membership-list-card"><h3>Como socia puedes</h3><ul>{membershipContent.canDo.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                   <article className="feature-panel membership-list-card"><h3>Como socia te comprometes a</h3><ul>{membershipContent.commitments.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                 </div>
+               </section>
+               <h2>¿Qué puedes aportar?</h2>
               <p>Cada mujer puede implicarse según su disponibilidad. Puedes aportar tiempo, ideas, conocimientos, experiencia o participación en los encuentros y actividades.</p>
               <div className="grid-two membership-grid">
                 <article className="feature-panel"><h3>Una participación flexible</h3><p>No todas tenemos la misma disponibilidad, y cada aportación cuenta.</p></article>

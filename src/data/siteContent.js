@@ -89,10 +89,10 @@ export const aboutContent = {
 
 export const aboutPageContent = {
   intro: [
-    'La Mirada Violeta somos una asociación feminista, antirracista y transincluyente de Fuenlabrada, vinculada a nuestros barrios y comprometida con la igualdad, la justicia social y la transformación desde lo local.',
-    'Nacemos de la convicción de que crear espacios para encontrarnos, compartir experiencias y apoyarnos mutuamente también es una forma de hacer feminismo.',
-    'Somos mujeres de distintas edades, trayectorias e intereses que compartimos una mirada feminista y las ganas de aprender, crear y construir comunidad juntas.',
+    'Somos una asociación feminista de Fuenlabrada que trabaja por una sociedad más justa e igualitaria.',
+    'Promovemos la igualdad, la prevención de las violencias machistas, la educación y la sensibilización feminista, la participación de las mujeres y la creación de espacios donde encontrarnos, aprender, compartir y apoyarnos.',
   ],
+  identity: ['Feminista', 'Antirracista', 'Transincluyente'],
   presence: [
     { title: 'Cercanas', description: 'trabajamos desde Fuenlabrada y nuestros barrios.' },
     { title: 'Participativas', description: 'las ideas y propuestas se construyen entre todas.' },
@@ -101,9 +101,9 @@ export const aboutPageContent = {
   ],
   board: [
     { role: 'Presidenta', name: 'Susana' },
-    { role: 'Vicepresidenta', name: 'Angéles' },
-    { role: 'Secretaria', name: 'Lidia' },
+    { role: 'Vicepresidenta', name: 'Ángeles' },
     { role: 'Tesorera', name: 'Cynthia' },
+    { role: 'Secretaria', name: 'Lidia' },
     { role: 'Vocal', name: 'Lía' },
   ],
   whatWeDo: [
@@ -132,6 +132,33 @@ export const aboutPageContent = {
       title: 'Aprender y crecer juntas',
       description: 'Organizamos encuentros de formación, debate e intercambio entre socias para compartir conocimientos y aprender unas de otras.',
     },
+  ],
+  defendedValues: [
+    { title: 'Igualdad', description: 'Trabajamos por la igualdad efectiva entre mujeres y hombres y por una sociedad libre de discriminaciones.' },
+    { title: 'Contra las violencias machistas', description: 'Promovemos la prevención, sensibilización, información y acompañamiento frente a la violencia de género.' },
+    { title: 'Educación y coeducación', description: 'Impulsamos la formación en igualdad y la educación feminista en diferentes ámbitos y edades.' },
+    { title: 'Cultura feminista', description: 'Generamos espacios de reflexión, divulgación, formación, debate y pensamiento feminista.' },
+    { title: 'Participación y redes', description: 'Fomentamos el asociacionismo, el voluntariado y la creación de redes entre mujeres.' },
+    { title: 'Una sociedad sin discriminación', description: 'Defendemos una sociedad basada en la igualdad, la solidaridad y el respeto, sin discriminación por género, raza, nacionalidad u otras circunstancias personales.' },
+  ],
+};
+
+export const membershipContent = {
+  introduction: 'Formar parte de La Mirada Violeta significa participar en un proyecto colectivo, aportar ideas, compartir espacios con otras mujeres y ayudar a construir una asociación más fuerte.',
+  canDo: [
+    'Participar en las actividades de la asociación.',
+    'Asistir a las asambleas.',
+    'Participar en las decisiones de la asociación.',
+    'Conocer cómo funciona la asociación.',
+    'Realizar propuestas y sugerencias.',
+    'Participar en sus órganos de representación cuando corresponda.',
+  ],
+  commitments: [
+    'Compartir los fines y valores de la asociación.',
+    'Respetar sus normas de convivencia.',
+    'Colaborar en la medida de tus posibilidades.',
+    'Respetar los acuerdos adoptados por la asociación.',
+    'Mantener al día la cuota correspondiente.',
   ],
 };
 
