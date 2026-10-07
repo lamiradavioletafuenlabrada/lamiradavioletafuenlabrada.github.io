@@ -22,7 +22,7 @@ function SocialButton({ link, compact = false }) {
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       aria-label={link.label}
-      title={link.label}
+      title={compact ? link.label : undefined}
     >
       <Icon aria-hidden="true" />
       {!compact && <span>{link.label}</span>}

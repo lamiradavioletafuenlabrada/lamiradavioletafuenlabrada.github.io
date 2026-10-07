@@ -510,7 +510,7 @@ export default function SitePages({ page }) {
                 <ul className="identity-objectives">{missionContent.objectives.map((objective) => <li key={objective.title}><strong>{objective.title}:</strong> {objective.description}</li>)}</ul>
                 <div className="identity-work">
                   <div className="identity-work-block"><h2>Cómo trabajamos</h2><p>Lo que nos hace fuertes es nuestra diversidad: somos mujeres de distintas edades, trayectorias y experiencias, unidas para aprender las unas de las otras y tejer redes de apoyo mutuo. Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p></div>
-                  <div className="identity-work-block"><h2>Nuestro ámbito</h2><p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>
+                  <div className="identity-work-block"><h2>Nuestro ámbito</h2><p>Trabajamos principalmente desde Fuenlabrada y sus barrios, dentro de un ámbito de actuación que se extiende a la Comunidad de Madrid, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>
                 </div>
              </div>
           </section>
