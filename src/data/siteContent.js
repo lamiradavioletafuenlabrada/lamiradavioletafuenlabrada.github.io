@@ -231,7 +231,7 @@ export const activities = [
 export const upcomingActivities = [
   {
     title: 'Huelga en minifalda',
-    details: '7 de octubre · 18:30 - 19:15 · Plaza de la Constitución, Fuenlabrada',
+    details: 'Se pospone por el mal tiempo',
   },
   {
     title: 'Charla: El cáncer no es rosa',
