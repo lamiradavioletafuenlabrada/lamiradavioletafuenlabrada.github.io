@@ -35,7 +35,7 @@ const eventSchema = [...activities, ...upcomingActivities]
     organizer: { '@type': 'Organization', name: 'La Mirada Violeta', url: domain },
   }));
 const jsonLd = (page) => JSON.stringify([organizationSchema, ...(page.id === 'actividades' ? eventSchema : [])]).replaceAll('<', '\\u003c');
-const sitemapPaths = new Set(['/', '/quienes-somos/', '/mision-valores/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/']);
+const sitemapPaths = new Set(['/', '/quienes-somos/', '/mision-valores/', '/transparencia/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/']);
 
 function renderPageHtml(page, pageContent, { notFound = false } = {}) {
   const canonical = page.canonical || page.path;

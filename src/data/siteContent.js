@@ -1,10 +1,11 @@
 export const navigation = [
   { label: 'Inicio', href: '/' },
   {
-    label: 'La Asociación',
+      label: 'La Asociación',
     children: [
       { label: 'Quiénes somos', href: '/quienes-somos/' },
       { label: 'Misión, valores y objetivos', href: '/mision-valores/' },
+      { label: 'Transparencia', href: '/transparencia/' },
     ],
   },
   {

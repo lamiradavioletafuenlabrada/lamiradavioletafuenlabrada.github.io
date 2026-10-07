@@ -249,6 +249,51 @@ function ResourcesPage() {
   );
 }
 
+function TransparencyPage() {
+  return (
+    <>
+      <section className="section container transparency-page-intro">
+        <PageIntro title="Transparencia" eyebrow="Una asociación abierta" showBack={false}>
+          <p>Creemos en una asociación abierta, democrática y transparente. En este espacio puedes consultar documentación e información básica sobre La Mirada Violeta y conocer mejor cómo funciona nuestra entidad.</p>
+        </PageIntro>
+      </section>
+      <section className="section container transparency-page-section" aria-labelledby="transparency-documents-title">
+        <div className="section-heading">
+          <p className="eyebrow">Documentación</p>
+          <h2 id="transparency-documents-title">Documentación de la asociación</h2>
+        </div>
+        <div className="transparency-grid transparency-page-grid">
+          <article className="feature-panel transparency-card transparency-feature">
+            <p className="eyebrow">Documento público</p>
+            <h3>Estatutos de La Mirada Violeta</h3>
+            <p>Consulta la versión pública y divulgativa de los estatutos de nuestra asociación.</p>
+            <p className="transparency-note">Esta versión ha sido adaptada para su publicación web, omitiendo determinados datos personales y simplificando algunos contenidos para facilitar su comprensión. El documento oficial inscrito se conserva para los trámites administrativos y jurídicos correspondientes.</p>
+            <a className="button" href="/estatutos-la-mirada-violeta.pdf" target="_blank" rel="noopener noreferrer">Consultar estatutos</a>
+          </article>
+          <article className="feature-panel transparency-card">
+            <p className="eyebrow">Organización</p>
+            <h3>Junta Directiva</h3>
+            <p>Conoce a las personas que actualmente forman parte de la Junta Directiva de La Mirada Violeta.</p>
+            <a className="button" href="/quienes-somos/#junta-directiva-title">Conocer la Junta Directiva</a>
+          </article>
+          <article className="feature-panel transparency-card transparency-coming-soon">
+            <p className="eyebrow">Próximamente</p>
+            <h3>Memoria anual de actividades</h3>
+            <p>En este espacio iremos publicando las memorias anuales de actividades de la asociación.</p>
+            <span className="status-label">Próximamente</span>
+          </article>
+          <article className="feature-panel transparency-card transparency-coming-soon">
+            <p className="eyebrow">Próximamente</p>
+            <h3>Información económica y subvenciones</h3>
+            <p>Este espacio recogerá información básica sobre subvenciones, ayudas y otros recursos vinculados a la actividad de la asociación.</p>
+            <span className="status-label">Próximamente</span>
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function CalendarPage() {
   return (
     <section className="section container" id="calendario">
@@ -389,37 +434,6 @@ export default function SitePages({ page }) {
                ))}
              </div>
             </section>
-            <section className="section container about-page-section transparency-section" aria-labelledby="transparency-title">
-              <div className="section-heading about-section-heading">
-                <p className="eyebrow">Una asociación abierta</p>
-                <h2 id="transparency-title">Transparencia</h2>
-                <p className="lead">Creemos en una asociación abierta, democrática y transparente. Aquí puedes consultar la documentación básica de La Mirada Violeta y conocer mejor cómo funciona nuestra entidad.</p>
-              </div>
-              <div className="grid-two transparency-grid">
-                <article className="feature-panel transparency-card">
-                  <p className="eyebrow">Documentación</p>
-                  <h3>Estatutos de la Asociación</h3>
-                  <p>Consulta los estatutos que regulan el funcionamiento de La Mirada Violeta.</p>
-                  <span className="button button-disabled" aria-disabled="true">Consultar estatutos</span>
-                </article>
-                <article className="feature-panel transparency-card">
-                  <p className="eyebrow">Organización</p>
-                  <h3>Junta Directiva actual</h3>
-                  <p>Conoce a las personas que actualmente forman parte de la Junta Directiva.</p>
-                  <a className="button" href="#junta-directiva-title">Ver la Junta Directiva</a>
-                </article>
-                <article className="feature-panel transparency-card">
-                  <p className="eyebrow">Próximamente</p>
-                  <h3>Memoria anual de actividades</h3>
-                  <p>Próximamente podrás consultar aquí nuestras memorias de actividades.</p>
-                </article>
-                <article className="feature-panel transparency-card">
-                  <p className="eyebrow">Próximamente</p>
-                  <h3>Información económica y subvenciones</h3>
-                  <p>Este apartado irá incorporando información económica y sobre subvenciones recibidas.</p>
-                </article>
-              </div>
-            </section>
             <SharedCTA about />
         </>
       );
@@ -499,8 +513,10 @@ export default function SitePages({ page }) {
              </div>
           </section>
           <SharedCTA />
-        </>
-      );
+         </>
+       );
+    case 'transparencia':
+      return <TransparencyPage />;
     case 'podcast':
       return (
         <section className="section container">

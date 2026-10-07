@@ -14,7 +14,7 @@ const exists = async (pathname) => {
 };
 assert.equal((await readFile('dist/CNAME', 'utf8')).trim(), 'www.lamiradavioleta.org');
 const titles = new Set();
-const sitemapPaths = ['/', '/quienes-somos/', '/mision-valores/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/'];
+const sitemapPaths = ['/', '/quienes-somos/', '/mision-valores/', '/transparencia/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/'];
 let checked = 0;
 for (const page of pages) {
   const html = await readFile(`dist${page.path}index.html`, 'utf8');
