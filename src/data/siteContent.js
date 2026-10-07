@@ -243,7 +243,7 @@ export const upcomingActivities = [
   },
   {
     title: 'Charla: Sexualidad en la madurez',
-    details: 'Fecha, hora y localización por confirmar',
+    details: '9 de noviembre · 18:30 · Asociación de Mayores de Loranca',
   },
 ];
 
