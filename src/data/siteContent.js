@@ -83,7 +83,7 @@ export const aboutContent = {
   ],
   closing:
     '¿Sintonizas con nuestra mirada? Te invitamos a conocernos, participar y seguir construyendo juntas una sociedad más justa.',
-  image: '/quienes.png',
+  image: '/quienes2.png',
   imageAlt: 'Mujeres de la asociación reunidas en un encuentro compartido',
 };
 
