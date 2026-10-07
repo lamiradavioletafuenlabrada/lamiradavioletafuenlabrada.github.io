@@ -13,6 +13,7 @@ import {
   contactContent,
   socialLinks,
   imageDimensions,
+  missionContent,
 } from '../data/siteContent';
 import { privacySections } from '../data/privacyContent';
 import { officialResources } from '../data/resourceContent';
@@ -497,7 +498,7 @@ export default function SitePages({ page }) {
             </PageIntro>
              <div className="prose identity-prose">
                <div className="identity-intro">
-                 <div><h2>Nuestra misión</h2><p>{aboutContent.paragraphs[0]}</p></div>
+                  <div><h2>Nuestra misión</h2><p className="mission-lead">{missionContent.mission}</p><p>{missionContent.missionDetail}</p></div>
                  <div><h2>Nuestra visión</h2><p>Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p></div>
                </div>
                <h2>Nuestros valores</h2>
@@ -505,7 +506,8 @@ export default function SitePages({ page }) {
                  {pillars.map((pillar) => <article className="feature-panel values-panel" key={pillar.title}><h3>{pillar.title}</h3><p>{pillar.description}</p></article>)}
                </div>
                <h2>Nuestros objetivos</h2>
-               <ul className="identity-objectives">{aboutContent.actions.map((action) => <li key={action.title}><strong>{action.title}:</strong> {action.description}</li>)}</ul>
+                <p className="objectives-intro">{missionContent.objectivesIntro}</p>
+                <ul className="identity-objectives">{missionContent.objectives.map((objective) => <li key={objective.title}><strong>{objective.title}:</strong> {objective.description}</li>)}</ul>
                <div className="identity-work">
                  <div><h2>Cómo trabajamos</h2><p>{aboutContent.paragraphs[1]} Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p></div>
                  <div className="feature-panel identity-scope"><h2>Nuestro ámbito</h2><p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>

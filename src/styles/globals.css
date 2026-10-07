@@ -227,6 +227,8 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
 .calendar-section { padding-top: 0; }
 .identity-grid, .membership-grid { margin-block: var(--space-md) var(--space-lg); }
 .identity-intro, .identity-work { display: grid; gap: var(--space-lg); }
+.mission-lead { color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(1.25rem, 2vw, 1.55rem); line-height: 1.45; }
+.objectives-intro { max-width: 60rem; color: var(--color-text-muted); }
 .identity-values, .identity-objectives { margin-block: var(--space-md) var(--space-lg); }
 .identity-scope { margin-top: var(--space-lg); }
 .podcast-coming-soon { width: 100%; }

@@ -165,14 +165,47 @@ export const membershipContent = {
 
 export const pillars = [
   {
-    title: 'Sororidad',
-    description: 'Espacios seguros para sanar, compartir y transformarnos juntas.',
+    title: 'Feminismo',
+    description: 'Defendemos la igualdad efectiva y los derechos de las mujeres como base de una sociedad más justa.',
   },
   {
-    title: 'Visibilización',
-    description: 'Abrimos caminos, rompemos silencios y sumamos nuestras voces.',
+    title: 'Sororidad',
+    description: 'Creemos en el apoyo mutuo, las redes entre mujeres y la fuerza de lo colectivo.',
+  },
+  {
+    title: 'Inclusión',
+    description: 'Queremos construir espacios seguros, diversos y libres de discriminación.',
+  },
+  {
+    title: 'Antirracismo',
+    description: 'Rechazamos cualquier forma de discriminación por origen, raza, nacionalidad o condición personal.',
+  },
+  {
+    title: 'Transinclusión',
+    description: 'Defendemos un feminismo inclusivo que reconozca y respete la diversidad de las mujeres.',
+  },
+  {
+    title: 'Participación',
+    description: 'Creemos en una asociación abierta, democrática y construida entre todas.',
+  },
+  {
+    title: 'Educación y pensamiento crítico',
+    description: 'Apostamos por la formación, la reflexión y la cultura feminista como herramientas de cambio.',
   },
 ];
+
+export const missionContent = {
+  mission: 'Nuestra misión es construir, desde Fuenlabrada, espacios de participación, apoyo y transformación feminista que contribuyan a una sociedad más justa, libre e igualitaria.',
+  missionDetail: 'Trabajamos para promover la igualdad efectiva, prevenir las violencias machistas, impulsar la educación y la sensibilización feminista y fortalecer las redes entre mujeres.',
+  objectivesIntro: 'Trabajamos para convertir nuestros valores en acciones concretas que generen cambios en nuestro entorno y fortalezcan la participación de las mujeres.',
+  objectives: [
+    { title: 'Igualdad', description: 'Promover la igualdad efectiva entre mujeres y hombres.' },
+    { title: 'Prevención', description: 'Prevenir y sensibilizar frente a las violencias machistas.' },
+    { title: 'Educación', description: 'Impulsar la educación y la coeducación en igualdad.' },
+    { title: 'Cultura y participación', description: 'Difundir la cultura feminista y fomentar el asociacionismo, el voluntariado y el aprendizaje compartido.' },
+    { title: 'Redes y transformación social', description: 'Crear redes de apoyo y colaborar con instituciones, entidades y colectivos para avanzar hacia una sociedad libre de discriminación, solidaria y respetuosa.' },
+  ],
+};
 
 export const activities = [
   {
