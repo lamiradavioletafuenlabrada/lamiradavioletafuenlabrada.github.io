@@ -492,14 +492,14 @@ export default function SitePages({ page }) {
     case 'mision-valores':
       return (
         <>
-          <section className="section container">
-            <PageIntro title="Misión, valores y objetivos" eyebrow="Nuestra identidad" showBack={false}>
+           <section className="section container identity-page">
+             <PageIntro title="Misión, valores y objetivos" eyebrow="Nuestra identidad" showBack={false}>
               <p>La Mirada Violeta es una asociación feminista de Fuenlabrada comprometida con la igualdad, la justicia social y la transformación desde lo local y lo colectivo.</p>
             </PageIntro>
              <div className="prose identity-prose">
                <div className="identity-intro">
-                  <div><h2>Nuestra misión</h2><p className="mission-lead">{missionContent.mission}</p><p>{missionContent.missionDetail}</p></div>
-                 <div><h2>Nuestra visión</h2><p>Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p></div>
+                  <div className="identity-mission"><h2>Nuestra misión</h2><p className="mission-lead">{missionContent.mission}</p><p>{missionContent.missionDetail}</p></div>
+                  <div className="identity-vision"><h2>Nuestra visión</h2><p className="vision-lead">Queremos seguir construyendo una comunidad feminista donde las mujeres puedan encontrarse, participar, aprender y apoyarse desde la diversidad de sus experiencias.</p></div>
                </div>
                <h2>Nuestros valores</h2>
                <div className="grid-three identity-grid identity-values">
@@ -508,13 +508,22 @@ export default function SitePages({ page }) {
                <h2>Nuestros objetivos</h2>
                 <p className="objectives-intro">{missionContent.objectivesIntro}</p>
                 <ul className="identity-objectives">{missionContent.objectives.map((objective) => <li key={objective.title}><strong>{objective.title}:</strong> {objective.description}</li>)}</ul>
-               <div className="identity-work">
-                 <div><h2>Cómo trabajamos</h2><p>{aboutContent.paragraphs[1]} Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p></div>
-                 <div className="feature-panel identity-scope"><h2>Nuestro ámbito</h2><p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>
-               </div>
+                <div className="identity-work">
+                  <div className="identity-work-block"><h2>Cómo trabajamos</h2><p>Lo que nos hace fuertes es nuestra diversidad: somos mujeres de distintas edades, trayectorias y experiencias, unidas para aprender las unas de las otras y tejer redes de apoyo mutuo. Colaboramos con el territorio y con colectivos que comparten nuestros valores porque la transformación social empieza en la comunidad.</p></div>
+                  <div className="identity-work-block"><h2>Nuestro ámbito</h2><p>Trabajamos desde Fuenlabrada y sus barrios, tejiendo redes de apoyo mutuo, participación y acción comunitaria.</p></div>
+                </div>
              </div>
           </section>
-          <SharedCTA />
+          <section className="section container identity-cta">
+            <div className="cta-panel">
+              <h2>Sigamos construyendo juntas</h2>
+              <p className="lead">¿Sintonizas con nuestra mirada? Conoce nuestras actividades o descubre cómo formar parte de La Mirada Violeta.</p>
+              <div className="actions">
+                <a className="button" href="/socias/">Hazte socia</a>
+                <a className="button button-secondary" href="/actividades/">Conoce nuestras actividades</a>
+              </div>
+            </div>
+          </section>
          </>
        );
     case 'transparencia':
