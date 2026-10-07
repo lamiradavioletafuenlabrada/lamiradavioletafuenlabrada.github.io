@@ -227,13 +227,15 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
 .calendar-section { padding-top: 0; }
 .identity-grid, .membership-grid { margin-block: var(--space-md) var(--space-lg); }
 .identity-intro, .identity-work { display: grid; gap: var(--space-lg); }
-.mission-lead { color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(1.25rem, 2vw, 1.55rem); line-height: 1.45; }
+.identity-page .mission-lead { max-width: 34ch; color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(1.2rem, 1.9vw, 1.45rem); line-height: 1.4; }
 .objectives-intro { max-width: 60rem; color: var(--color-text-muted); }
-.identity-page .page-intro { padding-bottom: var(--space-sm); }
-.identity-page .page-intro .lead { max-width: 46ch; }
+.identity-page .page-intro { padding-bottom: var(--space-xs); }
+.identity-page .page-intro h1 { margin-bottom: var(--space-sm); font-size: clamp(2.05rem, 4vw, 3rem); }
+.identity-page .page-intro .lead { max-width: 44ch; }
 .identity-vision { padding: var(--space-md); border-left: 2px solid var(--color-primary-light); background: var(--color-lavender-light); }
 .vision-lead { max-width: 42ch; color: var(--color-primary-dark); font-size: 1.05rem; line-height: 1.7; }
-.identity-work-block { padding-top: var(--space-md); border-top: 1px solid var(--color-border-accent); }
+.identity-work { margin-top: var(--space-xl); }
+.identity-work-block { min-height: 11rem; padding-top: var(--space-md); border-top: 1px solid var(--color-border-accent); }
 .identity-work-block h2 { margin-top: 0; }
 .identity-work-block p { max-width: 42ch; }
 .identity-values, .identity-objectives { margin-block: var(--space-md) var(--space-lg); }
@@ -364,6 +366,9 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
   .resource-alert { grid-template-columns: 1fr; gap: var(--space-md); padding: 1.1rem; }
   .resource-grid, .resource-contact-grid, .resource-details { grid-template-columns: 1fr; }
   .identity-intro, .identity-work { display: block; }
+  .identity-work { margin-top: var(--space-lg); }
+  .identity-work-block { min-height: 0; margin-bottom: var(--space-lg); }
+  .identity-work-block:last-child { margin-bottom: 0; }
   .resource-card { padding: 1.1rem; }
   .podcast-episode { grid-template-columns: 1fr; }
   .podcast-episode img { aspect-ratio: 16 / 9; height: auto; }
