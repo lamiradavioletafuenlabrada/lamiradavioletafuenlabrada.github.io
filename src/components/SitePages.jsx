@@ -397,7 +397,7 @@ export default function SitePages({ page }) {
               </div>
               <div className="about-board-grid">
                 {aboutPageContent.board.map((member) => (
-                  <article className="about-board-member" key={member.role}>
+                  <article className="about-board-member" key={`${member.role}-${member.name}`}>
                     <p>{member.role}</p>
                     <strong>{member.name}</strong>
                   </article>
