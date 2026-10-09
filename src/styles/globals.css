@@ -192,6 +192,8 @@ figure { margin: 0; }
 .membership-rules-intro h2 { margin-top: 0; }
 .membership-rules-grid { display: grid; gap: var(--space-md); }
 .membership-rule { min-width: 0; padding: var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+.membership-rule-title { display: flex; align-items: flex-start; gap: var(--space-sm); }
+.membership-rule-title h3 { margin: 0; color: var(--color-primary-dark); font-size: 1rem; line-height: 1.35; }
 .membership-rule[open] { border-color: var(--color-border-accent); box-shadow: 0 5px 14px var(--color-shadow); }
 .membership-rule summary { display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--color-primary-dark); font-weight: 700; line-height: 1.35; list-style: none; }
 .membership-rule summary span { flex: 1; }

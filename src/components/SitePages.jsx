@@ -26,64 +26,44 @@ const activityAlts = {
 
 const membershipRules = [
   {
-    title: 'Respeto y trato digno',
-    summary: 'Tratamos a todas las personas con respeto, sin insultos, burlas, humillaciones, amenazas ni actitudes agresivas.',
-    detail: 'Todas las personas deben ser tratadas con respeto, evitando insultos, burlas, humillaciones, amenazas, intimidaciones o actitudes agresivas.',
+    title: 'Respeto, sororidad y apoyo mutuo',
+    summary: 'Nos relacionamos desde la empatía, el cuidado, el compañerismo y el respeto a las distintas vivencias.',
   },
   {
-    title: 'Tolerancia cero frente a la discriminación',
-    summary: 'No aceptamos comportamientos discriminatorios por circunstancias personales o sociales.',
-    detail: 'No se permitirán comportamientos o comentarios discriminatorios por razón de sexo, identidad o expresión de género, orientación sexual, origen, raza o etnia, edad, discapacidad, situación económica, religión, aspecto físico o cualquier otra circunstancia personal o social.',
+    title: 'Inclusividad e interseccionalidad',
+    summary: 'La asociación es un espacio feminista, diverso e inclusivo donde se respetan identidades, orígenes, corporalidades, discapacidades, diversidades funcionales o psíquicas, orientaciones e identidades de género.',
   },
   {
-    title: 'Espacios libres de acoso y violencia',
-    summary: 'Cuidamos que nuestras actividades sean espacios seguros, sin acoso, violencia, abuso ni contacto físico no consentido.',
-    detail: 'No se tolerarán conductas de acoso, intimidación, violencia, abuso, presión, contacto físico no consentido o comportamientos que hagan sentir incómoda o insegura a otra persona.',
+    title: 'Cero tolerancia a la violencia y la discriminación',
+    summary: 'No se toleran agresiones, acoso, machismo, racismo, transfobia, bifobia, lesbofobia, homofobia, capacitismo, gordofobia, edadismo ni cualquier otra forma de discriminación, violencia, exclusión o aislamiento deliberado.',
   },
   {
-    title: 'Respeto al consentimiento y a los límites personales',
-    summary: 'Cada persona decide qué compartir, en qué participar y cuáles son sus límites.',
-    detail: 'Cada persona puede decidir qué quiere compartir, en qué actividades desea participar y cuáles son sus límites. Nadie deberá sentirse obligada a hablar de experiencias personales o situaciones que no quiera compartir.',
+    title: 'Compañerismo, sinceridad y confianza',
+    summary: 'Queremos preservar un espacio de compañerismo y confianza. Los conflictos personales deben gestionarse evitando que perjudiquen a la asociación.',
   },
   {
-    title: 'Escucha y respeto de los turnos de palabra',
-    summary: 'Promovemos el diálogo y la escucha activa, sin interrupciones constantes, descalificaciones ni ataques personales.',
-    detail: 'Promovemos el diálogo, la escucha activa y el intercambio de ideas sin interrupciones constantes, descalificaciones ni ataques personales.',
+    title: 'Escucha y respeto en reuniones',
+    summary: 'Se respetarán los turnos de palabra, se favorecerá la participación de todas y se debatirán las ideas sin ataques personales, descalificaciones ni interrupciones.',
   },
   {
-    title: 'Respeto a las diferentes experiencias y opiniones',
-    summary: 'Las discrepancias pueden expresarse desde el respeto, sin invalidar las experiencias de otras participantes.',
-    detail: 'No todas las personas vivimos las mismas realidades ni pensamos de la misma manera. Las discrepancias pueden expresarse siempre desde el respeto y sin cuestionar o invalidar las experiencias personales de otras participantes.',
+    title: 'Participación y toma de decisiones',
+    summary: 'Las reuniones se organizarán facilitando la participación. Se informará previamente del orden del día y, cuando una socia no pueda acudir, se facilitarán vías para trasladar propuestas, valoraciones, objeciones o votaciones. Se priorizará el consenso y, cuando no sea posible, se aplicará el sistema de votación previsto en los Estatutos.',
+  },
+  {
+    title: 'Compromiso en las actividades',
+    summary: 'Si una socia se compromete a colaborar en una actividad y finalmente no puede participar, deberá avisar con la mayor antelación posible. La colaboración está abierta a todas las socias y se valora cualquier grado de implicación.',
+  },
+  {
+    title: 'Corresponsabilidad y cuidados',
+    summary: 'Las tareas logísticas, organización, limpieza, toma de actas y gestión de espacios son responsabilidad colectiva y pueden repartirse de forma voluntaria y equitativa.',
   },
   {
     title: 'Confidencialidad',
-    summary: 'Las experiencias compartidas en nuestras actividades se tratan con respeto y discreción.',
-    detail: 'Las experiencias personales compartidas en talleres, grupos de encuentro u otras actividades deberán tratarse con respeto y discreción. No deberán difundirse fuera del espacio sin el consentimiento de la persona que las haya compartido.',
+    summary: 'Las experiencias personales, conversaciones, documentos, fotografías, vídeos, datos personales y demás contenidos compartidos dentro de la asociación son confidenciales y no deben difundirse fuera de ella sin consentimiento.',
   },
   {
-    title: 'Privacidad e imagen',
-    summary: 'No fotografiamos, grabamos ni compartimos imágenes de otras participantes sin su conocimiento y consentimiento.',
-    detail: 'No se realizarán ni compartirán fotografías, vídeos o grabaciones de otras participantes sin su conocimiento y consentimiento, especialmente cuando puedan aparecer testimonios, experiencias personales o situaciones sensibles.',
-  },
-  {
-    title: 'Convivencia respetuosa también en los espacios digitales',
-    summary: 'Las mismas normas se aplican a redes sociales, grupos de mensajería, videollamadas y comentarios.',
-    detail: 'Estas normas se aplican igualmente a redes sociales, grupos de mensajería, videollamadas, comentarios y cualquier otro canal vinculado a la asociación.',
-  },
-  {
-    title: 'Participación responsable',
-    summary: 'Respetamos horarios, espacios, materiales y la organización de las actividades.',
-    detail: 'Pedimos a las participantes que respeten los horarios, espacios, materiales y organización de las actividades, así como las indicaciones necesarias para garantizar el buen desarrollo de las mismas.',
-  },
-  {
-    title: 'Cuidado colectivo',
-    summary: 'Fomentamos el apoyo, la empatía y la libertad para retirarse, descansar o comunicar una situación incómoda.',
-    detail: 'Fomentamos una actitud de apoyo, empatía y colaboración. Si alguna persona necesita retirarse de una actividad, descansar o comunicar una situación que le haya hecho sentirse incómoda, podrá hacerlo libremente.',
-  },
-  {
-    title: 'Coherencia con los fines de la asociación',
-    summary: 'Nuestros espacios se alinean con la igualdad, los derechos de las mujeres, la diversidad y la prevención de las violencias machistas.',
-    detail: 'No se permitirán comportamientos contrarios a los principios de igualdad, derechos de las mujeres, prevención de las violencias machistas, diversidad, respeto y convivencia que forman parte de los valores de La Mirada Violeta.',
+    title: 'Límites y consentimiento',
+    summary: 'Se respetarán los límites físicos y emocionales de todas las personas. El consentimiento debe ser libre, claro y explícito y puede retirarse en cualquier momento.',
   },
 ];
 
@@ -131,11 +111,10 @@ function RuleMark() {
 
 function MembershipRuleCard({ rule }) {
   return (
-    <details className="membership-rule">
-      <summary><RuleMark /><span>{rule.title}</span></summary>
+    <article className="membership-rule">
+      <div className="membership-rule-title"><RuleMark /><h3>{rule.title}</h3></div>
       <p>{rule.summary}</p>
-      <div className="membership-rule-detail"><strong>Versión completa</strong><p>{rule.detail}</p></div>
-    </details>
+    </article>
   );
 }
 
@@ -270,6 +249,12 @@ function TransparencyPage() {
             <p>Consulta la versión pública y divulgativa de los estatutos de nuestra asociación.</p>
             <p className="transparency-note">Esta versión ha sido adaptada para su publicación web, omitiendo determinados datos personales y simplificando algunos contenidos para facilitar su comprensión. El documento oficial inscrito se conserva para los trámites administrativos y jurídicos correspondientes.</p>
             <a className="button" href="/estatutos-la-mirada-violeta.pdf" target="_blank" rel="noopener noreferrer">Consultar estatutos</a>
+          </article>
+          <article className="feature-panel transparency-card transparency-feature">
+            <p className="eyebrow">Documento público</p>
+            <h3>Normas generales de la Asociación</h3>
+            <p>Marco de convivencia, cuidados colectivos y funcionamiento interno de La Mirada Violeta. Recoge los principios de respeto, participación, confidencialidad, corresponsabilidad y gestión de conflictos que orientan la vida de la asociación.</p>
+            <a className="button" href="/normas_lmv.pdf" target="_blank" rel="noopener noreferrer">Consultar normas</a>
           </article>
           <article className="feature-panel transparency-card">
             <p className="eyebrow">Organización</p>
@@ -572,7 +557,8 @@ export default function SitePages({ page }) {
                 <section className="membership-rules" aria-labelledby="membership-rules-title">
                   <div className="membership-rules-intro"><p className="eyebrow">Cuidarnos entre todas</p><h2 id="membership-rules-title">Normas de convivencia y participación</h2><p>En <strong>La Mirada Violeta</strong> queremos crear espacios seguros, inclusivos y respetuosos en los que todas las personas puedan participar, expresarse y compartir experiencias con libertad.</p><p>La participación en nuestras actividades, espacios presenciales y canales digitales implica respetar las siguientes normas:</p></div>
                   <div className="membership-rules-grid">{membershipRules.map((rule) => <MembershipRuleCard key={rule.title} rule={rule} />)}</div>
-                  <div className="membership-conflict"><h3>Ante situaciones de conflicto</h3><p>Si se produce una situación incómoda, un conflicto o un posible incumplimiento de estas normas, podrá comunicarse a una persona responsable de la asociación.</p><p>La Mirada Violeta podrá intervenir, mediar o adoptar las medidas que considere necesarias para proteger el bienestar de las participantes y el correcto funcionamiento de sus actividades.</p><p>En casos graves o reiterados, la asociación podrá solicitar a una persona que abandone una actividad o limitar su participación en futuros espacios organizados por la entidad.</p><p>Nuestro objetivo no es crear espacios en los que todas pensemos igual, sino espacios en los que podamos <strong>escucharnos, aprender, cuidarnos y participar con libertad y respeto</strong>.</p></div>
+                  <div className="membership-conflict"><h3>Ante situaciones de conflicto</h3><p>Ante tensiones o desacuerdos, se priorizará el diálogo directo y respetuoso entre las personas implicadas.</p><p>Cuando no sea posible resolver la situación de esta manera, podrá intervenir una comisión mediadora formada por la Junta Directiva.</p><p>Si fuera necesario, podrá convocarse una asamblea específica para abordar el conflicto.</p><p>Cada situación se valorará individualmente y la Junta Directiva propondrá las medidas que correspondan de acuerdo con los Estatutos y las Normas generales de la Asociación.</p></div>
+                  <a className="text-link membership-rules-link" href="/normas_lmv.pdf" target="_blank" rel="noopener noreferrer">Consultar las Normas generales de la Asociación</a>
                 </section>
              </div>
            </section>
