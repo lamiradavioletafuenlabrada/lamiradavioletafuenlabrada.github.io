@@ -236,10 +236,12 @@ export const upcomingActivities = [
   {
     title: 'Charla: El cáncer no es rosa',
     details: '22 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
+    registrationUrl: 'https://forms.gle/ric47VyjBo2go65H9',
   },
   {
     title: 'Palestina desde los ojos de sus mujeres',
     details: '29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
+    registrationUrl: 'https://forms.gle/KPXbskyRHbC2jGAD8',
   },
   {
     title: 'Charla: Sexualidad en la madurez',

@@ -440,6 +440,7 @@ export default function SitePages({ page }) {
                 {upcomingActivities.map((activity) => (
                   <li className="upcoming-item" key={activity.title}>
                     <h3>{activity.title}</h3><p className="muted">{activity.startDate ? <time dateTime={activity.startDate}>{activity.dateLabel || activity.startDate}</time> : activity.details}{activity.location && <> · <span>{activity.location}</span></>}</p>
+                    {activity.registrationUrl && <a className="text-link" href={activity.registrationUrl} target="_blank" rel="noopener noreferrer">Inscríbete aquí</a>}
                   </li>
                 ))}
               </ul>
