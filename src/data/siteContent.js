@@ -101,11 +101,12 @@ export const aboutPageContent = {
     { title: 'Comunitarias', description: 'tejemos redes de apoyo, aprendizaje y colaboración.' },
   ],
   board: [
-    { role: 'Presidenta', name: 'Susana' },
-    { role: 'Vicepresidenta', name: 'Ángeles' },
-    { role: 'Tesorera', name: 'Cynthia' },
-    { role: 'Secretaria', name: 'Lidia' },
-    { role: 'Vocal', name: 'Lía' },
+    { role: 'Presidenta', name: 'Susana Guisado' },
+    { role: 'Vicepresidenta', name: 'Ángeles Andrés' },
+    { role: 'Tesorera', name: 'Cynthia Señorán' },
+    { role: 'Secretaria', name: 'Lidia Vigil' },
+    { role: 'Vocal', name: 'Lía Gutiérrez' },
+    { role: 'Vocal', name: 'Covadonga Fernández' },
   ],
   whatWeDo: [
     'Organizamos talleres, charlas, encuentros y actividades gratuitas con perspectiva feminista. Queremos crear propuestas accesibles y cercanas donde aprender, compartir, reflexionar y disfrutar.',
