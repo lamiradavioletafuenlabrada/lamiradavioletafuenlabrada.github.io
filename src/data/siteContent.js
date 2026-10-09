@@ -247,6 +247,7 @@ export const upcomingActivities = [
   {
     title: 'Charla: Sexualidad en la madurez',
     details: '9 de noviembre · 18:30 · Asociación de Mayores y Pensionistas de Loranca. Nuevo Versalles B, 201 Local.',
+    registrationUrl: 'https://forms.gle/65Hkm2DsPF9fsu176',
   },
 ];
 
