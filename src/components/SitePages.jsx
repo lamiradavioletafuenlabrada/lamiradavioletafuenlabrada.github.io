@@ -262,11 +262,11 @@ function TransparencyPage() {
             <p>Conoce a las personas que actualmente forman parte de la Junta Directiva de La Mirada Violeta.</p>
             <a className="button" href="/quienes-somos/#junta-directiva-title">Conocer la Junta Directiva</a>
           </article>
-          <article className="feature-panel transparency-card transparency-coming-soon">
-            <p className="eyebrow">Próximamente</p>
-            <h3>Memoria anual de actividades</h3>
-            <p>En este espacio iremos publicando las memorias anuales de actividades de la asociación.</p>
-            <span className="status-label">Próximamente</span>
+          <article className="feature-panel transparency-card transparency-feature">
+            <p className="eyebrow">Documento público</p>
+            <h3>Memoria de actividades 2025</h3>
+            <p>Resumen de las actividades, proyectos, encuentros y acciones desarrolladas por La Mirada Violeta durante el año 2025.</p>
+            <a className="button" href="/memoria2025.pdf" target="_blank" rel="noopener noreferrer">Consultar memoria</a>
           </article>
           <article className="feature-panel transparency-card transparency-coming-soon">
             <p className="eyebrow">Próximamente</p>
