@@ -252,13 +252,26 @@ export const upcomingActivities = [
 ];
 
 export const podcastContent = {
-  title: 'Se vienen cositas... y tu voz cuenta.',
-  text: 'Estamos preparando un nuevo podcast feminista y este espacio también es tuyo. ¿De qué temas te gustaría que hablemos? ¿Qué voces o debates echas en falta? Entra en el formulario, déjanos tus ideas y ayúdanos a construir los próximos episodios.',
+  title: 'Todas somos Violeta',
+  intro: 'Estamos preparando el podcast de La Mirada Violeta: un espacio de conversación, humor, divulgación y participación en el que hablaremos de feminismo, cultura, actualidad, historia y de las experiencias que nos atraviesan como mujeres.\n\nQueremos que sea también un lugar abierto a nuestra comunidad, donde compartir preguntas, historias, recomendaciones y voces diferentes.',
+  participation: 'Queremos que parte del podcast se construya con vosotras. Podréis enviarnos dudas, preguntas, historias, temas que os gustaría que tratáramos y propuestas a través de nuestras redes sociales.',
+  platformsText: 'Estamos preparando los primeros episodios. Cuando estén disponibles podrás escucharlos y verlos desde aquí.',
   cta: {
     label: 'Déjanos tus ideas aquí',
     href: 'https://forms.gle/jvptTa7dFfjkjGQc6',
   },
 };
+
+export const podcastSections = [
+  { title: 'Consultorio Violeta', description: 'Dudas, historias, situaciones y preguntas que nos hagáis llegar a través de nuestras redes. Un espacio para conversar, compartir puntos de vista y pensar juntas.' },
+  { title: 'Descubre a...', description: 'Historias de mujeres que dejaron huella y que no siempre ocuparon el lugar que merecían en los libros de historia.' },
+  { title: 'Dato mata relato', description: 'Datos, cifras e información para poner contexto a algunos de los debates y discursos que encontramos a nuestro alrededor.' },
+  { title: 'Entrevistas', description: 'Conversaciones con mujeres, profesionales, creadoras, activistas y personas que tengan experiencias o conocimientos que merezca la pena escuchar.' },
+  { title: 'Recomendaciones violetas', description: 'Libros, series, películas, documentales, podcasts y propuestas culturales que nos hayan hecho pensar, aprender o disfrutar.' },
+  { title: 'Agenda Violeta', description: 'Un repaso a próximas actividades de La Mirada Violeta y a otras propuestas feministas que puedan resultar interesantes.' },
+  { title: 'El tema sobre la mesa', description: 'Un espacio para debatir juntas sobre temas de actualidad, feminismo, sociedad y experiencias cotidianas.' },
+  { title: 'Horóscopo Violeta', description: 'Nuestro rincón menos serio: un horóscopo en clave de humor para terminar —o empezar— con una sonrisa.' },
+];
 
 // Add future episodes here without changing the podcast page structure.
 export const podcastEpisodes = [];

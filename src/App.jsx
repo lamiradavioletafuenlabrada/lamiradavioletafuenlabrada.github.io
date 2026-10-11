@@ -112,7 +112,7 @@ export default function App({ page = 'inicio' }) {
       <footer className="site-footer">
         <div className="container">
           <div className="footer-grid">
-             <div><a className="footer-brand" href="/">La Mirada Violeta</a><p>Asociación feminista de Fuenlabrada comprometida con la igualdad, la participación y la acción colectiva.</p><a href={`mailto:${contactContent.email}`}>{contactContent.email}</a><p className="footer-registration">N.º de Registro en la Comunidad de Madrid: 40614</p></div>
+             <div><a className="footer-brand" href="/">La Mirada Violeta</a><p>Asociación feminista de Fuenlabrada comprometida con la igualdad, la participación y la acción colectiva.</p><a href={`mailto:${contactContent.email}`}>{contactContent.email}</a><div className="footer-registration"><p>CIF: G56468705</p><p>N.º de Registro en la Comunidad de Madrid: 40614</p></div></div>
              <FooterNavGroup title="Enlaces" page={page} links={[{ label: 'Quiénes somos', href: '/quienes-somos/' }, { label: 'Actividades', href: '/actividades/' }, { label: 'Hazte Socia', href: '/socias/' }, { label: 'Recursos', href: '/recursos/' }, { label: 'Contacto', href: '/contacto/' }]} />
              <div className="footer-social"><h2>Síguenos</h2>{socialLinks.filter((link) => ['Instagram', 'TikTok', 'LinkedIn', 'YouTube'].includes(link.label)).map((link) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>
           </div>

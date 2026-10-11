@@ -8,6 +8,7 @@ import {
   activities,
   upcomingActivities,
   podcastContent,
+  podcastSections,
   podcastEpisodes,
   calendarContent,
   contactContent,
@@ -505,20 +506,37 @@ export default function SitePages({ page }) {
     case 'podcast':
       return (
         <section className="section container">
-          <PageIntro title="Podcast" eyebrow="Voces y conversaciones" showBack={false}>
-            <p>Estamos preparando un espacio para hablar de mujeres, feminismo, cultura, igualdad y experiencias que merecen ser escuchadas.</p>
+          <PageIntro title={podcastContent.title} eyebrow="Voces y conversaciones" showBack={false}>
+            {podcastContent.intro.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </PageIntro>
-          <div className="feature-panel podcast-coming-soon">
-            <p className="tag">Próximamente</p>
-            <h2>{podcastContent.title}</h2>
-            <p>{podcastContent.text}</p>
-            <div className="podcast-platforms" aria-label="Plataformas previstas para el podcast">
-              <span>Spotify</span><span>YouTube</span>
+          <section className="podcast-sections" aria-labelledby="podcast-sections-title">
+            <div className="section-heading"><p className="eyebrow">El programa</p><h2 id="podcast-sections-title">¿Qué encontrarás en Todas somos Violeta?</h2></div>
+            <div className="podcast-section-grid">
+              {podcastSections.map((section) => <article className="feature-panel podcast-section-card" key={section.title}><h3>{section.title}</h3><p>{section.description}</p></article>)}
             </div>
-            <div className="actions"><a className="button button-secondary" href={podcastContent.cta.href} target="_blank" rel="noopener noreferrer">{podcastContent.cta.label}</a></div>
-          </div>
-          <div className="section-heading episode-heading"><h2>Próximos episodios</h2><p className="muted">Cuando publiquemos episodios aparecerán aquí con su portada, fecha, descripción y enlaces para escucharlos.</p></div>
-          <div className="podcast-episodes">{podcastEpisodes.map((episode) => <article className="card podcast-episode" key={episode.title}><img src={episode.image} alt={episode.imageAlt || episode.title} width={episode.width} height={episode.height} loading="lazy" /><div className="card-body"><p className="eyebrow">{episode.date}</p><h3>{episode.title}</h3><p>{episode.description}</p><div className="actions"><a className="button button-secondary" href={episode.spotify}>Spotify</a><a className="button button-secondary" href={episode.youtube}>YouTube</a></div></div></article>)}</div>
+          </section>
+          <section className="feature-panel podcast-participation" aria-labelledby="podcast-participation-title">
+            <p className="eyebrow">Participa</p>
+            <h2 id="podcast-participation-title">También queremos escucharte</h2>
+            <p>{podcastContent.participation}</p>
+            <div className="actions">
+              <a className="button button-secondary" href={podcastContent.cta.href} target="_blank" rel="noopener noreferrer">{podcastContent.cta.label}</a>
+              {socialLinks.filter((link) => ['Instagram', 'TikTok'].includes(link.label)).map((link) => <a className="text-link" key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}
+            </div>
+          </section>
+          <section className="feature-panel podcast-platform-panel" aria-labelledby="podcast-platforms-title">
+            <p className="eyebrow">Cuando publiquemos</p>
+            <h2 id="podcast-platforms-title">Escúchanos y míranos</h2>
+            <p>{podcastContent.platformsText}</p>
+            <div className="podcast-platforms" aria-label="Plataformas previstas para el podcast">
+              <span className="button button-disabled" aria-disabled="true">Spotify</span>
+              <a className="button button-secondary" href={socialLinks.find((link) => link.label === 'YouTube')?.href} target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+          </section>
+          <section className="podcast-episodes-section" aria-labelledby="podcast-episodes-title">
+            <div className="section-heading episode-heading"><p className="eyebrow">Archivo</p><h2 id="podcast-episodes-title">Episodios</h2></div>
+            {podcastEpisodes.length ? <div className="podcast-episodes">{podcastEpisodes.map((episode) => <article className="card podcast-episode" key={episode.title}><img src={episode.image} alt={episode.imageAlt || episode.title} width={episode.width} height={episode.height} loading="lazy" /><div className="card-body"><p className="eyebrow">{episode.date}</p><h3>{episode.title}</h3><p>{episode.description}</p><div className="actions"><a className="button button-secondary" href={episode.spotify}>Escuchar en Spotify</a><a className="button button-secondary" href={episode.youtube}>Ver en YouTube</a></div></div></article>)}</div> : <div className="podcast-empty"><h3>Los primeros episodios están en preparación</h3><p>Esta sección se actualizará con la miniatura, el número de episodio, la fecha, la descripción, la duración y los enlaces para escucharlo o verlo.</p></div>}
+          </section>
         </section>
       );
     case 'socias':
