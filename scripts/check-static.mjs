@@ -15,6 +15,7 @@ const exists = async (pathname) => {
 assert.equal((await readFile('dist/CNAME', 'utf8')).trim(), 'www.lamiradavioleta.org');
 const titles = new Set();
 const sitemapPaths = ['/', '/quienes-somos/', '/mision-valores/', '/transparencia/', '/actividades/', '/podcast/', '/socias/', '/recursos/', '/contacto/'];
+const googleEmbedPages = new Set(['actividades', 'contacto']);
 let checked = 0;
 for (const page of pages) {
   const html = await readFile(`dist${page.path}index.html`, 'utf8');
@@ -32,12 +33,13 @@ for (const page of pages) {
   assert.ok(jsonLd, `Missing JSON-LD: ${page.path}`);
   assert.doesNotThrow(() => JSON.parse(jsonLd), `Invalid JSON-LD: ${page.path}`);
   for (const image of html.matchAll(/<img\b([^>]*)>/g)) assert.ok(/\balt="/.test(image[1]), `Image without alt: ${page.path}`);
-   assert.equal((html.match(/<iframe\b/g) || []).length, page.id === 'actividades' ? 1 : 0, 'Only the activities page embeds Google directly');
-   if (page.id === 'actividades') {
-    assert.ok(html.includes('src="https://calendar.google.com/calendar/embed?'));
-    assert.ok(!html.includes('Mostrar calendario de Google'));
-    assert.ok(!/<iframe[^>]*loading="lazy"/.test(html), 'Calendar must load immediately');
-  }
+    assert.equal((html.match(/<iframe\b/g) || []).length, googleEmbedPages.has(page.id) ? 1 : 0, 'Only activities and contact pages embed Google directly');
+    if (page.id === 'actividades') {
+     assert.ok(html.includes('src="https://calendar.google.com/calendar/embed?'));
+     assert.ok(!html.includes('Mostrar calendario de Google'));
+     assert.ok(!/<iframe[^>]*loading="lazy"/.test(html), 'Calendar must load immediately');
+   }
+   if (page.id === 'contacto') assert.ok(html.includes('src="https://www.google.com/maps?q=Centro+8+de+Marzo+Fuenlabrada&amp;output=embed"'));
   assert.ok(!html.includes('.render/'), 'Build-only rendering bundle must not ship');
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const value = match[1].replaceAll('&amp;', '&');
