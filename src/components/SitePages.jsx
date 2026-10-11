@@ -588,10 +588,18 @@ export default function SitePages({ page }) {
                   <a className="text-link" key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
                 ))}
               </div>
-               <h3>Sede oficial de la Asociación</h3>
-               <p>Actualmente no disponemos de espacio propio, esperamos contar con ello próximamente. En el mapa, verás que nos ubicamos en el Centro 8 de Marzo de Fuenlabrada como referencia. Confirma con nosotras el lugar de cada encuentro.</p>
-              <a className="text-link" href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer">Ver el Centro 8 de Marzo en Google Maps</a>
-            </div>
+                <h3>Ubicación de referencia</h3>
+                <p>Actualmente no disponemos de espacio propio, esperamos contar con ello próximamente. En el mapa, verás que nos ubicamos en el Centro 8 de Marzo de Fuenlabrada como referencia. Confirma con nosotras el lugar de cada encuentro.</p>
+               <a className="text-link" href={contactContent.locationUrl} target="_blank" rel="noopener noreferrer">Ver el Centro 8 de Marzo en Google Maps</a>
+               <div className="contact-map-wrap">
+                 <iframe className="contact-map" title="Centro 8 de Marzo de Fuenlabrada en Google Maps" src={contactContent.mapEmbedUrl} loading="lazy" allowFullScreen />
+               </div>
+               <div className="contact-reviews">
+                 <h3>Opiniones en Google</h3>
+                 <p>Consulta las valoraciones y experiencias compartidas en nuestra ficha de Google.</p>
+                 <a className="button" href={contactContent.reviewsUrl} target="_blank" rel="noopener noreferrer">Ver opiniones en Google</a>
+               </div>
+             </div>
           </div>
         </section>
       );

@@ -281,6 +281,10 @@ export const contactContent = {
   location: 'Fuenlabrada, Madrid',
   locationUrl:
     'https://www.google.com/maps/search/?api=1&query=Centro+8+de+Marzo+Fuenlabrada',
+  mapEmbedUrl:
+    'https://www.google.com/maps?q=Centro+8+de+Marzo+Fuenlabrada&output=embed',
+  reviewsUrl:
+    'https://www.google.com/maps/search/?api=1&query=La+Mirada+Violeta+Fuenlabrada',
   email: 'contacto@lamiradavioleta.org',
 };
 

@@ -1,3 +1,6 @@
+/*
+Diseño y desarrollo web por Covadonga Fernández Benavente
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -224,6 +227,11 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
 .contact-panel { overflow-wrap: anywhere; }
 .contact-panel h2 { font-size: 1.65rem; }
 .contact-panel h3 { margin-top: var(--space-lg); }
+.contact-map-wrap { margin-top: var(--space-md); overflow: hidden; border-radius: var(--radius-md); }
+.contact-map { display: block; width: 100%; height: 220px; border: 0; }
+.contact-reviews { margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--color-border-accent); }
+.contact-reviews h3 { margin-top: 0; }
+.contact-reviews p { color: var(--color-text-muted); }
 .calendar-container { width: 100%; overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
 .calendar-container iframe { display: block; width: 100%; max-width: 100%; height: 600px; border: 0; }
 .calendar-section { padding-top: 0; }
