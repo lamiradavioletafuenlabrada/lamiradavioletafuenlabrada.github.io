@@ -285,6 +285,7 @@ figcaption { color: var(--color-text-muted); margin-top: var(--space-sm); font-s
 .footer-grid { display: grid; gap: var(--space-lg); }
 .footer-brand { font-family: var(--font-heading); font-size: 1.7rem; text-decoration: none; }
 .footer-grid p { max-width: 38ch; color: var(--color-text-muted); margin-top: var(--space-sm); }
+.footer-registration { font-size: .8rem; font-weight: 400; }
 .footer-grid h2 { font-family: var(--font-body); font-size: .8rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--space-sm); }
 .footer-grid nav a, .footer-social a { display: block; width: fit-content; min-height: 36px; padding-block: var(--space-xs); }
 .footer-grid a { overflow-wrap: anywhere; }
