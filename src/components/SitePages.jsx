@@ -265,14 +265,8 @@ function TransparencyPage() {
           <article className="feature-panel transparency-card transparency-feature">
             <p className="eyebrow">Documento público</p>
             <h3>Memoria de actividades 2025</h3>
-            <p>Resumen de las actividades, proyectos, encuentros y acciones desarrolladas por La Mirada Violeta durante el año 2025.</p>
+            <p>Memoria anual de La Mirada Violeta correspondiente a 2025. Incluye un resumen de las actividades, proyectos, encuentros y acciones desarrolladas durante el año, así como información sobre financiación, ayudas y subvenciones vinculadas a la actividad de la asociación.</p>
             <a className="button" href="/memoria2025.pdf" target="_blank" rel="noopener noreferrer">Consultar memoria</a>
-          </article>
-          <article className="feature-panel transparency-card transparency-coming-soon">
-            <p className="eyebrow">Próximamente</p>
-            <h3>Información económica y subvenciones</h3>
-            <p>Este espacio recogerá información básica sobre subvenciones, ayudas y otros recursos vinculados a la actividad de la asociación.</p>
-            <span className="status-label">Próximamente</span>
           </article>
         </div>
       </section>
