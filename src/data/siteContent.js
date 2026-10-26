@@ -240,7 +240,7 @@ export const upcomingActivities = [
     registrationUrl: 'https://forms.gle/NabEWWXEYLxuvwoo8',
   },
   {
-    title: 'Palestina desde los ojos de sus mujeres',
+    title: 'La Resistencia Palestina y el movimiento BDS: una mirada feminista',
     details: '29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
     registrationUrl: 'https://forms.gle/rjXaEKV2f2Q3TVn36',
   },
