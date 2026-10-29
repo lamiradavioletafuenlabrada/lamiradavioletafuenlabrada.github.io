@@ -241,7 +241,7 @@ export const upcomingActivities = [
   },
   {
     title: 'La Resistencia Palestina y el movimiento BDS: una mirada feminista',
-    details: '29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
+    details: 'APLAZADA · Se avisará de nueva fecha · 29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
     registrationUrl: 'https://forms.gle/rjXaEKV2f2Q3TVn36',
   },
   {
