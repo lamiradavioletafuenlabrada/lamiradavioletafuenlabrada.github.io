@@ -231,19 +231,9 @@ export const activities = [
 
 export const upcomingActivities = [
   {
-    title: 'La Resistencia Palestina y el movimiento BDS: una mirada feminista',
-    details: 'APLAZADA · Se avisará de nueva fecha · 29 de octubre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
-    registrationUrl: 'https://forms.gle/rjXaEKV2f2Q3TVn36',
-  },
-  {
-    title: 'Charla: Sexualidad en la madurez',
-    details: '9 de noviembre · 18:30 · Asociación de Mayores y Pensionistas de Loranca. Nuevo Versalles B, 201 Local.',
-    registrationUrl: 'https://forms.gle/xe1PPwAt8pyFS1Gz5',
-  },
-  {
-    title: 'Huellas Silenciadas: un tributo a las que ya no están',
-    details: 'Martes 24 de noviembre · 18:00 · Calle Francia-Bulevar, junto a la parada de MetroSur Parque Europa – Fuenlabrada',
-    registrationUrl: 'https://forms.gle/7hesbYYybAikWKp37',
+    title: 'Taller de nins',
+    details: '1 de diciembre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
+    registrationUrl: 'https://forms.gle/Tchhdq9wzZyhCiVr7',
   },
 ];
 
