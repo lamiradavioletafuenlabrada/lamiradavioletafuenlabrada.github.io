@@ -235,6 +235,11 @@ export const upcomingActivities = [
     details: '1 de diciembre · 18:30-20:30 · Centro para la Igualdad 8 de Marzo',
     registrationUrl: 'https://forms.gle/Tchhdq9wzZyhCiVr7',
   },
+  {
+    title: 'La Resistencia Palestina y el movimiento BDS: una mirada feminista',
+    details: '3 de diciembre · 18:30-20:30 · Centro Cívico La Serna',
+    registrationUrl: 'https://forms.gle/Jd7mYBuucui3EZSQ8',
+  },
 ];
 
 export const podcastContent = {
