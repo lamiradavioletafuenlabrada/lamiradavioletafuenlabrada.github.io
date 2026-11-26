@@ -240,6 +240,11 @@ export const upcomingActivities = [
     details: '3 de diciembre · 18:30-20:30 · Centro Cívico La Serna',
     registrationUrl: 'https://forms.gle/Jd7mYBuucui3EZSQ8',
   },
+  {
+    title: 'Cápsula del tiempo feminista',
+    details: '10 de diciembre · 18:30-20:30 h · Centro para la Igualdad 8 de Marzo',
+    registrationUrl: 'https://forms.gle/53GVyYvUc5D32CSX7',
+  },
 ];
 
 export const podcastContent = {
